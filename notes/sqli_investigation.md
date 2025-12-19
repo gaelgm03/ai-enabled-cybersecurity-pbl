@@ -46,3 +46,11 @@ It is also called blind SQLi because there is no explicit data transfer from the
   - Resulting query: `SELECT * FROM users WHERE username = '' AND IF(LENGTH(database()) > 5, SLEEP(3), 0)--';`
   - This line establishes a condition in which, if the name of the database is greater than 5, the database waits 3 seconds before returning the information. This will not change the behavior of the application whatsoever, it will simply change the response time of the database. By timing those responses, the attacker can learn whether the condition was true or false.
 
+## References
+1. Dougherty, C. (2012). Practical Identification of SQL Injection Vulnerabilities. CISA; United States Computer Emergency Readiness Team. [https://www.cisa.gov/sites/default/files/publications/Practical-SQLi-Identification.pdf](https://www.cisa.gov/sites/default/files/publications/Practical-SQLi-Identification.pdf)
+
+1. Microsoft Learn. (2025, November 18). SQL injection - SQL Server. Microsoft.com; Microsoft. [https://learn.microsoft.com/en-us/sql/relational-databases/security/sql-injection?view=sql-server-ver17](https://learn.microsoft.com/en-us/sql/relational-databases/security/sql-injection?view=sql-server-ver17)
+
+1. OWASP. (n.d.). Testing for SQL injection. OWASP; Open Worldwide Application Security Project. Retrieved December 19, 2025, from [https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05-Testing_for_SQL_Injection](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05-Testing_for_SQL_Injection)
+
+1. PortSwigger. (2024). SQL injection. Portswigger; Portswigger. [https://portswigger.net/web-security/sql-injection](https://portswigger.net/web-security/sql-injection)
