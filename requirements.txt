@@ -1,0 +1,12 @@
+# Week 2 Security Scanning Pipeline - Dependencies
+# MIT Blended AI+X PBL - AI-Enabled Cybersecurity
+
+# Core detection tools
+codespell>=2.2.0
+pip-audit>=2.6.0
+
+# LLM integration (optional - for remediation generation)
+anthropic>=0.18.0
+
+# Note: gitleaks must be installed separately (Go binary)
+# See: https://github.com/gitleaks/gitleaks#installing

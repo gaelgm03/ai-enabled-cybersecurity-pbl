@@ -39,14 +39,25 @@ The project explores how **Large Language Models (LLMs)** can be used to **assis
 
 ## 🗂️ Repository Structure
 
+```
 ai-enabled-cybersecurity-pbl/
 │
-├── docs/ # References, diagrams, and documentation
-├── notes/ # Weekly reflections, findings, and discussions
-├── experiments/ # Vulnerability examples and prompt experiments
-├── src/ # Source code for AI-assisted tools (future work)
-├── README.md # Project overview and documentation
+├── docs/                    # References, diagrams, and documentation
+├── notes/                   # Weekly reflections, findings, and discussions
+├── experiments/             # Vulnerability examples and prompt experiments
+├── src/
+│   └── pipeline/            # Week 2: Security scanning pipeline
+│       ├── detectors/       # Typo, secret, dependency detectors
+│       ├── reporters/       # JSON and Markdown report generators
+│       ├── main.py          # Pipeline entrypoint
+│       ├── schema.py        # Unified finding schema
+│       ├── redaction.py     # Secret redaction layer
+│       └── llm_remediation.py  # LLM-based fix instructions
+├── reports/                 # Generated scan reports
+├── requirements.txt         # Python dependencies
+├── README.md                # Project overview and documentation
 └── .gitignore
+```
 
 ---
 
@@ -76,12 +87,65 @@ All experiments and tools developed will:
 
 ---
 
+## � Week 2 Focus
+
+**Week 2 Topic:** Basic issues—typos, accidentally committed API keys, outdated dependencies.
+
+**Week 2 Deliverable:** A security scanning pipeline that detects common issues and generates remediation guidance.
+
+### Pipeline Features
+
+| Detector | Tool | Purpose |
+|----------|------|---------|
+| **Typos** | codespell | Spelling errors in code and docs |
+| **Secrets** | gitleaks/regex | Accidentally committed credentials |
+| **Dependencies** | pip-audit/npm audit | Known vulnerable packages |
+
+### Key Design Decisions
+
+- **Deterministic detection**: All scanning uses established tools, not LLM inference
+- **Redaction layer**: Secrets are **never** stored or displayed in full
+- **LLM for remediation only**: LLM generates fix instructions from redacted context
+- **Unified schema**: All findings use a common format for easy processing
+- **Multiple LLM backends**: Anthropic Claude, Ollama (free/local), or templates
+
+### Running the Pipeline
+
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the scan (auto-selects LLM provider)
+cd src
+python -m pipeline.main ..
+
+# Use local Ollama for free LLM remediation
+python -m pipeline.main .. --llm-provider ollama
+
+# Quick scan with templates only (no LLM)
+python -m pipeline.main .. --no-llm
+
+# Check available tools and LLM providers
+python -m pipeline.main --check-tools
+
+# Output will be in reports/week2/
+```
+
+### Output Files
+
+- `reports/week2/findings.json` — Machine-readable scan results
+- `reports/week2/report.md` — Human-readable report with remediation guidance
+
+See [docs/week2-pipeline.md](docs/week2-pipeline.md) for full documentation.
+
+---
+
 ## 🚀 Next Steps
 
-- Narrow the initial vulnerability scope
-- Design the AI-assisted security workflow
-- Begin prototyping and evaluation of LLM outputs
-- Define success metrics and limitations
+- Integrate pipeline into CI/CD (GitHub Actions)
+- Add custom ignore lists for false positives
+- Explore SARIF output for IDE integration
+- Week 3: Deeper vulnerability analysis
 
 ---
 
