@@ -1,0 +1,122 @@
+# Classic SQL Injection Detection Patterns
+# Phase 1: Error-based and Union-based SQL injection patterns
+
+patterns:
+  # Error-based SQL injection patterns
+  - name: extractvalue_injection
+    subtype: error_based
+    regex: "EXTRACTVALUE\\s*\\("
+    severity: HIGH
+    description: "EXTRACTVALUE function used for error-based SQL injection - extracts data through XML parsing errors"
+
+  - name: updatexml_injection
+    subtype: error_based
+    regex: "UPDATEXML\\s*\\("
+    severity: HIGH
+    description: "UPDATEXML function used for error-based SQL injection - extracts data through XML update errors"
+
+  - name: convert_error_injection
+    subtype: error_based
+    regex: "CONVERT\\s*\\([^,]+,\\s*(SELECT|CONCAT)"
+    severity: HIGH
+    description: "CONVERT function with subquery may trigger type conversion errors to leak data"
+
+  - name: cast_error_injection
+    subtype: error_based
+    regex: "CAST\\s*\\(\\s*(SELECT|CONCAT)[^)]*\\s+AS\\s+"
+    severity: HIGH
+    description: "CAST function with subquery may trigger type conversion errors to leak data"
+
+  - name: exp_overflow_injection
+    subtype: error_based
+    regex: "EXP\\s*\\(~\\s*\\(SELECT"
+    severity: HIGH
+    description: "EXP function overflow technique for error-based SQL injection"
+
+  # Union-based SQL injection patterns
+  - name: union_select
+    subtype: union_based
+    regex: "UNION\\s+(ALL\\s+)?SELECT"
+    severity: HIGH
+    description: "UNION SELECT pattern detected - classic union-based SQL injection technique"
+
+  - name: union_null_columns
+    subtype: union_based
+    regex: "UNION\\s+(ALL\\s+)?SELECT\\s+(NULL\\s*,?\\s*)+"
+    severity: HIGH
+    description: "UNION SELECT with NULL columns - common technique to determine column count"
+
+  - name: order_by_probe
+    subtype: union_based
+    regex: "ORDER\\s+BY\\s+\\d+\\s*(--|#|/\\*)"
+    severity: MEDIUM
+    description: "ORDER BY with numeric column index followed by comment - column count enumeration"
+
+  # String concatenation in queries (Python-specific)
+  # Note: Using \b word boundaries to avoid false positives (e.g., "ERROR" matching "OR")
+  - name: fstring_sql_concat
+    subtype: string_concat
+    regex: "f['\"][^'\"]*\\b(?:SELECT|INSERT|UPDATE|DELETE)\\b[^'\"]*\\{[^}]+\\}"
+    severity: HIGH
+    description: "F-string with SQL keywords and variable interpolation - high risk of SQL injection"
+
+  - name: fstring_where_clause
+    subtype: string_concat
+    regex: "f['\"][^'\"]*\\bWHERE\\b[^'\"]*=[^'\"]*\\{[^}]+\\}"
+    severity: HIGH
+    description: "F-string with WHERE clause and variable interpolation - SQL injection risk"
+
+  - name: plus_concat_sql
+    subtype: string_concat
+    regex: "['\"][^'\"]*\\b(?:SELECT|INSERT|UPDATE|DELETE)\\b[^'\"]*['\"]\\s*\\+\\s*\\w+"
+    severity: HIGH
+    description: "String concatenation with + operator in SQL query - vulnerable to SQL injection"
+
+  - name: format_sql_concat
+    subtype: string_concat
+    regex: "['\"][^'\"]*\\b(?:SELECT|INSERT|UPDATE|DELETE)\\b[^'\"]*(?:\\{\\}|\\{\\d+\\})[^'\"]*['\"]\\s*\\.format\\s*\\("
+    severity: HIGH
+    description: "String .format() method used in SQL query - vulnerable to SQL injection"
+
+  - name: percent_format_sql
+    subtype: string_concat
+    regex: "['\"][^'\"]*\\b(?:SELECT|INSERT|UPDATE|DELETE)\\b[^'\"]*%s[^'\"]*['\"]\\s*%\\s*(?:\\(|\\w)"
+    severity: HIGH
+    description: "Percent formatting (%s) used in SQL query without parameterization"
+
+  # Unsafe format patterns
+  - name: execute_with_fstring
+    subtype: unsafe_format
+    regex: "\\.execute\\s*\\(\\s*f['\"]"
+    severity: HIGH
+    description: "Database execute() called with f-string - direct SQL injection vulnerability"
+
+  - name: execute_with_format
+    subtype: unsafe_format
+    regex: "\\.execute\\s*\\([^)]*\\.format\\s*\\("
+    severity: HIGH
+    description: "Database execute() called with .format() - direct SQL injection vulnerability"
+
+  - name: execute_with_percent
+    subtype: unsafe_format
+    regex: "\\.execute\\s*\\([^)]*%\\s*(?:\\(|\\w)"
+    severity: HIGH
+    description: "Database execute() called with % formatting - direct SQL injection vulnerability"
+
+  - name: execute_with_concat
+    subtype: unsafe_format
+    regex: "\\.execute\\s*\\([^)]*\\+[^)]*\\)"
+    severity: HIGH
+    description: "Database execute() called with string concatenation - SQL injection vulnerability"
+
+  - name: raw_sql_input
+    subtype: unsafe_format
+    regex: "(?:input|request\\.(?:args|form|json)|sys\\.argv)[^)]*\\)[^;]*(?:SELECT|INSERT|UPDATE|DELETE)"
+    severity: HIGH
+    description: "User input directly used in SQL query construction"
+
+  - name: executemany_unsafe
+    subtype: unsafe_format
+    regex: "\\.executemany\\s*\\(\\s*f['\"]"
+    severity: HIGH
+    description: "Database executemany() called with f-string - SQL injection vulnerability"
