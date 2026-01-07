@@ -1,0 +1,5305 @@
+{
+  "scan_id": "scan-20260107-070355-89f02b34",
+  "timestamp": "2026-01-07T07:03:55.199868Z",
+  "target_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle",
+  "summary": {
+    "total_findings": 311,
+    "by_type": {
+      "typo": 300,
+      "secret": 11
+    },
+    "by_severity": {
+      "low": 300,
+      "high": 11
+    }
+  },
+  "findings": [
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'childs'",
+      "description": "Possible typo found: 'childs' should be 'children, child's'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\bottle.py",
+      "line_number": 752,
+      "detector": "codespell",
+      "raw_match": "childs",
+      "redacted_match": "childs",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "childs",
+        "suggestion": "children, child's"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'build-in'",
+      "description": "Possible typo found: 'build-in' should be 'built-in'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\bottle.py",
+      "line_number": 2475,
+      "detector": "codespell",
+      "raw_match": "build-in",
+      "redacted_match": "build-in",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "build-in",
+        "suggestion": "built-in"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'clen'",
+      "description": "Possible typo found: 'clen' should be 'clean, clan'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\bottle.py",
+      "line_number": 2814,
+      "detector": "codespell",
+      "raw_match": "clen",
+      "redacted_match": "clen",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "clen",
+        "suggestion": "clean, clan"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'clen'",
+      "description": "Possible typo found: 'clen' should be 'clean, clan'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\bottle.py",
+      "line_number": 2820,
+      "detector": "codespell",
+      "raw_match": "clen",
+      "redacted_match": "clen",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "clen",
+        "suggestion": "clean, clan"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'clen'",
+      "description": "Possible typo found: 'clen' should be 'clean, clan'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\bottle.py",
+      "line_number": 2840,
+      "detector": "codespell",
+      "raw_match": "clen",
+      "redacted_match": "clen",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "clen",
+        "suggestion": "clean, clan"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'clen'",
+      "description": "Possible typo found: 'clen' should be 'clean, clan'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\bottle.py",
+      "line_number": 2845,
+      "detector": "codespell",
+      "raw_match": "clen",
+      "redacted_match": "clen",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "clen",
+        "suggestion": "clean, clan"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'cutted'",
+      "description": "Possible typo found: 'cutted' should be 'cutter, gutted, cut'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\bottle.py",
+      "line_number": 3201,
+      "detector": "codespell",
+      "raw_match": "cutted",
+      "redacted_match": "cutted",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "cutted",
+        "suggestion": "cutter, gutted, cut"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 're-use'",
+      "description": "Possible typo found: 're-use' should be 'reuse'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\bottle.py",
+      "line_number": 4212,
+      "detector": "codespell",
+      "raw_match": "re-use",
+      "redacted_match": "re-use",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "re-use",
+        "suggestion": "reuse"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'loosly'",
+      "description": "Possible typo found: 'loosly' should be 'loosely'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\changelog.rst",
+      "line_number": 8,
+      "detector": "codespell",
+      "raw_match": "loosly",
+      "redacted_match": "loosly",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "loosly",
+        "suggestion": "loosely"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Whats'",
+      "description": "Possible typo found: 'Whats' should be 'What's'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\changelog.rst",
+      "line_number": 211,
+      "detector": "codespell",
+      "raw_match": "Whats",
+      "redacted_match": "Whats",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Whats",
+        "suggestion": "What's"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'deprectated'",
+      "description": "Possible typo found: 'deprectated' should be 'deprecated'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\deployment.rst",
+      "line_number": 77,
+      "detector": "codespell",
+      "raw_match": "deprectated",
+      "redacted_match": "deprectated",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "deprectated",
+        "suggestion": "deprecated"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'absolut'",
+      "description": "Possible typo found: 'absolut' should be 'absolute'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\faq.rst",
+      "line_number": 41,
+      "detector": "codespell",
+      "raw_match": "absolut",
+      "redacted_match": "absolut",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "absolut",
+        "suggestion": "absolute"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'appropiate'",
+      "description": "Possible typo found: 'appropiate' should be 'appropriate'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\faq.rst",
+      "line_number": 271,
+      "detector": "codespell",
+      "raw_match": "appropiate",
+      "redacted_match": "appropiate",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "appropiate",
+        "suggestion": "appropriate"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\tutorial.rst",
+      "line_number": 156,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'absolut'",
+      "description": "Possible typo found: 'absolut' should be 'absolute'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\tutorial.rst",
+      "line_number": 277,
+      "detector": "codespell",
+      "raw_match": "absolut",
+      "redacted_match": "absolut",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "absolut",
+        "suggestion": "absolute"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'appropiate'",
+      "description": "Possible typo found: 'appropiate' should be 'appropriate'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\tutorial.rst",
+      "line_number": 659,
+      "detector": "codespell",
+      "raw_match": "appropiate",
+      "redacted_match": "appropiate",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "appropiate",
+        "suggestion": "appropriate"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'publically'",
+      "description": "Possible typo found: 'publically' should be 'publicly'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\tutorial_app.rst",
+      "line_number": 33,
+      "detector": "codespell",
+      "raw_match": "publically",
+      "redacted_match": "publically",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "publically",
+        "suggestion": "publicly"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'validtion'",
+      "description": "Possible typo found: 'validtion' should be 'validation'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\tutorial_app.rst",
+      "line_number": 33,
+      "detector": "codespell",
+      "raw_match": "validtion",
+      "redacted_match": "validtion",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "validtion",
+        "suggestion": "validation"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'formated'",
+      "description": "Possible typo found: 'formated' should be 'formatted'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\tutorial_app.rst",
+      "line_number": 52,
+      "detector": "codespell",
+      "raw_match": "formated",
+      "redacted_match": "formated",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "formated",
+        "suggestion": "formatted"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'build-in'",
+      "description": "Possible typo found: 'build-in' should be 'built-in'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\tutorial_app.rst",
+      "line_number": 149,
+      "detector": "codespell",
+      "raw_match": "build-in",
+      "redacted_match": "build-in",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "build-in",
+        "suggestion": "built-in"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'formated'",
+      "description": "Possible typo found: 'formated' should be 'formatted'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\tutorial_app.rst",
+      "line_number": 200,
+      "detector": "codespell",
+      "raw_match": "formated",
+      "redacted_match": "formated",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "formated",
+        "suggestion": "formatted"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'build-in'",
+      "description": "Possible typo found: 'build-in' should be 'built-in'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\tutorial_app.rst",
+      "line_number": 238,
+      "detector": "codespell",
+      "raw_match": "build-in",
+      "redacted_match": "build-in",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "build-in",
+        "suggestion": "built-in"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'couse'",
+      "description": "Possible typo found: 'couse' should be 'course, cause'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\tutorial_app.rst",
+      "line_number": 317,
+      "detector": "codespell",
+      "raw_match": "couse",
+      "redacted_match": "couse",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "couse",
+        "suggestion": "course, cause"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'similat'",
+      "description": "Possible typo found: 'similat' should be 'similar'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\tutorial_app.rst",
+      "line_number": 473,
+      "detector": "codespell",
+      "raw_match": "similat",
+      "redacted_match": "similat",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "similat",
+        "suggestion": "similar"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'relativ'",
+      "description": "Possible typo found: 'relativ' should be 'relative'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\tutorial_app.rst",
+      "line_number": 532,
+      "detector": "codespell",
+      "raw_match": "relativ",
+      "redacted_match": "relativ",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "relativ",
+        "suggestion": "relative"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'build-in'",
+      "description": "Possible typo found: 'build-in' should be 'built-in'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\tutorial_app.rst",
+      "line_number": 551,
+      "detector": "codespell",
+      "raw_match": "build-in",
+      "redacted_match": "build-in",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "build-in",
+        "suggestion": "built-in"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'modifiying'",
+      "description": "Possible typo found: 'modifiying' should be 'modifying'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\tutorial_app.rst",
+      "line_number": 579,
+      "detector": "codespell",
+      "raw_match": "modifiying",
+      "redacted_match": "modifiying",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "modifiying",
+        "suggestion": "modifying"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'build-in'",
+      "description": "Possible typo found: 'build-in' should be 'built-in'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\tutorial_app.rst",
+      "line_number": 605,
+      "detector": "codespell",
+      "raw_match": "build-in",
+      "redacted_match": "build-in",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "build-in",
+        "suggestion": "built-in"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'excuted'",
+      "description": "Possible typo found: 'excuted' should be 'executed'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\tutorial_app.rst",
+      "line_number": 616,
+      "detector": "codespell",
+      "raw_match": "excuted",
+      "redacted_match": "excuted",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "excuted",
+        "suggestion": "executed"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'build-in'",
+      "description": "Possible typo found: 'build-in' should be 'built-in'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\tutorial_app.rst",
+      "line_number": 621,
+      "detector": "codespell",
+      "raw_match": "build-in",
+      "redacted_match": "build-in",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "build-in",
+        "suggestion": "built-in"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'build-in'",
+      "description": "Possible typo found: 'build-in' should be 'built-in'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\tutorial_app.rst",
+      "line_number": 623,
+      "detector": "codespell",
+      "raw_match": "build-in",
+      "redacted_match": "build-in",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "build-in",
+        "suggestion": "built-in"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'build-in'",
+      "description": "Possible typo found: 'build-in' should be 'built-in'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\tutorial_app.rst",
+      "line_number": 627,
+      "detector": "codespell",
+      "raw_match": "build-in",
+      "redacted_match": "build-in",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "build-in",
+        "suggestion": "built-in"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'utilizin'",
+      "description": "Possible typo found: 'utilizin' should be 'utilizing'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\tutorial_app.rst",
+      "line_number": 669,
+      "detector": "codespell",
+      "raw_match": "utilizin",
+      "redacted_match": "utilizin",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "utilizin",
+        "suggestion": "utilizing"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 're-usable'",
+      "description": "Possible typo found: 're-usable' should be 'reusable'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\plugins\\index.rst",
+      "line_number": 13,
+      "detector": "codespell",
+      "raw_match": "re-usable",
+      "redacted_match": "re-usable",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "re-usable",
+        "suggestion": "reusable"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Referenz'",
+      "description": "Possible typo found: 'Referenz' should be 'Reference'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\api.po",
+      "line_number": 24,
+      "detector": "codespell",
+      "raw_match": "Referenz",
+      "redacted_match": "Referenz",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Referenz",
+        "suggestion": "Reference"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\api.po",
+      "line_number": 30,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'childs'",
+      "description": "Possible typo found: 'childs' should be 'children, child's'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\api.po",
+      "line_number": 624,
+      "detector": "codespell",
+      "raw_match": "childs",
+      "redacted_match": "childs",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "childs",
+        "suggestion": "children, child's"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'accpets'",
+      "description": "Possible typo found: 'accpets' should be 'accepts'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\changelog.po",
+      "line_number": 498,
+      "detector": "codespell",
+      "raw_match": "accpets",
+      "redacted_match": "accpets",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "accpets",
+        "suggestion": "accepts"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Whats'",
+      "description": "Possible typo found: 'Whats' should be 'What's'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\changelog.po",
+      "line_number": 521,
+      "detector": "codespell",
+      "raw_match": "Whats",
+      "redacted_match": "Whats",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Whats",
+        "suggestion": "What's"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'modue'",
+      "description": "Possible typo found: 'modue' should be 'module'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\configuration.po",
+      "line_number": 226,
+      "detector": "codespell",
+      "raw_match": "modue",
+      "redacted_match": "modue",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "modue",
+        "suggestion": "module"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\contact.po",
+      "line_number": 50,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\contact.po",
+      "line_number": 64,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'oder'",
+      "description": "Possible typo found: 'oder' should be 'order, older, coder, odder, odor, over, doer'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\contact.po",
+      "line_number": 66,
+      "detector": "codespell",
+      "raw_match": "oder",
+      "redacted_match": "oder",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "oder",
+        "suggestion": "order, older, coder, odder, odor, over, doer"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\contact.po",
+      "line_number": 66,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Dokument'",
+      "description": "Possible typo found: 'Dokument' should be 'Document'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 30,
+      "detector": "codespell",
+      "raw_match": "Dokument",
+      "redacted_match": "Dokument",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Dokument",
+        "suggestion": "Document"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 30,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Wege'",
+      "description": "Possible typo found: 'Wege' should be 'Wedge'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 40,
+      "detector": "codespell",
+      "raw_match": "Wege",
+      "redacted_match": "Wege",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Wege",
+        "suggestion": "Wedge"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'oder'",
+      "description": "Possible typo found: 'oder' should be 'order, older, coder, odder, odor, over, doer'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 53,
+      "detector": "codespell",
+      "raw_match": "oder",
+      "redacted_match": "oder",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "oder",
+        "suggestion": "order, older, coder, odder, odor, over, doer"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'oder'",
+      "description": "Possible typo found: 'oder' should be 'order, older, coder, odder, odor, over, doer'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 60,
+      "detector": "codespell",
+      "raw_match": "oder",
+      "redacted_match": "oder",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "oder",
+        "suggestion": "order, older, coder, odder, odor, over, doer"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'als'",
+      "description": "Possible typo found: 'als' should be 'also'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 99,
+      "detector": "codespell",
+      "raw_match": "als",
+      "redacted_match": "als",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "als",
+        "suggestion": "also"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Archiv'",
+      "description": "Possible typo found: 'Archiv' should be 'Archive'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 99,
+      "detector": "codespell",
+      "raw_match": "Archiv",
+      "redacted_match": "Archiv",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Archiv",
+        "suggestion": "Archive"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'oder'",
+      "description": "Possible typo found: 'oder' should be 'order, older, coder, odder, odor, over, doer'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 99,
+      "detector": "codespell",
+      "raw_match": "oder",
+      "redacted_match": "oder",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "oder",
+        "suggestion": "order, older, coder, odder, odor, over, doer"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Paket'",
+      "description": "Possible typo found: 'Paket' should be 'Packet'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 118,
+      "detector": "codespell",
+      "raw_match": "Paket",
+      "redacted_match": "Paket",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Paket",
+        "suggestion": "Packet"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 128,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'oder'",
+      "description": "Possible typo found: 'oder' should be 'order, older, coder, odder, odor, over, doer'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 128,
+      "detector": "codespell",
+      "raw_match": "oder",
+      "redacted_match": "oder",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "oder",
+        "suggestion": "order, older, coder, odder, odor, over, doer"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'alle'",
+      "description": "Possible typo found: 'alle' should be 'all, alley'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 128,
+      "detector": "codespell",
+      "raw_match": "alle",
+      "redacted_match": "alle",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "alle",
+        "suggestion": "all, alley"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'oder'",
+      "description": "Possible typo found: 'oder' should be 'order, older, coder, odder, odor, over, doer'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 128,
+      "detector": "codespell",
+      "raw_match": "oder",
+      "redacted_match": "oder",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "oder",
+        "suggestion": "order, older, coder, odder, odor, over, doer"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'oder'",
+      "description": "Possible typo found: 'oder' should be 'order, older, coder, odder, odor, over, doer'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 140,
+      "detector": "codespell",
+      "raw_match": "oder",
+      "redacted_match": "oder",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "oder",
+        "suggestion": "order, older, coder, odder, odor, over, doer"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'deine'",
+      "description": "Possible typo found: 'deine' should be 'define'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 140,
+      "detector": "codespell",
+      "raw_match": "deine",
+      "redacted_match": "deine",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "deine",
+        "suggestion": "define"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'oder'",
+      "description": "Possible typo found: 'oder' should be 'order, older, coder, odder, odor, over, doer'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 155,
+      "detector": "codespell",
+      "raw_match": "oder",
+      "redacted_match": "oder",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "oder",
+        "suggestion": "order, older, coder, odder, odor, over, doer"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'hart'",
+      "description": "Possible typo found: 'hart' should be 'heart, harm'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 155,
+      "detector": "codespell",
+      "raw_match": "hart",
+      "redacted_match": "hart",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "hart",
+        "suggestion": "heart, harm"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 155,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Applikation'",
+      "description": "Possible typo found: 'Applikation' should be 'Application'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 167,
+      "detector": "codespell",
+      "raw_match": "Applikation",
+      "redacted_match": "Applikation",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Applikation",
+        "suggestion": "Application"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'offen'",
+      "description": "Possible typo found: 'offen' should be 'often'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 178,
+      "detector": "codespell",
+      "raw_match": "offen",
+      "redacted_match": "offen",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "offen",
+        "suggestion": "often"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'sie'",
+      "description": "Possible typo found: 'sie' should be 'size, sigh, side'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 178,
+      "detector": "codespell",
+      "raw_match": "sie",
+      "redacted_match": "sie",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "sie",
+        "suggestion": "size, sigh, side"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 186,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 196,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Alle'",
+      "description": "Possible typo found: 'Alle' should be 'All, Alley'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 196,
+      "detector": "codespell",
+      "raw_match": "Alle",
+      "redacted_match": "Alle",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Alle",
+        "suggestion": "All, Alley"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 211,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 211,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'als'",
+      "description": "Possible typo found: 'als' should be 'also'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 211,
+      "detector": "codespell",
+      "raw_match": "als",
+      "redacted_match": "als",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "als",
+        "suggestion": "also"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Alle'",
+      "description": "Possible typo found: 'Alle' should be 'All, Alley'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 222,
+      "detector": "codespell",
+      "raw_match": "Alle",
+      "redacted_match": "Alle",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Alle",
+        "suggestion": "All, Alley"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'sie'",
+      "description": "Possible typo found: 'sie' should be 'size, sigh, side'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 222,
+      "detector": "codespell",
+      "raw_match": "sie",
+      "redacted_match": "sie",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "sie",
+        "suggestion": "size, sigh, side"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Thats'",
+      "description": "Possible typo found: 'Thats' should be 'That's'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 233,
+      "detector": "codespell",
+      "raw_match": "Thats",
+      "redacted_match": "Thats",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Thats",
+        "suggestion": "That's"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'branche'",
+      "description": "Possible typo found: 'branche' should be 'branch, branches, branched'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 235,
+      "detector": "codespell",
+      "raw_match": "branche",
+      "redacted_match": "branche",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "branche",
+        "suggestion": "branch, branches, branched"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 235,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Ende'",
+      "description": "Possible typo found: 'Ende' should be 'End'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 235,
+      "detector": "codespell",
+      "raw_match": "Ende",
+      "redacted_match": "Ende",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Ende",
+        "suggestion": "End"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'deine'",
+      "description": "Possible typo found: 'deine' should be 'define'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 267,
+      "detector": "codespell",
+      "raw_match": "deine",
+      "redacted_match": "deine",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "deine",
+        "suggestion": "define"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 267,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'deine'",
+      "description": "Possible typo found: 'deine' should be 'define'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 267,
+      "detector": "codespell",
+      "raw_match": "deine",
+      "redacted_match": "deine",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "deine",
+        "suggestion": "define"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 267,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'alle'",
+      "description": "Possible typo found: 'alle' should be 'all, alley'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 281,
+      "detector": "codespell",
+      "raw_match": "alle",
+      "redacted_match": "alle",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "alle",
+        "suggestion": "all, alley"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'applyed'",
+      "description": "Possible typo found: 'applyed' should be 'applied'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 286,
+      "detector": "codespell",
+      "raw_match": "applyed",
+      "redacted_match": "applyed",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "applyed",
+        "suggestion": "applied"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'oder'",
+      "description": "Possible typo found: 'oder' should be 'order, older, coder, odder, odor, over, doer'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 288,
+      "detector": "codespell",
+      "raw_match": "oder",
+      "redacted_match": "oder",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "oder",
+        "suggestion": "order, older, coder, odder, odor, over, doer"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'deine'",
+      "description": "Possible typo found: 'deine' should be 'define'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 288,
+      "detector": "codespell",
+      "raw_match": "deine",
+      "redacted_match": "deine",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "deine",
+        "suggestion": "define"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'sie'",
+      "description": "Possible typo found: 'sie' should be 'size, sigh, side'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 288,
+      "detector": "codespell",
+      "raw_match": "sie",
+      "redacted_match": "sie",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "sie",
+        "suggestion": "size, sigh, side"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'als'",
+      "description": "Possible typo found: 'als' should be 'also'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 288,
+      "detector": "codespell",
+      "raw_match": "als",
+      "redacted_match": "als",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "als",
+        "suggestion": "also"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'deine'",
+      "description": "Possible typo found: 'deine' should be 'define'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 288,
+      "detector": "codespell",
+      "raw_match": "deine",
+      "redacted_match": "deine",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "deine",
+        "suggestion": "define"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'oder'",
+      "description": "Possible typo found: 'oder' should be 'order, older, coder, odder, odor, over, doer'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 295,
+      "detector": "codespell",
+      "raw_match": "oder",
+      "redacted_match": "oder",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "oder",
+        "suggestion": "order, older, coder, odder, odor, over, doer"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'passt'",
+      "description": "Possible typo found: 'passt' should be 'past, passed'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 295,
+      "detector": "codespell",
+      "raw_match": "passt",
+      "redacted_match": "passt",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "passt",
+        "suggestion": "past, passed"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 306,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'manuell'",
+      "description": "Possible typo found: 'manuell' should be 'manual'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 306,
+      "detector": "codespell",
+      "raw_match": "manuell",
+      "redacted_match": "manuell",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "manuell",
+        "suggestion": "manual"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 317,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Als'",
+      "description": "Possible typo found: 'Als' should be 'Also'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 325,
+      "detector": "codespell",
+      "raw_match": "Als",
+      "redacted_match": "Als",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Als",
+        "suggestion": "Also"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 325,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 333,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'lokal'",
+      "description": "Possible typo found: 'lokal' should be 'local'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 333,
+      "detector": "codespell",
+      "raw_match": "lokal",
+      "redacted_match": "lokal",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "lokal",
+        "suggestion": "local"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 342,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'deine'",
+      "description": "Possible typo found: 'deine' should be 'define'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 342,
+      "detector": "codespell",
+      "raw_match": "deine",
+      "redacted_match": "deine",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "deine",
+        "suggestion": "define"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'sie'",
+      "description": "Possible typo found: 'sie' should be 'size, sigh, side'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 342,
+      "detector": "codespell",
+      "raw_match": "sie",
+      "redacted_match": "sie",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "sie",
+        "suggestion": "size, sigh, side"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'deine'",
+      "description": "Possible typo found: 'deine' should be 'define'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 342,
+      "detector": "codespell",
+      "raw_match": "deine",
+      "redacted_match": "deine",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "deine",
+        "suggestion": "define"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 349,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'sie'",
+      "description": "Possible typo found: 'sie' should be 'size, sigh, side'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 361,
+      "detector": "codespell",
+      "raw_match": "sie",
+      "redacted_match": "sie",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "sie",
+        "suggestion": "size, sigh, side"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'sie'",
+      "description": "Possible typo found: 'sie' should be 'size, sigh, side'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 361,
+      "detector": "codespell",
+      "raw_match": "sie",
+      "redacted_match": "sie",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "sie",
+        "suggestion": "size, sigh, side"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'alle'",
+      "description": "Possible typo found: 'alle' should be 'all, alley'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 367,
+      "detector": "codespell",
+      "raw_match": "alle",
+      "redacted_match": "alle",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "alle",
+        "suggestion": "all, alley"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'committe'",
+      "description": "Possible typo found: 'committe' should be 'committee'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 367,
+      "detector": "codespell",
+      "raw_match": "committe",
+      "redacted_match": "committe",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "committe",
+        "suggestion": "committee"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'deine'",
+      "description": "Possible typo found: 'deine' should be 'define'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 367,
+      "detector": "codespell",
+      "raw_match": "deine",
+      "redacted_match": "deine",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "deine",
+        "suggestion": "define"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 383,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'deine'",
+      "description": "Possible typo found: 'deine' should be 'define'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 383,
+      "detector": "codespell",
+      "raw_match": "deine",
+      "redacted_match": "deine",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "deine",
+        "suggestion": "define"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 383,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'alle'",
+      "description": "Possible typo found: 'alle' should be 'all, alley'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 383,
+      "detector": "codespell",
+      "raw_match": "alle",
+      "redacted_match": "alle",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "alle",
+        "suggestion": "all, alley"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'committe'",
+      "description": "Possible typo found: 'committe' should be 'committee'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 383,
+      "detector": "codespell",
+      "raw_match": "committe",
+      "redacted_match": "committe",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "committe",
+        "suggestion": "committee"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'als'",
+      "description": "Possible typo found: 'als' should be 'also'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 389,
+      "detector": "codespell",
+      "raw_match": "als",
+      "redacted_match": "als",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "als",
+        "suggestion": "also"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'deine'",
+      "description": "Possible typo found: 'deine' should be 'define'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 389,
+      "detector": "codespell",
+      "raw_match": "deine",
+      "redacted_match": "deine",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "deine",
+        "suggestion": "define"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 398,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'deine'",
+      "description": "Possible typo found: 'deine' should be 'define'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 398,
+      "detector": "codespell",
+      "raw_match": "deine",
+      "redacted_match": "deine",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "deine",
+        "suggestion": "define"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 414,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Branche'",
+      "description": "Possible typo found: 'Branche' should be 'Branch, Branches, Branched'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 420,
+      "detector": "codespell",
+      "raw_match": "Branche",
+      "redacted_match": "Branche",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Branche",
+        "suggestion": "Branch, Branches, Branched"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 430,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'oder'",
+      "description": "Possible typo found: 'oder' should be 'order, older, coder, odder, odor, over, doer'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\development.po",
+      "line_number": 436,
+      "detector": "codespell",
+      "raw_match": "oder",
+      "redacted_match": "oder",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "oder",
+        "suggestion": "order, older, coder, odder, odor, over, doer"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Ist'",
+      "description": "Possible typo found: 'Ist' should be 'Is, It, Its, It's, Sit, List'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\faq.po",
+      "line_number": 32,
+      "detector": "codespell",
+      "raw_match": "Ist",
+      "redacted_match": "Ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Ist",
+        "suggestion": "Is, It, Its, It's, Sit, List"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\faq.po",
+      "line_number": 43,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'sie'",
+      "description": "Possible typo found: 'sie' should be 'size, sigh, side'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\faq.po",
+      "line_number": 43,
+      "detector": "codespell",
+      "raw_match": "sie",
+      "redacted_match": "sie",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "sie",
+        "suggestion": "size, sigh, side"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\faq.po",
+      "line_number": 43,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'oder'",
+      "description": "Possible typo found: 'oder' should be 'order, older, coder, odder, odor, over, doer'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\faq.po",
+      "line_number": 43,
+      "detector": "codespell",
+      "raw_match": "oder",
+      "redacted_match": "oder",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "oder",
+        "suggestion": "order, older, coder, odder, odor, over, doer"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Probleme'",
+      "description": "Possible typo found: 'Probleme' should be 'Problem'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\faq.po",
+      "line_number": 47,
+      "detector": "codespell",
+      "raw_match": "Probleme",
+      "redacted_match": "Probleme",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Probleme",
+        "suggestion": "Problem"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'oder'",
+      "description": "Possible typo found: 'oder' should be 'order, older, coder, odder, odor, over, doer'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\faq.po",
+      "line_number": 59,
+      "detector": "codespell",
+      "raw_match": "oder",
+      "redacted_match": "oder",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "oder",
+        "suggestion": "order, older, coder, odder, odor, over, doer"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Probleme'",
+      "description": "Possible typo found: 'Probleme' should be 'Problem'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\faq.po",
+      "line_number": 81,
+      "detector": "codespell",
+      "raw_match": "Probleme",
+      "redacted_match": "Probleme",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Probleme",
+        "suggestion": "Problem"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Adresse'",
+      "description": "Possible typo found: 'Adresse' should be 'Address'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\faq.po",
+      "line_number": 91,
+      "detector": "codespell",
+      "raw_match": "Adresse",
+      "redacted_match": "Adresse",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Adresse",
+        "suggestion": "Address"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'lokal'",
+      "description": "Possible typo found: 'lokal' should be 'local'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\faq.po",
+      "line_number": 91,
+      "detector": "codespell",
+      "raw_match": "lokal",
+      "redacted_match": "lokal",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "lokal",
+        "suggestion": "local"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'oder'",
+      "description": "Possible typo found: 'oder' should be 'order, older, coder, odder, odor, over, doer'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\faq.po",
+      "line_number": 91,
+      "detector": "codespell",
+      "raw_match": "oder",
+      "redacted_match": "oder",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "oder",
+        "suggestion": "order, older, coder, odder, odor, over, doer"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'oder'",
+      "description": "Possible typo found: 'oder' should be 'order, older, coder, odder, odor, over, doer'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\faq.po",
+      "line_number": 91,
+      "detector": "codespell",
+      "raw_match": "oder",
+      "redacted_match": "oder",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "oder",
+        "suggestion": "order, older, coder, odder, odor, over, doer"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'lokale'",
+      "description": "Possible typo found: 'lokale' should be 'locale'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\faq.po",
+      "line_number": 91,
+      "detector": "codespell",
+      "raw_match": "lokale",
+      "redacted_match": "lokale",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "lokale",
+        "suggestion": "locale"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'deines'",
+      "description": "Possible typo found: 'deines' should be 'denies, defines, defined'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\faq.po",
+      "line_number": 91,
+      "detector": "codespell",
+      "raw_match": "deines",
+      "redacted_match": "deines",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "deines",
+        "suggestion": "denies, defines, defined"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Proxys'",
+      "description": "Possible typo found: 'Proxys' should be 'Proxies'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\faq.po",
+      "line_number": 91,
+      "detector": "codespell",
+      "raw_match": "Proxys",
+      "redacted_match": "Proxys",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Proxys",
+        "suggestion": "Proxies"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\faq.po",
+      "line_number": 91,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'informations'",
+      "description": "Possible typo found: 'informations' should be 'information'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\plugindev.po",
+      "line_number": 212,
+      "detector": "codespell",
+      "raw_match": "informations",
+      "redacted_match": "informations",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "informations",
+        "suggestion": "information"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'infastructure'",
+      "description": "Possible typo found: 'infastructure' should be 'infrastructure'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\recipes.po",
+      "line_number": 291,
+      "detector": "codespell",
+      "raw_match": "infastructure",
+      "redacted_match": "infastructure",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "infastructure",
+        "suggestion": "infrastructure"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Ende'",
+      "description": "Possible typo found: 'Ende' should be 'End'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\tutorial.po",
+      "line_number": 37,
+      "detector": "codespell",
+      "raw_match": "Ende",
+      "redacted_match": "Ende",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Ende",
+        "suggestion": "End"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'oder'",
+      "description": "Possible typo found: 'oder' should be 'order, older, coder, odder, odor, over, doer'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\tutorial.po",
+      "line_number": 37,
+      "detector": "codespell",
+      "raw_match": "oder",
+      "redacted_match": "oder",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "oder",
+        "suggestion": "order, older, coder, odder, odor, over, doer"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'als'",
+      "description": "Possible typo found: 'als' should be 'also'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\tutorial.po",
+      "line_number": 37,
+      "detector": "codespell",
+      "raw_match": "als",
+      "redacted_match": "als",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "als",
+        "suggestion": "also"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Referenz'",
+      "description": "Possible typo found: 'Referenz' should be 'Reference'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\tutorial.po",
+      "line_number": 37,
+      "detector": "codespell",
+      "raw_match": "Referenz",
+      "redacted_match": "Referenz",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Referenz",
+        "suggestion": "Reference"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Sie'",
+      "description": "Possible typo found: 'Sie' should be 'Size, Sigh, Side'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\tutorial.po",
+      "line_number": 37,
+      "detector": "codespell",
+      "raw_match": "Sie",
+      "redacted_match": "Sie",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Sie",
+        "suggestion": "Size, Sigh, Side"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'oder'",
+      "description": "Possible typo found: 'oder' should be 'order, older, coder, odder, odor, over, doer'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\tutorial.po",
+      "line_number": 37,
+      "detector": "codespell",
+      "raw_match": "oder",
+      "redacted_match": "oder",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "oder",
+        "suggestion": "order, older, coder, odder, odor, over, doer"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'oder'",
+      "description": "Possible typo found: 'oder' should be 'order, older, coder, odder, odor, over, doer'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\tutorial.po",
+      "line_number": 37,
+      "detector": "codespell",
+      "raw_match": "oder",
+      "redacted_match": "oder",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "oder",
+        "suggestion": "order, older, coder, odder, odor, over, doer"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'alle'",
+      "description": "Possible typo found: 'alle' should be 'all, alley'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\tutorial.po",
+      "line_number": 57,
+      "detector": "codespell",
+      "raw_match": "alle",
+      "redacted_match": "alle",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "alle",
+        "suggestion": "all, alley"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'oder'",
+      "description": "Possible typo found: 'oder' should be 'order, older, coder, odder, odor, over, doer'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\tutorial.po",
+      "line_number": 57,
+      "detector": "codespell",
+      "raw_match": "oder",
+      "redacted_match": "oder",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "oder",
+        "suggestion": "order, older, coder, odder, odor, over, doer"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Oder'",
+      "description": "Possible typo found: 'Oder' should be 'Order, Older, Coder, Odder, Odor, Over, Doer'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\tutorial.po",
+      "line_number": 69,
+      "detector": "codespell",
+      "raw_match": "Oder",
+      "redacted_match": "Oder",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Oder",
+        "suggestion": "Order, Older, Coder, Odder, Odor, Over, Doer"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\tutorial.po",
+      "line_number": 69,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'oder'",
+      "description": "Possible typo found: 'oder' should be 'order, older, coder, odder, odor, over, doer'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\tutorial.po",
+      "line_number": 80,
+      "detector": "codespell",
+      "raw_match": "oder",
+      "redacted_match": "oder",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "oder",
+        "suggestion": "order, older, coder, odder, odor, over, doer"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\tutorial.po",
+      "line_number": 86,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\tutorial.po",
+      "line_number": 96,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Funktion'",
+      "description": "Possible typo found: 'Funktion' should be 'Function'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\tutorial.po",
+      "line_number": 96,
+      "detector": "codespell",
+      "raw_match": "Funktion",
+      "redacted_match": "Funktion",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Funktion",
+        "suggestion": "Function"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\tutorial.po",
+      "line_number": 96,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'startet'",
+      "description": "Possible typo found: 'startet' should be 'started'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\tutorial.po",
+      "line_number": 106,
+      "detector": "codespell",
+      "raw_match": "startet",
+      "redacted_match": "startet",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "startet",
+        "suggestion": "started"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\tutorial.po",
+      "line_number": 106,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\tutorial.po",
+      "line_number": 106,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'deine'",
+      "description": "Possible typo found: 'deine' should be 'define'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\tutorial.po",
+      "line_number": 106,
+      "detector": "codespell",
+      "raw_match": "deine",
+      "redacted_match": "deine",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "deine",
+        "suggestion": "define"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ans'",
+      "description": "Possible typo found: 'ans' should be 'and'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\tutorial.po",
+      "line_number": 106,
+      "detector": "codespell",
+      "raw_match": "ans",
+      "redacted_match": "ans",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ans",
+        "suggestion": "and"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 're-usable'",
+      "description": "Possible typo found: 're-usable' should be 'reusable'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\de_DE\\LC_MESSAGES\\tutorial.po",
+      "line_number": 1093,
+      "detector": "codespell",
+      "raw_match": "re-usable",
+      "redacted_match": "re-usable",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "re-usable",
+        "suggestion": "reusable"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'childs'",
+      "description": "Possible typo found: 'childs' should be 'children, child's'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\fr\\LC_MESSAGES\\api.po",
+      "line_number": 622,
+      "detector": "codespell",
+      "raw_match": "childs",
+      "redacted_match": "childs",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "childs",
+        "suggestion": "children, child's"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'accpets'",
+      "description": "Possible typo found: 'accpets' should be 'accepts'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\fr\\LC_MESSAGES\\changelog.po",
+      "line_number": 498,
+      "detector": "codespell",
+      "raw_match": "accpets",
+      "redacted_match": "accpets",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "accpets",
+        "suggestion": "accepts"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Whats'",
+      "description": "Possible typo found: 'Whats' should be 'What's'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\fr\\LC_MESSAGES\\changelog.po",
+      "line_number": 521,
+      "detector": "codespell",
+      "raw_match": "Whats",
+      "redacted_match": "Whats",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Whats",
+        "suggestion": "What's"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'modue'",
+      "description": "Possible typo found: 'modue' should be 'module'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\fr\\LC_MESSAGES\\configuration.po",
+      "line_number": 226,
+      "detector": "codespell",
+      "raw_match": "modue",
+      "redacted_match": "modue",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "modue",
+        "suggestion": "module"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ans'",
+      "description": "Possible typo found: 'ans' should be 'and'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\fr\\LC_MESSAGES\\contact.po",
+      "line_number": 39,
+      "detector": "codespell",
+      "raw_match": "ans",
+      "redacted_match": "ans",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ans",
+        "suggestion": "and"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'langage'",
+      "description": "Possible typo found: 'langage' should be 'language'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\fr\\LC_MESSAGES\\contact.po",
+      "line_number": 39,
+      "detector": "codespell",
+      "raw_match": "langage",
+      "redacted_match": "langage",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "langage",
+        "suggestion": "language"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'projet'",
+      "description": "Possible typo found: 'projet' should be 'project'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\fr\\LC_MESSAGES\\contact.po",
+      "line_number": 50,
+      "detector": "codespell",
+      "raw_match": "projet",
+      "redacted_match": "projet",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "projet",
+        "suggestion": "project"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'projet'",
+      "description": "Possible typo found: 'projet' should be 'project'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\fr\\LC_MESSAGES\\contact.po",
+      "line_number": 50,
+      "detector": "codespell",
+      "raw_match": "projet",
+      "redacted_match": "projet",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "projet",
+        "suggestion": "project"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'projet'",
+      "description": "Possible typo found: 'projet' should be 'project'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\fr\\LC_MESSAGES\\contact.po",
+      "line_number": 50,
+      "detector": "codespell",
+      "raw_match": "projet",
+      "redacted_match": "projet",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "projet",
+        "suggestion": "project"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\fr\\LC_MESSAGES\\contact.po",
+      "line_number": 64,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'oder'",
+      "description": "Possible typo found: 'oder' should be 'order, older, coder, odder, odor, over, doer'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\fr\\LC_MESSAGES\\contact.po",
+      "line_number": 66,
+      "detector": "codespell",
+      "raw_match": "oder",
+      "redacted_match": "oder",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "oder",
+        "suggestion": "order, older, coder, odder, odor, over, doer"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\fr\\LC_MESSAGES\\contact.po",
+      "line_number": 66,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\fr\\LC_MESSAGES\\contact.po",
+      "line_number": 68,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'oder'",
+      "description": "Possible typo found: 'oder' should be 'order, older, coder, odder, odor, over, doer'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\fr\\LC_MESSAGES\\contact.po",
+      "line_number": 68,
+      "detector": "codespell",
+      "raw_match": "oder",
+      "redacted_match": "oder",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "oder",
+        "suggestion": "order, older, coder, odder, odor, over, doer"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\fr\\LC_MESSAGES\\contact.po",
+      "line_number": 68,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Thats'",
+      "description": "Possible typo found: 'Thats' should be 'That's'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\fr\\LC_MESSAGES\\development.po",
+      "line_number": 232,
+      "detector": "codespell",
+      "raw_match": "Thats",
+      "redacted_match": "Thats",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Thats",
+        "suggestion": "That's"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'applyed'",
+      "description": "Possible typo found: 'applyed' should be 'applied'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\fr\\LC_MESSAGES\\development.po",
+      "line_number": 285,
+      "detector": "codespell",
+      "raw_match": "applyed",
+      "redacted_match": "applyed",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "applyed",
+        "suggestion": "applied"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Exemple'",
+      "description": "Possible typo found: 'Exemple' should be 'Example'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\fr\\LC_MESSAGES\\index.po",
+      "line_number": 58,
+      "detector": "codespell",
+      "raw_match": "Exemple",
+      "redacted_match": "Exemple",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Exemple",
+        "suggestion": "Example"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'informations'",
+      "description": "Possible typo found: 'informations' should be 'information'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\fr\\LC_MESSAGES\\plugindev.po",
+      "line_number": 212,
+      "detector": "codespell",
+      "raw_match": "informations",
+      "redacted_match": "informations",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "informations",
+        "suggestion": "information"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'infastructure'",
+      "description": "Possible typo found: 'infastructure' should be 'infrastructure'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\fr\\LC_MESSAGES\\recipes.po",
+      "line_number": 291,
+      "detector": "codespell",
+      "raw_match": "infastructure",
+      "redacted_match": "infastructure",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "infastructure",
+        "suggestion": "infrastructure"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 're-usable'",
+      "description": "Possible typo found: 're-usable' should be 'reusable'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\fr\\LC_MESSAGES\\tutorial.po",
+      "line_number": 1091,
+      "detector": "codespell",
+      "raw_match": "re-usable",
+      "redacted_match": "re-usable",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "re-usable",
+        "suggestion": "reusable"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'childs'",
+      "description": "Possible typo found: 'childs' should be 'children, child's'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\ja_JP\\LC_MESSAGES\\api.po",
+      "line_number": 622,
+      "detector": "codespell",
+      "raw_match": "childs",
+      "redacted_match": "childs",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "childs",
+        "suggestion": "children, child's"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'accpets'",
+      "description": "Possible typo found: 'accpets' should be 'accepts'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\ja_JP\\LC_MESSAGES\\changelog.po",
+      "line_number": 498,
+      "detector": "codespell",
+      "raw_match": "accpets",
+      "redacted_match": "accpets",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "accpets",
+        "suggestion": "accepts"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Whats'",
+      "description": "Possible typo found: 'Whats' should be 'What's'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\ja_JP\\LC_MESSAGES\\changelog.po",
+      "line_number": 521,
+      "detector": "codespell",
+      "raw_match": "Whats",
+      "redacted_match": "Whats",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Whats",
+        "suggestion": "What's"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'modue'",
+      "description": "Possible typo found: 'modue' should be 'module'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\ja_JP\\LC_MESSAGES\\configuration.po",
+      "line_number": 226,
+      "detector": "codespell",
+      "raw_match": "modue",
+      "redacted_match": "modue",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "modue",
+        "suggestion": "module"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\ja_JP\\LC_MESSAGES\\contact.po",
+      "line_number": 63,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'oder'",
+      "description": "Possible typo found: 'oder' should be 'order, older, coder, odder, odor, over, doer'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\ja_JP\\LC_MESSAGES\\contact.po",
+      "line_number": 65,
+      "detector": "codespell",
+      "raw_match": "oder",
+      "redacted_match": "oder",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "oder",
+        "suggestion": "order, older, coder, odder, odor, over, doer"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\ja_JP\\LC_MESSAGES\\contact.po",
+      "line_number": 65,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Thats'",
+      "description": "Possible typo found: 'Thats' should be 'That's'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\ja_JP\\LC_MESSAGES\\development.po",
+      "line_number": 232,
+      "detector": "codespell",
+      "raw_match": "Thats",
+      "redacted_match": "Thats",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Thats",
+        "suggestion": "That's"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'applyed'",
+      "description": "Possible typo found: 'applyed' should be 'applied'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\ja_JP\\LC_MESSAGES\\development.po",
+      "line_number": 285,
+      "detector": "codespell",
+      "raw_match": "applyed",
+      "redacted_match": "applyed",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "applyed",
+        "suggestion": "applied"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'informations'",
+      "description": "Possible typo found: 'informations' should be 'information'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\ja_JP\\LC_MESSAGES\\plugindev.po",
+      "line_number": 212,
+      "detector": "codespell",
+      "raw_match": "informations",
+      "redacted_match": "informations",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "informations",
+        "suggestion": "information"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'infastructure'",
+      "description": "Possible typo found: 'infastructure' should be 'infrastructure'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\ja_JP\\LC_MESSAGES\\recipes.po",
+      "line_number": 291,
+      "detector": "codespell",
+      "raw_match": "infastructure",
+      "redacted_match": "infastructure",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "infastructure",
+        "suggestion": "infrastructure"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 're-usable'",
+      "description": "Possible typo found: 're-usable' should be 'reusable'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\ja_JP\\LC_MESSAGES\\tutorial.po",
+      "line_number": 1092,
+      "detector": "codespell",
+      "raw_match": "re-usable",
+      "redacted_match": "re-usable",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "re-usable",
+        "suggestion": "reusable"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'childs'",
+      "description": "Possible typo found: 'childs' should be 'children, child's'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\pt_BR\\LC_MESSAGES\\api.po",
+      "line_number": 624,
+      "detector": "codespell",
+      "raw_match": "childs",
+      "redacted_match": "childs",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "childs",
+        "suggestion": "children, child's"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'accpets'",
+      "description": "Possible typo found: 'accpets' should be 'accepts'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\pt_BR\\LC_MESSAGES\\changelog.po",
+      "line_number": 498,
+      "detector": "codespell",
+      "raw_match": "accpets",
+      "redacted_match": "accpets",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "accpets",
+        "suggestion": "accepts"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Whats'",
+      "description": "Possible typo found: 'Whats' should be 'What's'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\pt_BR\\LC_MESSAGES\\changelog.po",
+      "line_number": 521,
+      "detector": "codespell",
+      "raw_match": "Whats",
+      "redacted_match": "Whats",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Whats",
+        "suggestion": "What's"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'modue'",
+      "description": "Possible typo found: 'modue' should be 'module'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\pt_BR\\LC_MESSAGES\\configuration.po",
+      "line_number": 226,
+      "detector": "codespell",
+      "raw_match": "modue",
+      "redacted_match": "modue",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "modue",
+        "suggestion": "module"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\pt_BR\\LC_MESSAGES\\contact.po",
+      "line_number": 63,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'oder'",
+      "description": "Possible typo found: 'oder' should be 'order, older, coder, odder, odor, over, doer'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\pt_BR\\LC_MESSAGES\\contact.po",
+      "line_number": 65,
+      "detector": "codespell",
+      "raw_match": "oder",
+      "redacted_match": "oder",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "oder",
+        "suggestion": "order, older, coder, odder, odor, over, doer"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\pt_BR\\LC_MESSAGES\\contact.po",
+      "line_number": 65,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Thats'",
+      "description": "Possible typo found: 'Thats' should be 'That's'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\pt_BR\\LC_MESSAGES\\development.po",
+      "line_number": 232,
+      "detector": "codespell",
+      "raw_match": "Thats",
+      "redacted_match": "Thats",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Thats",
+        "suggestion": "That's"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'applyed'",
+      "description": "Possible typo found: 'applyed' should be 'applied'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\pt_BR\\LC_MESSAGES\\development.po",
+      "line_number": 285,
+      "detector": "codespell",
+      "raw_match": "applyed",
+      "redacted_match": "applyed",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "applyed",
+        "suggestion": "applied"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'leve'",
+      "description": "Possible typo found: 'leve' should be 'level, levee'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\pt_BR\\LC_MESSAGES\\index.po",
+      "line_number": 33,
+      "detector": "codespell",
+      "raw_match": "leve",
+      "redacted_match": "leve",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "leve",
+        "suggestion": "level, levee"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'informations'",
+      "description": "Possible typo found: 'informations' should be 'information'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\pt_BR\\LC_MESSAGES\\plugindev.po",
+      "line_number": 212,
+      "detector": "codespell",
+      "raw_match": "informations",
+      "redacted_match": "informations",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "informations",
+        "suggestion": "information"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'infastructure'",
+      "description": "Possible typo found: 'infastructure' should be 'infrastructure'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\pt_BR\\LC_MESSAGES\\recipes.po",
+      "line_number": 291,
+      "detector": "codespell",
+      "raw_match": "infastructure",
+      "redacted_match": "infastructure",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "infastructure",
+        "suggestion": "infrastructure"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ser'",
+      "description": "Possible typo found: 'ser' should be 'set'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\pt_BR\\LC_MESSAGES\\tutorial.po",
+      "line_number": 37,
+      "detector": "codespell",
+      "raw_match": "ser",
+      "redacted_match": "ser",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ser",
+        "suggestion": "set"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ser'",
+      "description": "Possible typo found: 'ser' should be 'set'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\pt_BR\\LC_MESSAGES\\tutorial.po",
+      "line_number": 37,
+      "detector": "codespell",
+      "raw_match": "ser",
+      "redacted_match": "ser",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ser",
+        "suggestion": "set"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'vai'",
+      "description": "Possible typo found: 'vai' should be 'via, vie'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\pt_BR\\LC_MESSAGES\\tutorial.po",
+      "line_number": 57,
+      "detector": "codespell",
+      "raw_match": "vai",
+      "redacted_match": "vai",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "vai",
+        "suggestion": "via, vie"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'te'",
+      "description": "Possible typo found: 'te' should be 'the, be, we, to'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\pt_BR\\LC_MESSAGES\\tutorial.po",
+      "line_number": 57,
+      "detector": "codespell",
+      "raw_match": "te",
+      "redacted_match": "te",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "te",
+        "suggestion": "the, be, we, to"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'prefere'",
+      "description": "Possible typo found: 'prefere' should be 'prefer, preferred'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\pt_BR\\LC_MESSAGES\\tutorial.po",
+      "line_number": 57,
+      "detector": "codespell",
+      "raw_match": "prefere",
+      "redacted_match": "prefere",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "prefere",
+        "suggestion": "prefer, preferred"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ser'",
+      "description": "Possible typo found: 'ser' should be 'set'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\pt_BR\\LC_MESSAGES\\tutorial.po",
+      "line_number": 57,
+      "detector": "codespell",
+      "raw_match": "ser",
+      "redacted_match": "ser",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ser",
+        "suggestion": "set"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'vai'",
+      "description": "Possible typo found: 'vai' should be 'via, vie'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\pt_BR\\LC_MESSAGES\\tutorial.po",
+      "line_number": 86,
+      "detector": "codespell",
+      "raw_match": "vai",
+      "redacted_match": "vai",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "vai",
+        "suggestion": "via, vie"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 're-usable'",
+      "description": "Possible typo found: 're-usable' should be 'reusable'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\pt_BR\\LC_MESSAGES\\tutorial.po",
+      "line_number": 1093,
+      "detector": "codespell",
+      "raw_match": "re-usable",
+      "redacted_match": "re-usable",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "re-usable",
+        "suggestion": "reusable"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'returend'",
+      "description": "Possible typo found: 'returend' should be 'returned'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\pt_BR\\LC_MESSAGES\\_pot\\api.po",
+      "line_number": 400,
+      "detector": "codespell",
+      "raw_match": "returend",
+      "redacted_match": "returend",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "returend",
+        "suggestion": "returned"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'accpets'",
+      "description": "Possible typo found: 'accpets' should be 'accepts'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\pt_BR\\LC_MESSAGES\\_pot\\changelog.po",
+      "line_number": 239,
+      "detector": "codespell",
+      "raw_match": "accpets",
+      "redacted_match": "accpets",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "accpets",
+        "suggestion": "accepts"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Whats'",
+      "description": "Possible typo found: 'Whats' should be 'What's'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\pt_BR\\LC_MESSAGES\\_pot\\changelog.po",
+      "line_number": 262,
+      "detector": "codespell",
+      "raw_match": "Whats",
+      "redacted_match": "Whats",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Whats",
+        "suggestion": "What's"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Autor'",
+      "description": "Possible typo found: 'Autor' should be 'Author'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\pt_BR\\LC_MESSAGES\\_pot\\contact.po",
+      "line_number": 19,
+      "detector": "codespell",
+      "raw_match": "Autor",
+      "redacted_match": "Autor",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Autor",
+        "suggestion": "Author"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\pt_BR\\LC_MESSAGES\\_pot\\contact.po",
+      "line_number": 57,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'oder'",
+      "description": "Possible typo found: 'oder' should be 'order, older, coder, odder, odor, over, doer'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\pt_BR\\LC_MESSAGES\\_pot\\contact.po",
+      "line_number": 59,
+      "detector": "codespell",
+      "raw_match": "oder",
+      "redacted_match": "oder",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "oder",
+        "suggestion": "order, older, coder, odder, odor, over, doer"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\pt_BR\\LC_MESSAGES\\_pot\\contact.po",
+      "line_number": 59,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Thats'",
+      "description": "Possible typo found: 'Thats' should be 'That's'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\pt_BR\\LC_MESSAGES\\_pot\\development.po",
+      "line_number": 231,
+      "detector": "codespell",
+      "raw_match": "Thats",
+      "redacted_match": "Thats",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Thats",
+        "suggestion": "That's"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'applyed'",
+      "description": "Possible typo found: 'applyed' should be 'applied'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\pt_BR\\LC_MESSAGES\\_pot\\development.po",
+      "line_number": 284,
+      "detector": "codespell",
+      "raw_match": "applyed",
+      "redacted_match": "applyed",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "applyed",
+        "suggestion": "applied"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'informations'",
+      "description": "Possible typo found: 'informations' should be 'information'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\pt_BR\\LC_MESSAGES\\_pot\\plugindev.po",
+      "line_number": 206,
+      "detector": "codespell",
+      "raw_match": "informations",
+      "redacted_match": "informations",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "informations",
+        "suggestion": "information"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'virtaully'",
+      "description": "Possible typo found: 'virtaully' should be 'virtually'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\pt_BR\\LC_MESSAGES\\_pot\\plugindev.po",
+      "line_number": 341,
+      "detector": "codespell",
+      "raw_match": "virtaully",
+      "redacted_match": "virtaully",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "virtaully",
+        "suggestion": "virtually"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'infastructure'",
+      "description": "Possible typo found: 'infastructure' should be 'infrastructure'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\pt_BR\\LC_MESSAGES\\_pot\\recipes.po",
+      "line_number": 264,
+      "detector": "codespell",
+      "raw_match": "infastructure",
+      "redacted_match": "infastructure",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "infastructure",
+        "suggestion": "infrastructure"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 're-usable'",
+      "description": "Possible typo found: 're-usable' should be 'reusable'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\pt_BR\\LC_MESSAGES\\_pot\\tutorial.po",
+      "line_number": 1132,
+      "detector": "codespell",
+      "raw_match": "re-usable",
+      "redacted_match": "re-usable",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "re-usable",
+        "suggestion": "reusable"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'beeing'",
+      "description": "Possible typo found: 'beeing' should be 'being, been'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\pt_BR\\LC_MESSAGES\\_pot\\tutorial.po",
+      "line_number": 1284,
+      "detector": "codespell",
+      "raw_match": "beeing",
+      "redacted_match": "beeing",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "beeing",
+        "suggestion": "being, been"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'progess'",
+      "description": "Possible typo found: 'progess' should be 'progress'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\pt_BR\\LC_MESSAGES\\_pot\\tutorial_app.po",
+      "line_number": 20,
+      "detector": "codespell",
+      "raw_match": "progess",
+      "redacted_match": "progess",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "progess",
+        "suggestion": "progress"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'databse'",
+      "description": "Possible typo found: 'databse' should be 'database'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\pt_BR\\LC_MESSAGES\\_pot\\tutorial_app.po",
+      "line_number": 40,
+      "detector": "codespell",
+      "raw_match": "databse",
+      "redacted_match": "databse",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "databse",
+        "suggestion": "database"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'adress'",
+      "description": "Possible typo found: 'adress' should be 'address'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\pt_BR\\LC_MESSAGES\\_pot\\tutorial_app.po",
+      "line_number": 751,
+      "detector": "codespell",
+      "raw_match": "adress",
+      "redacted_match": "adress",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "adress",
+        "suggestion": "address"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'childs'",
+      "description": "Possible typo found: 'childs' should be 'children, child's'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\ru_RU\\LC_MESSAGES\\api.po",
+      "line_number": 622,
+      "detector": "codespell",
+      "raw_match": "childs",
+      "redacted_match": "childs",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "childs",
+        "suggestion": "children, child's"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'accpets'",
+      "description": "Possible typo found: 'accpets' should be 'accepts'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\ru_RU\\LC_MESSAGES\\changelog.po",
+      "line_number": 498,
+      "detector": "codespell",
+      "raw_match": "accpets",
+      "redacted_match": "accpets",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "accpets",
+        "suggestion": "accepts"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Whats'",
+      "description": "Possible typo found: 'Whats' should be 'What's'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\ru_RU\\LC_MESSAGES\\changelog.po",
+      "line_number": 521,
+      "detector": "codespell",
+      "raw_match": "Whats",
+      "redacted_match": "Whats",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Whats",
+        "suggestion": "What's"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'modue'",
+      "description": "Possible typo found: 'modue' should be 'module'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\ru_RU\\LC_MESSAGES\\configuration.po",
+      "line_number": 226,
+      "detector": "codespell",
+      "raw_match": "modue",
+      "redacted_match": "modue",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "modue",
+        "suggestion": "module"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\ru_RU\\LC_MESSAGES\\contact.po",
+      "line_number": 63,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'oder'",
+      "description": "Possible typo found: 'oder' should be 'order, older, coder, odder, odor, over, doer'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\ru_RU\\LC_MESSAGES\\contact.po",
+      "line_number": 65,
+      "detector": "codespell",
+      "raw_match": "oder",
+      "redacted_match": "oder",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "oder",
+        "suggestion": "order, older, coder, odder, odor, over, doer"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\ru_RU\\LC_MESSAGES\\contact.po",
+      "line_number": 65,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Thats'",
+      "description": "Possible typo found: 'Thats' should be 'That's'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\ru_RU\\LC_MESSAGES\\development.po",
+      "line_number": 232,
+      "detector": "codespell",
+      "raw_match": "Thats",
+      "redacted_match": "Thats",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Thats",
+        "suggestion": "That's"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'applyed'",
+      "description": "Possible typo found: 'applyed' should be 'applied'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\ru_RU\\LC_MESSAGES\\development.po",
+      "line_number": 285,
+      "detector": "codespell",
+      "raw_match": "applyed",
+      "redacted_match": "applyed",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "applyed",
+        "suggestion": "applied"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'informations'",
+      "description": "Possible typo found: 'informations' should be 'information'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\ru_RU\\LC_MESSAGES\\plugindev.po",
+      "line_number": 212,
+      "detector": "codespell",
+      "raw_match": "informations",
+      "redacted_match": "informations",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "informations",
+        "suggestion": "information"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'infastructure'",
+      "description": "Possible typo found: 'infastructure' should be 'infrastructure'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\ru_RU\\LC_MESSAGES\\recipes.po",
+      "line_number": 291,
+      "detector": "codespell",
+      "raw_match": "infastructure",
+      "redacted_match": "infastructure",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "infastructure",
+        "suggestion": "infrastructure"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 're-usable'",
+      "description": "Possible typo found: 're-usable' should be 'reusable'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\ru_RU\\LC_MESSAGES\\tutorial.po",
+      "line_number": 1092,
+      "detector": "codespell",
+      "raw_match": "re-usable",
+      "redacted_match": "re-usable",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "re-usable",
+        "suggestion": "reusable"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'childs'",
+      "description": "Possible typo found: 'childs' should be 'children, child's'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\zh_CN\\LC_MESSAGES\\api.po",
+      "line_number": 623,
+      "detector": "codespell",
+      "raw_match": "childs",
+      "redacted_match": "childs",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "childs",
+        "suggestion": "children, child's"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'accpets'",
+      "description": "Possible typo found: 'accpets' should be 'accepts'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\zh_CN\\LC_MESSAGES\\changelog.po",
+      "line_number": 498,
+      "detector": "codespell",
+      "raw_match": "accpets",
+      "redacted_match": "accpets",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "accpets",
+        "suggestion": "accepts"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Whats'",
+      "description": "Possible typo found: 'Whats' should be 'What's'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\zh_CN\\LC_MESSAGES\\changelog.po",
+      "line_number": 521,
+      "detector": "codespell",
+      "raw_match": "Whats",
+      "redacted_match": "Whats",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Whats",
+        "suggestion": "What's"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'modue'",
+      "description": "Possible typo found: 'modue' should be 'module'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\zh_CN\\LC_MESSAGES\\configuration.po",
+      "line_number": 226,
+      "detector": "codespell",
+      "raw_match": "modue",
+      "redacted_match": "modue",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "modue",
+        "suggestion": "module"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\zh_CN\\LC_MESSAGES\\contact.po",
+      "line_number": 63,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'oder'",
+      "description": "Possible typo found: 'oder' should be 'order, older, coder, odder, odor, over, doer'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\zh_CN\\LC_MESSAGES\\contact.po",
+      "line_number": 65,
+      "detector": "codespell",
+      "raw_match": "oder",
+      "redacted_match": "oder",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "oder",
+        "suggestion": "order, older, coder, odder, odor, over, doer"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\zh_CN\\LC_MESSAGES\\contact.po",
+      "line_number": 65,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Thats'",
+      "description": "Possible typo found: 'Thats' should be 'That's'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\zh_CN\\LC_MESSAGES\\development.po",
+      "line_number": 232,
+      "detector": "codespell",
+      "raw_match": "Thats",
+      "redacted_match": "Thats",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Thats",
+        "suggestion": "That's"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'applyed'",
+      "description": "Possible typo found: 'applyed' should be 'applied'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\zh_CN\\LC_MESSAGES\\development.po",
+      "line_number": 285,
+      "detector": "codespell",
+      "raw_match": "applyed",
+      "redacted_match": "applyed",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "applyed",
+        "suggestion": "applied"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'informations'",
+      "description": "Possible typo found: 'informations' should be 'information'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\zh_CN\\LC_MESSAGES\\plugindev.po",
+      "line_number": 212,
+      "detector": "codespell",
+      "raw_match": "informations",
+      "redacted_match": "informations",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "informations",
+        "suggestion": "information"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'infastructure'",
+      "description": "Possible typo found: 'infastructure' should be 'infrastructure'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\zh_CN\\LC_MESSAGES\\recipes.po",
+      "line_number": 291,
+      "detector": "codespell",
+      "raw_match": "infastructure",
+      "redacted_match": "infastructure",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "infastructure",
+        "suggestion": "infrastructure"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 're-usable'",
+      "description": "Possible typo found: 're-usable' should be 'reusable'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\zh_CN\\LC_MESSAGES\\tutorial.po",
+      "line_number": 1091,
+      "detector": "codespell",
+      "raw_match": "re-usable",
+      "redacted_match": "re-usable",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "re-usable",
+        "suggestion": "reusable"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'unistall'",
+      "description": "Possible typo found: 'unistall' should be 'uninstall'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\zh_CN\\LC_MESSAGES\\tutorial.po",
+      "line_number": 1173,
+      "detector": "codespell",
+      "raw_match": "unistall",
+      "redacted_match": "unistall",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "unistall",
+        "suggestion": "uninstall"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'returend'",
+      "description": "Possible typo found: 'returend' should be 'returned'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\zh_CN\\LC_MESSAGES\\_pot\\api.po",
+      "line_number": 400,
+      "detector": "codespell",
+      "raw_match": "returend",
+      "redacted_match": "returend",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "returend",
+        "suggestion": "returned"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'accpets'",
+      "description": "Possible typo found: 'accpets' should be 'accepts'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\zh_CN\\LC_MESSAGES\\_pot\\changelog.po",
+      "line_number": 239,
+      "detector": "codespell",
+      "raw_match": "accpets",
+      "redacted_match": "accpets",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "accpets",
+        "suggestion": "accepts"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Whats'",
+      "description": "Possible typo found: 'Whats' should be 'What's'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\zh_CN\\LC_MESSAGES\\_pot\\changelog.po",
+      "line_number": 262,
+      "detector": "codespell",
+      "raw_match": "Whats",
+      "redacted_match": "Whats",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Whats",
+        "suggestion": "What's"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Autor'",
+      "description": "Possible typo found: 'Autor' should be 'Author'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\zh_CN\\LC_MESSAGES\\_pot\\contact.po",
+      "line_number": 19,
+      "detector": "codespell",
+      "raw_match": "Autor",
+      "redacted_match": "Autor",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Autor",
+        "suggestion": "Author"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\zh_CN\\LC_MESSAGES\\_pot\\contact.po",
+      "line_number": 57,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'oder'",
+      "description": "Possible typo found: 'oder' should be 'order, older, coder, odder, odor, over, doer'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\zh_CN\\LC_MESSAGES\\_pot\\contact.po",
+      "line_number": 59,
+      "detector": "codespell",
+      "raw_match": "oder",
+      "redacted_match": "oder",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "oder",
+        "suggestion": "order, older, coder, odder, odor, over, doer"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\zh_CN\\LC_MESSAGES\\_pot\\contact.po",
+      "line_number": 59,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Thats'",
+      "description": "Possible typo found: 'Thats' should be 'That's'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\zh_CN\\LC_MESSAGES\\_pot\\development.po",
+      "line_number": 231,
+      "detector": "codespell",
+      "raw_match": "Thats",
+      "redacted_match": "Thats",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Thats",
+        "suggestion": "That's"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'applyed'",
+      "description": "Possible typo found: 'applyed' should be 'applied'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\zh_CN\\LC_MESSAGES\\_pot\\development.po",
+      "line_number": 284,
+      "detector": "codespell",
+      "raw_match": "applyed",
+      "redacted_match": "applyed",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "applyed",
+        "suggestion": "applied"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'informations'",
+      "description": "Possible typo found: 'informations' should be 'information'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\zh_CN\\LC_MESSAGES\\_pot\\plugindev.po",
+      "line_number": 206,
+      "detector": "codespell",
+      "raw_match": "informations",
+      "redacted_match": "informations",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "informations",
+        "suggestion": "information"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'virtaully'",
+      "description": "Possible typo found: 'virtaully' should be 'virtually'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\zh_CN\\LC_MESSAGES\\_pot\\plugindev.po",
+      "line_number": 341,
+      "detector": "codespell",
+      "raw_match": "virtaully",
+      "redacted_match": "virtaully",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "virtaully",
+        "suggestion": "virtually"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'infastructure'",
+      "description": "Possible typo found: 'infastructure' should be 'infrastructure'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\zh_CN\\LC_MESSAGES\\_pot\\recipes.po",
+      "line_number": 264,
+      "detector": "codespell",
+      "raw_match": "infastructure",
+      "redacted_match": "infastructure",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "infastructure",
+        "suggestion": "infrastructure"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 're-usable'",
+      "description": "Possible typo found: 're-usable' should be 'reusable'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\zh_CN\\LC_MESSAGES\\_pot\\tutorial.po",
+      "line_number": 1132,
+      "detector": "codespell",
+      "raw_match": "re-usable",
+      "redacted_match": "re-usable",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "re-usable",
+        "suggestion": "reusable"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'beeing'",
+      "description": "Possible typo found: 'beeing' should be 'being, been'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\zh_CN\\LC_MESSAGES\\_pot\\tutorial.po",
+      "line_number": 1284,
+      "detector": "codespell",
+      "raw_match": "beeing",
+      "redacted_match": "beeing",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "beeing",
+        "suggestion": "being, been"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'progess'",
+      "description": "Possible typo found: 'progess' should be 'progress'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\zh_CN\\LC_MESSAGES\\_pot\\tutorial_app.po",
+      "line_number": 20,
+      "detector": "codespell",
+      "raw_match": "progess",
+      "redacted_match": "progess",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "progess",
+        "suggestion": "progress"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'databse'",
+      "description": "Possible typo found: 'databse' should be 'database'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\zh_CN\\LC_MESSAGES\\_pot\\tutorial_app.po",
+      "line_number": 40,
+      "detector": "codespell",
+      "raw_match": "databse",
+      "redacted_match": "databse",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "databse",
+        "suggestion": "database"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'adress'",
+      "description": "Possible typo found: 'adress' should be 'address'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\zh_CN\\LC_MESSAGES\\_pot\\tutorial_app.po",
+      "line_number": 751,
+      "detector": "codespell",
+      "raw_match": "adress",
+      "redacted_match": "adress",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "adress",
+        "suggestion": "address"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'childs'",
+      "description": "Possible typo found: 'childs' should be 'children, child's'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\_pot\\api.pot",
+      "line_number": 513,
+      "detector": "codespell",
+      "raw_match": "childs",
+      "redacted_match": "childs",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "childs",
+        "suggestion": "children, child's"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'accpets'",
+      "description": "Possible typo found: 'accpets' should be 'accepts'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\_pot\\changelog.pot",
+      "line_number": 372,
+      "detector": "codespell",
+      "raw_match": "accpets",
+      "redacted_match": "accpets",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "accpets",
+        "suggestion": "accepts"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Whats'",
+      "description": "Possible typo found: 'Whats' should be 'What's'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\_pot\\changelog.pot",
+      "line_number": 392,
+      "detector": "codespell",
+      "raw_match": "Whats",
+      "redacted_match": "Whats",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Whats",
+        "suggestion": "What's"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'modue'",
+      "description": "Possible typo found: 'modue' should be 'module'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\_pot\\configuration.pot",
+      "line_number": 160,
+      "detector": "codespell",
+      "raw_match": "modue",
+      "redacted_match": "modue",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "modue",
+        "suggestion": "module"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\_pot\\contact.pot",
+      "line_number": 48,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'oder'",
+      "description": "Possible typo found: 'oder' should be 'order, older, coder, odder, odor, over, doer'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\_pot\\contact.pot",
+      "line_number": 48,
+      "detector": "codespell",
+      "raw_match": "oder",
+      "redacted_match": "oder",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "oder",
+        "suggestion": "order, older, coder, odder, odor, over, doer"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ist'",
+      "description": "Possible typo found: 'ist' should be 'is, it, its, it's, sit, list'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\_pot\\contact.pot",
+      "line_number": 48,
+      "detector": "codespell",
+      "raw_match": "ist",
+      "redacted_match": "ist",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ist",
+        "suggestion": "is, it, its, it's, sit, list"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Thats'",
+      "description": "Possible typo found: 'Thats' should be 'That's'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\_pot\\development.pot",
+      "line_number": 156,
+      "detector": "codespell",
+      "raw_match": "Thats",
+      "redacted_match": "Thats",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Thats",
+        "suggestion": "That's"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'applyed'",
+      "description": "Possible typo found: 'applyed' should be 'applied'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\_pot\\development.pot",
+      "line_number": 188,
+      "detector": "codespell",
+      "raw_match": "applyed",
+      "redacted_match": "applyed",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "applyed",
+        "suggestion": "applied"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'informations'",
+      "description": "Possible typo found: 'informations' should be 'information'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\_pot\\plugindev.pot",
+      "line_number": 132,
+      "detector": "codespell",
+      "raw_match": "informations",
+      "redacted_match": "informations",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "informations",
+        "suggestion": "information"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'infastructure'",
+      "description": "Possible typo found: 'infastructure' should be 'infrastructure'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\_pot\\recipes.pot",
+      "line_number": 217,
+      "detector": "codespell",
+      "raw_match": "infastructure",
+      "redacted_match": "infastructure",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "infastructure",
+        "suggestion": "infrastructure"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 're-usable'",
+      "description": "Possible typo found: 're-usable' should be 'reusable'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\_locale\\_pot\\tutorial.pot",
+      "line_number": 701,
+      "detector": "codespell",
+      "raw_match": "re-usable",
+      "redacted_match": "re-usable",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "re-usable",
+        "suggestion": "reusable"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'doen't'",
+      "description": "Possible typo found: 'doen't' should be 'doesn't'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\test\\test_config.py",
+      "line_number": 10,
+      "detector": "codespell",
+      "raw_match": "doen't",
+      "redacted_match": "doen't",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "doen't",
+        "suggestion": "doesn't"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'overlayed'",
+      "description": "Possible typo found: 'overlayed' should be 'overlaid'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\test\\test_config.py",
+      "line_number": 118,
+      "detector": "codespell",
+      "raw_match": "overlayed",
+      "redacted_match": "overlayed",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "overlayed",
+        "suggestion": "overlaid"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'overlayed'",
+      "description": "Possible typo found: 'overlayed' should be 'overlaid'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\test\\test_config.py",
+      "line_number": 152,
+      "detector": "codespell",
+      "raw_match": "overlayed",
+      "redacted_match": "overlayed",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "overlayed",
+        "suggestion": "overlaid"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'multible'",
+      "description": "Possible typo found: 'multible' should be 'multiple'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\test\\test_environ.py",
+      "line_number": 321,
+      "detector": "codespell",
+      "raw_match": "multible",
+      "redacted_match": "multible",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "multible",
+        "suggestion": "multiple"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'te'",
+      "description": "Possible typo found: 'te' should be 'the, be, we, to'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\test\\test_environ.py",
+      "line_number": 866,
+      "detector": "codespell",
+      "raw_match": "te",
+      "redacted_match": "te",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "te",
+        "suggestion": "the, be, we, to"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'te'",
+      "description": "Possible typo found: 'te' should be 'the, be, we, to'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\test\\test_environ.py",
+      "line_number": 867,
+      "detector": "codespell",
+      "raw_match": "te",
+      "redacted_match": "te",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "te",
+        "suggestion": "the, be, we, to"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'returs'",
+      "description": "Possible typo found: 'returs' should be 'returns'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\test\\test_formsdict.py",
+      "line_number": 9,
+      "detector": "codespell",
+      "raw_match": "returs",
+      "redacted_match": "returs",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "returs",
+        "suggestion": "returns"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'returs'",
+      "description": "Possible typo found: 'returs' should be 'returns'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\test\\test_formsdict.py",
+      "line_number": 15,
+      "detector": "codespell",
+      "raw_match": "returs",
+      "redacted_match": "returs",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "returs",
+        "suggestion": "returns"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'clen'",
+      "description": "Possible typo found: 'clen' should be 'clean, clan'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\test\\test_multipart.py",
+      "line_number": 21,
+      "detector": "codespell",
+      "raw_match": "clen",
+      "redacted_match": "clen",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "clen",
+        "suggestion": "clean, clan"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'clen'",
+      "description": "Possible typo found: 'clen' should be 'clean, clan'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\test\\test_multipart.py",
+      "line_number": 26,
+      "detector": "codespell",
+      "raw_match": "clen",
+      "redacted_match": "clen",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "clen",
+        "suggestion": "clean, clan"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Te'",
+      "description": "Possible typo found: 'Te' should be 'The, Be, We, To'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\test\\test_multipart.py",
+      "line_number": 59,
+      "detector": "codespell",
+      "raw_match": "Te",
+      "redacted_match": "Te",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Te",
+        "suggestion": "The, Be, We, To"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Te'",
+      "description": "Possible typo found: 'Te' should be 'The, Be, We, To'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\test\\test_multipart.py",
+      "line_number": 60,
+      "detector": "codespell",
+      "raw_match": "Te",
+      "redacted_match": "Te",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Te",
+        "suggestion": "The, Be, We, To"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'withoud'",
+      "description": "Possible typo found: 'withoud' should be 'without'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\test\\test_multipart.py",
+      "line_number": 130,
+      "detector": "codespell",
+      "raw_match": "withoud",
+      "redacted_match": "withoud",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "withoud",
+        "suggestion": "without"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'clen'",
+      "description": "Possible typo found: 'clen' should be 'clean, clan'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\test\\test_multipart.py",
+      "line_number": 703,
+      "detector": "codespell",
+      "raw_match": "clen",
+      "redacted_match": "clen",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "clen",
+        "suggestion": "clean, clan"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'indention'",
+      "description": "Possible typo found: 'indention' should be 'indentation'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\test\\test_stpl.py",
+      "line_number": 106,
+      "detector": "codespell",
+      "raw_match": "indention",
+      "redacted_match": "indention",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "indention",
+        "suggestion": "indentation"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'indention'",
+      "description": "Possible typo found: 'indention' should be 'indentation'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\test\\test_stpl.py",
+      "line_number": 117,
+      "detector": "codespell",
+      "raw_match": "indention",
+      "redacted_match": "indention",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "indention",
+        "suggestion": "indentation"
+      }
+    },
+    {
+      "finding_type": "secret",
+      "severity": "high",
+      "title": "Potential Password/Secret",
+      "description": "Detected potential secret matching Password/Secret pattern",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\bottle.py",
+      "line_number": 2894,
+      "detector": "regex-patterns",
+      "raw_match": "[REDACTED]",
+      "redacted_match": "toun********lit(",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "pattern": "(?i)(secret|password|passwd|pwd)\\s*[=:]\\s*[\"\\']?([...",
+        "secret_type": "Password/Secret"
+      }
+    },
+    {
+      "finding_type": "secret",
+      "severity": "high",
+      "title": "Potential Password/Secret",
+      "description": "Detected potential secret matching Password/Secret pattern",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\bottle.py",
+      "line_number": 3079,
+      "detector": "regex-patterns",
+      "raw_match": "[REDACTED]",
+      "redacted_match": "requ****auth",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "pattern": "(?i)(secret|password|passwd|pwd)\\s*[=:]\\s*[\"\\']?([...",
+        "secret_type": "Password/Secret"
+      }
+    },
+    {
+      "finding_type": "secret",
+      "severity": "high",
+      "title": "Potential Password/Secret",
+      "description": "Detected potential secret matching Password/Secret pattern",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\tutorial.rst",
+      "line_number": 246,
+      "detector": "regex-patterns",
+      "raw_match": "[REDACTED]",
+      "redacted_match": "requ********word",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "pattern": "(?i)(secret|password|passwd|pwd)\\s*[=:]\\s*[\"\\']?([...",
+        "secret_type": "Password/Secret"
+      }
+    },
+    {
+      "finding_type": "secret",
+      "severity": "high",
+      "title": "Potential Password/Secret",
+      "description": "Detected potential secret matching Password/Secret pattern",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\tutorial.rst",
+      "line_number": 459,
+      "detector": "regex-patterns",
+      "raw_match": "[REDACTED]",
+      "redacted_match": "requ********get(",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "pattern": "(?i)(secret|password|passwd|pwd)\\s*[=:]\\s*[\"\\']?([...",
+        "secret_type": "Password/Secret"
+      }
+    },
+    {
+      "finding_type": "secret",
+      "severity": "high",
+      "title": "Potential Password/Secret",
+      "description": "Detected potential secret matching Password/Secret pattern",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\tutorial.rst",
+      "line_number": 461,
+      "detector": "regex-patterns",
+      "raw_match": "[REDACTED]",
+      "redacted_match": "some*******-key",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "pattern": "(?i)(secret|password|passwd|pwd)\\s*[=:]\\s*[\"\\']?([...",
+        "secret_type": "Password/Secret"
+      }
+    },
+    {
+      "finding_type": "secret",
+      "severity": "high",
+      "title": "Potential Password/Secret",
+      "description": "Detected potential secret matching Password/Secret pattern",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\tutorial.rst",
+      "line_number": 468,
+      "detector": "regex-patterns",
+      "raw_match": "[REDACTED]",
+      "redacted_match": "some*******-key",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "pattern": "(?i)(secret|password|passwd|pwd)\\s*[=:]\\s*[\"\\']?([...",
+        "secret_type": "Password/Secret"
+      }
+    },
+    {
+      "finding_type": "secret",
+      "severity": "high",
+      "title": "Potential Password/Secret",
+      "description": "Detected potential secret matching Password/Secret pattern",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\docs\\tutorial.rst",
+      "line_number": 615,
+      "detector": "regex-patterns",
+      "raw_match": "[REDACTED]",
+      "redacted_match": "requ********word",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "pattern": "(?i)(secret|password|passwd|pwd)\\s*[=:]\\s*[\"\\']?([...",
+        "secret_type": "Password/Secret"
+      }
+    },
+    {
+      "finding_type": "secret",
+      "severity": "high",
+      "title": "Potential Password/Secret",
+      "description": "Detected potential secret matching Password/Secret pattern",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\test\\test_securecookies.py",
+      "line_number": 30,
+      "detector": "regex-patterns",
+      "raw_match": "[REDACTED]",
+      "redacted_match": "self****ret)",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "pattern": "(?i)(secret|password|passwd|pwd)\\s*[=:]\\s*[\"\\']?([...",
+        "secret_type": "Password/Secret"
+      }
+    },
+    {
+      "finding_type": "secret",
+      "severity": "high",
+      "title": "Potential Password/Secret",
+      "description": "Detected potential secret matching Password/Secret pattern",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\test\\test_securecookies.py",
+      "line_number": 33,
+      "detector": "regex-patterns",
+      "raw_match": "[REDACTED]",
+      "redacted_match": "self****ret)",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "pattern": "(?i)(secret|password|passwd|pwd)\\s*[=:]\\s*[\"\\']?([...",
+        "secret_type": "Password/Secret"
+      }
+    },
+    {
+      "finding_type": "secret",
+      "severity": "high",
+      "title": "Potential Password/Secret",
+      "description": "Detected potential secret matching Password/Secret pattern",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\test\\test_securecookies.py",
+      "line_number": 37,
+      "detector": "regex-patterns",
+      "raw_match": "[REDACTED]",
+      "redacted_match": "self****ret)",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "pattern": "(?i)(secret|password|passwd|pwd)\\s*[=:]\\s*[\"\\']?([...",
+        "secret_type": "Password/Secret"
+      }
+    },
+    {
+      "finding_type": "secret",
+      "severity": "high",
+      "title": "Potential Password/Secret",
+      "description": "Detected potential secret matching Password/Secret pattern",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_bottlepy__bottle_9s_57lb7\\bottle\\test\\test_securecookies.py",
+      "line_number": 40,
+      "detector": "regex-patterns",
+      "raw_match": "[REDACTED]",
+      "redacted_match": "self****ret)",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "pattern": "(?i)(secret|password|passwd|pwd)\\s*[=:]\\s*[\"\\']?([...",
+        "secret_type": "Password/Secret"
+      }
+    }
+  ]
+}

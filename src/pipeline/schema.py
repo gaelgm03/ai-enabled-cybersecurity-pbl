@@ -20,6 +20,7 @@ class FindingType(Enum):
     TYPO = "typo"
     SECRET = "secret"
     DEPENDENCY = "dependency"
+    SQLI = "sqli"
 
 
 @dataclass

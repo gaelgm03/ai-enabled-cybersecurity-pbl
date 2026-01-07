@@ -14,7 +14,7 @@ from pathlib import Path
 from datetime import datetime, timezone
 
 from .schema import ScanReport
-from .detectors import TypoDetector, SecretDetector, DependencyDetector
+from .detectors import TypoDetector, SecretDetector, DependencyDetector, SQLiDetector
 from .reporters import JSONReporter, MarkdownReporter
 from .llm_remediation import enrich_findings_with_remediation, is_ollama_available, auto_select_provider
 
@@ -71,6 +71,7 @@ def run_pipeline(
         ("Typo", TypoDetector(str(target))),
         ("Secret", SecretDetector(str(target))),
         ("Dependency", DependencyDetector(str(target))),
+        ("SQLi", SQLiDetector(str(target))),
     ]
     
     for name, detector in detectors:

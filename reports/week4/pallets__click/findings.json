@@ -1,0 +1,834 @@
+{
+  "scan_id": "scan-20260107-070238-64f647d8",
+  "timestamp": "2026-01-07T07:02:38.812846Z",
+  "target_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click",
+  "summary": {
+    "total_findings": 48,
+    "by_type": {
+      "typo": 47,
+      "secret": 1
+    },
+    "by_severity": {
+      "low": 47,
+      "high": 1
+    }
+  },
+  "findings": [
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 're-used'",
+      "description": "Possible typo found: 're-used' should be 'reused'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\CHANGES.rst",
+      "line_number": 891,
+      "detector": "codespell",
+      "raw_match": "re-used",
+      "redacted_match": "re-used",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "re-used",
+        "suggestion": "reused"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'inout'",
+      "description": "Possible typo found: 'inout' should be 'input, in out'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\docs\\handling-files.md",
+      "line_number": 29,
+      "detector": "codespell",
+      "raw_match": "inout",
+      "redacted_match": "inout",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "inout",
+        "suggestion": "input, in out"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'inout'",
+      "description": "Possible typo found: 'inout' should be 'input, in out'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\docs\\handling-files.md",
+      "line_number": 42,
+      "detector": "codespell",
+      "raw_match": "inout",
+      "redacted_match": "inout",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "inout",
+        "suggestion": "input, in out"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'inout'",
+      "description": "Possible typo found: 'inout' should be 'input, in out'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\docs\\handling-files.md",
+      "line_number": 44,
+      "detector": "codespell",
+      "raw_match": "inout",
+      "redacted_match": "inout",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "inout",
+        "suggestion": "input, in out"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'inout'",
+      "description": "Possible typo found: 'inout' should be 'input, in out'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\docs\\quickstart.md",
+      "line_number": 21,
+      "detector": "codespell",
+      "raw_match": "inout",
+      "redacted_match": "inout",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "inout",
+        "suggestion": "input, in out"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'inout'",
+      "description": "Possible typo found: 'inout' should be 'input, in out'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\docs\\quickstart.md",
+      "line_number": 21,
+      "detector": "codespell",
+      "raw_match": "inout",
+      "redacted_match": "inout",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "inout",
+        "suggestion": "input, in out"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'bulitin'",
+      "description": "Possible typo found: 'bulitin' should be 'built-in'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\examples\\aliases\\aliases.py",
+      "line_number": 43,
+      "detector": "codespell",
+      "raw_match": "bulitin",
+      "redacted_match": "bulitin",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "bulitin",
+        "suggestion": "built-in"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'inout'",
+      "description": "Possible typo found: 'inout' should be 'input, in out'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\examples\\inout\\README",
+      "line_number": 3,
+      "detector": "codespell",
+      "raw_match": "inout",
+      "redacted_match": "inout",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "inout",
+        "suggestion": "input, in out"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'inout'",
+      "description": "Possible typo found: 'inout' should be 'input, in out'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\examples\\inout\\README",
+      "line_number": 10,
+      "detector": "codespell",
+      "raw_match": "inout",
+      "redacted_match": "inout",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "inout",
+        "suggestion": "input, in out"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'inout'",
+      "description": "Possible typo found: 'inout' should be 'input, in out'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\examples\\inout\\inout.py",
+      "line_number": 14,
+      "detector": "codespell",
+      "raw_match": "inout",
+      "redacted_match": "inout",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "inout",
+        "suggestion": "input, in out"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'inout'",
+      "description": "Possible typo found: 'inout' should be 'input, in out'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\examples\\inout\\inout.py",
+      "line_number": 18,
+      "detector": "codespell",
+      "raw_match": "inout",
+      "redacted_match": "inout",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "inout",
+        "suggestion": "input, in out"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'inout'",
+      "description": "Possible typo found: 'inout' should be 'input, in out'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\examples\\inout\\inout.py",
+      "line_number": 22,
+      "detector": "codespell",
+      "raw_match": "inout",
+      "redacted_match": "inout",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "inout",
+        "suggestion": "input, in out"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'inout'",
+      "description": "Possible typo found: 'inout' should be 'input, in out'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\examples\\inout\\pyproject.toml",
+      "line_number": 4,
+      "detector": "codespell",
+      "raw_match": "inout",
+      "redacted_match": "inout",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "inout",
+        "suggestion": "input, in out"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'inout'",
+      "description": "Possible typo found: 'inout' should be 'input, in out'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\examples\\inout\\pyproject.toml",
+      "line_number": 11,
+      "detector": "codespell",
+      "raw_match": "inout",
+      "redacted_match": "inout",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "inout",
+        "suggestion": "input, in out"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'inout'",
+      "description": "Possible typo found: 'inout' should be 'input, in out'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\examples\\inout\\pyproject.toml",
+      "line_number": 11,
+      "detector": "codespell",
+      "raw_match": "inout",
+      "redacted_match": "inout",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "inout",
+        "suggestion": "input, in out"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'inout'",
+      "description": "Possible typo found: 'inout' should be 'input, in out'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\examples\\inout\\pyproject.toml",
+      "line_number": 18,
+      "detector": "codespell",
+      "raw_match": "inout",
+      "redacted_match": "inout",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "inout",
+        "suggestion": "input, in out"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'odering'",
+      "description": "Possible typo found: 'odering' should be 'ordering'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\src\\click\\core.py",
+      "line_number": 1069,
+      "detector": "codespell",
+      "raw_match": "odering",
+      "redacted_match": "odering",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "odering",
+        "suggestion": "ordering"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'te'",
+      "description": "Possible typo found: 'te' should be 'the, be, we, to'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\src\\click\\decorators.py",
+      "line_number": 18,
+      "detector": "codespell",
+      "raw_match": "te",
+      "redacted_match": "te",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "te",
+        "suggestion": "the, be, we, to"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'te'",
+      "description": "Possible typo found: 'te' should be 'the, be, we, to'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\src\\click\\decorators.py",
+      "line_number": 20,
+      "detector": "codespell",
+      "raw_match": "te",
+      "redacted_match": "te",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "te",
+        "suggestion": "the, be, we, to"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'te'",
+      "description": "Possible typo found: 'te' should be 'the, be, we, to'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\src\\click\\decorators.py",
+      "line_number": 28,
+      "detector": "codespell",
+      "raw_match": "te",
+      "redacted_match": "te",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "te",
+        "suggestion": "the, be, we, to"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'te'",
+      "description": "Possible typo found: 'te' should be 'the, be, we, to'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\src\\click\\decorators.py",
+      "line_number": 39,
+      "detector": "codespell",
+      "raw_match": "te",
+      "redacted_match": "te",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "te",
+        "suggestion": "the, be, we, to"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'te'",
+      "description": "Possible typo found: 'te' should be 'the, be, we, to'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\src\\click\\decorators.py",
+      "line_number": 53,
+      "detector": "codespell",
+      "raw_match": "te",
+      "redacted_match": "te",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "te",
+        "suggestion": "the, be, we, to"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'te'",
+      "description": "Possible typo found: 'te' should be 'the, be, we, to'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\src\\click\\decorators.py",
+      "line_number": 76,
+      "detector": "codespell",
+      "raw_match": "te",
+      "redacted_match": "te",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "te",
+        "suggestion": "the, be, we, to"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'te'",
+      "description": "Possible typo found: 'te' should be 'the, be, we, to'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\src\\click\\decorators.py",
+      "line_number": 102,
+      "detector": "codespell",
+      "raw_match": "te",
+      "redacted_match": "te",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "te",
+        "suggestion": "the, be, we, to"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'te'",
+      "description": "Possible typo found: 'te' should be 'the, be, we, to'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\src\\click\\decorators.py",
+      "line_number": 115,
+      "detector": "codespell",
+      "raw_match": "te",
+      "redacted_match": "te",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "te",
+        "suggestion": "the, be, we, to"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'larg'",
+      "description": "Possible typo found: 'larg' should be 'large'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\src\\click\\parser.py",
+      "line_number": 424,
+      "detector": "codespell",
+      "raw_match": "larg",
+      "redacted_match": "larg",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "larg",
+        "suggestion": "large"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'te'",
+      "description": "Possible typo found: 'te' should be 'the, be, we, to'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\src\\click\\types.py",
+      "line_number": 21,
+      "detector": "codespell",
+      "raw_match": "te",
+      "redacted_match": "te",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "te",
+        "suggestion": "the, be, we, to"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'te'",
+      "description": "Possible typo found: 'te' should be 'the, be, we, to'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\src\\click\\types.py",
+      "line_number": 875,
+      "detector": "codespell",
+      "raw_match": "te",
+      "redacted_match": "te",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "te",
+        "suggestion": "the, be, we, to"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'te'",
+      "description": "Possible typo found: 'te' should be 'the, be, we, to'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\src\\click\\utils.py",
+      "line_number": 25,
+      "detector": "codespell",
+      "raw_match": "te",
+      "redacted_match": "te",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "te",
+        "suggestion": "the, be, we, to"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'te'",
+      "description": "Possible typo found: 'te' should be 'the, be, we, to'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\src\\click\\utils.py",
+      "line_number": 27,
+      "detector": "codespell",
+      "raw_match": "te",
+      "redacted_match": "te",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "te",
+        "suggestion": "the, be, we, to"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'inout'",
+      "description": "Possible typo found: 'inout' should be 'input, in out'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\tests\\test_arguments.py",
+      "line_number": 109,
+      "detector": "codespell",
+      "raw_match": "inout",
+      "redacted_match": "inout",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "inout",
+        "suggestion": "input, in out"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'inout'",
+      "description": "Possible typo found: 'inout' should be 'input, in out'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\tests\\test_arguments.py",
+      "line_number": 117,
+      "detector": "codespell",
+      "raw_match": "inout",
+      "redacted_match": "inout",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "inout",
+        "suggestion": "input, in out"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'inout'",
+      "description": "Possible typo found: 'inout' should be 'input, in out'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\tests\\test_arguments.py",
+      "line_number": 123,
+      "detector": "codespell",
+      "raw_match": "inout",
+      "redacted_match": "inout",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "inout",
+        "suggestion": "input, in out"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'inout'",
+      "description": "Possible typo found: 'inout' should be 'input, in out'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\tests\\test_arguments.py",
+      "line_number": 142,
+      "detector": "codespell",
+      "raw_match": "inout",
+      "redacted_match": "inout",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "inout",
+        "suggestion": "input, in out"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'inout'",
+      "description": "Possible typo found: 'inout' should be 'input, in out'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\tests\\test_arguments.py",
+      "line_number": 152,
+      "detector": "codespell",
+      "raw_match": "inout",
+      "redacted_match": "inout",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "inout",
+        "suggestion": "input, in out"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'inout'",
+      "description": "Possible typo found: 'inout' should be 'input, in out'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\tests\\test_arguments.py",
+      "line_number": 162,
+      "detector": "codespell",
+      "raw_match": "inout",
+      "redacted_match": "inout",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "inout",
+        "suggestion": "input, in out"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'inout'",
+      "description": "Possible typo found: 'inout' should be 'input, in out'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\tests\\test_arguments.py",
+      "line_number": 166,
+      "detector": "codespell",
+      "raw_match": "inout",
+      "redacted_match": "inout",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "inout",
+        "suggestion": "input, in out"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ue'",
+      "description": "Possible typo found: 'ue' should be 'use, due'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\tests\\test_options.py",
+      "line_number": 512,
+      "detector": "codespell",
+      "raw_match": "ue",
+      "redacted_match": "ue",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ue",
+        "suggestion": "use, due"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'wont'",
+      "description": "Possible typo found: 'wont' should be 'won't'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\tests\\test_options.py",
+      "line_number": 991,
+      "detector": "codespell",
+      "raw_match": "wont",
+      "redacted_match": "wont",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "wont",
+        "suggestion": "won't"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'wont'",
+      "description": "Possible typo found: 'wont' should be 'won't'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\tests\\test_options.py",
+      "line_number": 997,
+      "detector": "codespell",
+      "raw_match": "wont",
+      "redacted_match": "wont",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "wont",
+        "suggestion": "won't"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'wont'",
+      "description": "Possible typo found: 'wont' should be 'won't'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\tests\\test_options.py",
+      "line_number": 1007,
+      "detector": "codespell",
+      "raw_match": "wont",
+      "redacted_match": "wont",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "wont",
+        "suggestion": "won't"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'wont'",
+      "description": "Possible typo found: 'wont' should be 'won't'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\tests\\test_options.py",
+      "line_number": 1013,
+      "detector": "codespell",
+      "raw_match": "wont",
+      "redacted_match": "wont",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "wont",
+        "suggestion": "won't"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 're-use'",
+      "description": "Possible typo found: 're-use' should be 'reuse'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\tests\\test_options.py",
+      "line_number": 1060,
+      "detector": "codespell",
+      "raw_match": "re-use",
+      "redacted_match": "re-use",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "re-use",
+        "suggestion": "reuse"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'wont'",
+      "description": "Possible typo found: 'wont' should be 'won't'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\tests\\test_options.py",
+      "line_number": 1061,
+      "detector": "codespell",
+      "raw_match": "wont",
+      "redacted_match": "wont",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "wont",
+        "suggestion": "won't"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'wont'",
+      "description": "Possible typo found: 'wont' should be 'won't'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\tests\\test_options.py",
+      "line_number": 1077,
+      "detector": "codespell",
+      "raw_match": "wont",
+      "redacted_match": "wont",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "wont",
+        "suggestion": "won't"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ot'",
+      "description": "Possible typo found: 'ot' should be 'to, of, or, not, it'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\tests\\test_termui.py",
+      "line_number": 395,
+      "detector": "codespell",
+      "raw_match": "ot",
+      "redacted_match": "ot",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ot",
+        "suggestion": "to, of, or, not, it"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'spacial'",
+      "description": "Possible typo found: 'spacial' should be 'special, spatial'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\tests\\test_types.py",
+      "line_number": 231,
+      "detector": "codespell",
+      "raw_match": "spacial",
+      "redacted_match": "spacial",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "spacial",
+        "suggestion": "special, spatial"
+      }
+    },
+    {
+      "finding_type": "secret",
+      "severity": "high",
+      "title": "Potential Password/Secret",
+      "description": "Detected potential secret matching Password/Secret pattern",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_pallets__click_113dv_xy\\click\\tests\\test_utils.py",
+      "line_number": 230,
+      "detector": "regex-patterns",
+      "raw_match": "[REDACTED]",
+      "redacted_match": "\\nin*******ed\\n",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "pattern": "(?i)(secret|password|passwd|pwd)\\s*[=:]\\s*[\"\\']?([...",
+        "secret_type": "Password/Secret"
+      }
+    }
+  ]
+}

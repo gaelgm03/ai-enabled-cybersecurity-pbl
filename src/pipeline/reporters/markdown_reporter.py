@@ -23,6 +23,7 @@ class MarkdownReporter:
         FindingType.SECRET: "🔐",
         FindingType.TYPO: "📝",
         FindingType.DEPENDENCY: "📦",
+        FindingType.SQLI: "💉",
     }
     
     def __init__(self, report: ScanReport):
@@ -90,7 +91,7 @@ class MarkdownReporter:
                 by_type[ftype].append(finding)
             
             # Output each type
-            for ftype in [FindingType.SECRET, FindingType.DEPENDENCY, FindingType.TYPO]:
+            for ftype in [FindingType.SECRET, FindingType.SQLI, FindingType.DEPENDENCY, FindingType.TYPO]:
                 if ftype in by_type:
                     icon = self.TYPE_ICONS.get(ftype, "")
                     lines.append(f"### {icon} {ftype.value.capitalize()} Issues")

@@ -1,0 +1,309 @@
+{
+  "scan_id": "scan-20260107-070254-b88725d6",
+  "timestamp": "2026-01-07T07:02:54.793035Z",
+  "target_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_httpie__cli_m991w987\\cli",
+  "summary": {
+    "total_findings": 17,
+    "by_type": {
+      "typo": 6,
+      "secret": 11
+    },
+    "by_severity": {
+      "low": 6,
+      "high": 5,
+      "medium": 3,
+      "critical": 3
+    }
+  },
+  "findings": [
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Re-use'",
+      "description": "Possible typo found: 'Re-use' should be 'Reuse'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_httpie__cli_m991w987\\cli\\docs\\README.md",
+      "line_number": 2106,
+      "detector": "codespell",
+      "raw_match": "Re-use",
+      "redacted_match": "Re-use",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Re-use",
+        "suggestion": "Reuse"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 're-used'",
+      "description": "Possible typo found: 're-used' should be 'reused'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_httpie__cli_m991w987\\cli\\docs\\README.md",
+      "line_number": 2146,
+      "detector": "codespell",
+      "raw_match": "re-used",
+      "redacted_match": "re-used",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "re-used",
+        "suggestion": "reused"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'convertors'",
+      "description": "Possible typo found: 'convertors' should be 'converters'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_httpie__cli_m991w987\\cli\\docs\\README.md",
+      "line_number": 2413,
+      "detector": "codespell",
+      "raw_match": "convertors",
+      "redacted_match": "convertors",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "convertors",
+        "suggestion": "converters"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'datas'",
+      "description": "Possible typo found: 'datas' should be 'data'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_httpie__cli_m991w987\\cli\\extras\\packaging\\linux\\scripts\\hooks\\hook-pip.py",
+      "line_number": 11,
+      "detector": "codespell",
+      "raw_match": "datas",
+      "redacted_match": "datas",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "datas",
+        "suggestion": "data"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'datas'",
+      "description": "Possible typo found: 'datas' should be 'data'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_httpie__cli_m991w987\\cli\\extras\\packaging\\linux\\scripts\\hooks\\hook-pip.py",
+      "line_number": 12,
+      "detector": "codespell",
+      "raw_match": "datas",
+      "redacted_match": "datas",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "datas",
+        "suggestion": "data"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'resuls'",
+      "description": "Possible typo found: 'resuls' should be 'results'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_httpie__cli_m991w987\\cli\\extras\\profiling\\benchmarks.py",
+      "line_number": 24,
+      "detector": "codespell",
+      "raw_match": "resuls",
+      "redacted_match": "resuls",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "resuls",
+        "suggestion": "results"
+      }
+    },
+    {
+      "finding_type": "secret",
+      "severity": "high",
+      "title": "Potential Password/Secret",
+      "description": "Detected potential secret matching Password/Secret pattern",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_httpie__cli_m991w987\\cli\\httpie\\ssl_.py",
+      "line_number": 32,
+      "detector": "regex-patterns",
+      "raw_match": "[REDACTED]",
+      "redacted_match": "Opti*****str]",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "pattern": "(?i)(secret|password|passwd|pwd)\\s*[=:]\\s*[\"\\']?([...",
+        "secret_type": "Password/Secret"
+      }
+    },
+    {
+      "finding_type": "secret",
+      "severity": "high",
+      "title": "Potential Password/Secret",
+      "description": "Detected potential secret matching Password/Secret pattern",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_httpie__cli_m991w987\\cli\\httpie\\ssl_.py",
+      "line_number": 65,
+      "detector": "regex-patterns",
+      "raw_match": "[REDACTED]",
+      "redacted_match": "cert********word",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "pattern": "(?i)(secret|password|passwd|pwd)\\s*[=:]\\s*[\"\\']?([...",
+        "secret_type": "Password/Secret"
+      }
+    },
+    {
+      "finding_type": "secret",
+      "severity": "high",
+      "title": "Potential Password/Secret",
+      "description": "Detected potential secret matching Password/Secret pattern",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_httpie__cli_m991w987\\cli\\tests\\test_auth_plugins.py",
+      "line_number": 12,
+      "detector": "regex-patterns",
+      "raw_match": "[REDACTED]",
+      "redacted_match": "********",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "pattern": "(?i)(secret|password|passwd|pwd)\\s*[=:]\\s*[\"\\']?([...",
+        "secret_type": "Password/Secret"
+      }
+    },
+    {
+      "finding_type": "secret",
+      "severity": "high",
+      "title": "Potential Password/Secret",
+      "description": "Detected potential secret matching Password/Secret pattern",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_httpie__cli_m991w987\\cli\\httpie\\cli\\argparser.py",
+      "line_number": 293,
+      "detector": "regex-patterns",
+      "raw_match": "[REDACTED]",
+      "redacted_match": "url.****word",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "pattern": "(?i)(secret|password|passwd|pwd)\\s*[=:]\\s*[\"\\']?([...",
+        "secret_type": "Password/Secret"
+      }
+    },
+    {
+      "finding_type": "secret",
+      "severity": "high",
+      "title": "Potential Password/Secret",
+      "description": "Detected potential secret matching Password/Secret pattern",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_httpie__cli_m991w987\\cli\\httpie\\cli\\argparser.py",
+      "line_number": 350,
+      "detector": "regex-patterns",
+      "raw_match": "[REDACTED]",
+      "redacted_match": "cred********lue,",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "pattern": "(?i)(secret|password|passwd|pwd)\\s*[=:]\\s*[\"\\']?([...",
+        "secret_type": "Password/Secret"
+      }
+    },
+    {
+      "finding_type": "secret",
+      "severity": "medium",
+      "title": "Potential Certificate",
+      "description": "Detected potential secret matching Certificate pattern",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_httpie__cli_m991w987\\cli\\tests\\client_certs\\client.crt",
+      "line_number": 1,
+      "detector": "regex-patterns",
+      "raw_match": "[REDACTED]",
+      "redacted_match": "----********----",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "pattern": "-----BEGIN CERTIFICATE-----...",
+        "secret_type": "Certificate"
+      }
+    },
+    {
+      "finding_type": "secret",
+      "severity": "critical",
+      "title": "Potential Private Key",
+      "description": "Detected potential secret matching Private Key pattern",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_httpie__cli_m991w987\\cli\\tests\\client_certs\\client.key",
+      "line_number": 1,
+      "detector": "regex-patterns",
+      "raw_match": "[REDACTED]",
+      "redacted_match": "****",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "pattern": "-----BEGIN (RSA |EC |OPENSSH |DSA |PGP )?PRIVATE K...",
+        "secret_type": "Private Key"
+      }
+    },
+    {
+      "finding_type": "secret",
+      "severity": "medium",
+      "title": "Potential Certificate",
+      "description": "Detected potential secret matching Certificate pattern",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_httpie__cli_m991w987\\cli\\tests\\client_certs\\client.pem",
+      "line_number": 1,
+      "detector": "regex-patterns",
+      "raw_match": "[REDACTED]",
+      "redacted_match": "----********----",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "pattern": "-----BEGIN CERTIFICATE-----...",
+        "secret_type": "Certificate"
+      }
+    },
+    {
+      "finding_type": "secret",
+      "severity": "critical",
+      "title": "Potential Private Key",
+      "description": "Detected potential secret matching Private Key pattern",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_httpie__cli_m991w987\\cli\\tests\\client_certs\\client.pem",
+      "line_number": 32,
+      "detector": "regex-patterns",
+      "raw_match": "[REDACTED]",
+      "redacted_match": "****",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "pattern": "-----BEGIN (RSA |EC |OPENSSH |DSA |PGP )?PRIVATE K...",
+        "secret_type": "Private Key"
+      }
+    },
+    {
+      "finding_type": "secret",
+      "severity": "critical",
+      "title": "Potential Private Key",
+      "description": "Detected potential secret matching Private Key pattern",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_httpie__cli_m991w987\\cli\\tests\\client_certs\\password_protected\\client.key",
+      "line_number": 1,
+      "detector": "regex-patterns",
+      "raw_match": "[REDACTED]",
+      "redacted_match": "****",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "pattern": "-----BEGIN (RSA |EC |OPENSSH |DSA |PGP )?PRIVATE K...",
+        "secret_type": "Private Key"
+      }
+    },
+    {
+      "finding_type": "secret",
+      "severity": "medium",
+      "title": "Potential Certificate",
+      "description": "Detected potential secret matching Certificate pattern",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_httpie__cli_m991w987\\cli\\tests\\client_certs\\password_protected\\client.pem",
+      "line_number": 1,
+      "detector": "regex-patterns",
+      "raw_match": "[REDACTED]",
+      "redacted_match": "----********----",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "pattern": "-----BEGIN CERTIFICATE-----...",
+        "secret_type": "Certificate"
+      }
+    }
+  ]
+}

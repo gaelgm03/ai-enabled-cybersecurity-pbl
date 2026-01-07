@@ -42,18 +42,27 @@ The project explores how **Large Language Models (LLMs)** can be used to **assis
 ```
 ai-enabled-cybersecurity-pbl/
 │
+├── .github/workflows/       # CI/CD workflows
+│   └── security-scan.yml    # Week 4: Self-scan on PRs
+├── configs/                 # Configuration files
+│   └── targets.yaml         # Week 4: Target repos for batch scanning
 ├── docs/                    # References, diagrams, and documentation
+│   ├── week4-agent.md       # Week 4: GitHub agent documentation
+│   └── week4-results.md     # Week 4: Validation scan results
 ├── notes/                   # Weekly reflections, findings, and discussions
 ├── experiments/             # Vulnerability examples and prompt experiments
 ├── src/
-│   └── pipeline/            # Week 2: Security scanning pipeline
-│       ├── detectors/       # Typo, secret, dependency detectors
-│       ├── reporters/       # JSON and Markdown report generators
-│       ├── main.py          # Pipeline entrypoint
+│   └── pipeline/            # Security scanning pipeline
+│       ├── detectors/       # Typo, secret, dependency, SQLi detectors
+│       ├── reporters/       # JSON, Markdown, and Security reporters
+│       ├── main.py          # Week 2: Pipeline entrypoint
+│       ├── github_agent.py  # Week 4: GitHub repo scanner
 │       ├── schema.py        # Unified finding schema
 │       ├── redaction.py     # Secret redaction layer
 │       └── llm_remediation.py  # LLM-based fix instructions
 ├── reports/                 # Generated scan reports
+│   ├── week2/               # Week 2 scan outputs
+│   └── week4/               # Week 4 GitHub repo scans
 ├── requirements.txt         # Python dependencies
 ├── README.md                # Project overview and documentation
 └── .gitignore
@@ -140,12 +149,84 @@ See [docs/week2-pipeline.md](docs/week2-pipeline.md) for full documentation.
 
 ---
 
+## � Week 4 Focus
+
+**Week 4 Topic:** Building an agent to find software vulnerabilities in open-source software.
+
+**Week 4 Deliverable:** Automated GitHub repository security scanner with developer-friendly reports.
+
+### New Features (Week 4)
+
+| Feature | Description |
+|---------|-------------|
+| **GitHub Agent** | Scan any GitHub repo by URL or owner/name |
+| **SQL Injection Detection** | Pattern-based detection for Python, JS, PHP |
+| **Expanded Secrets** | 30+ provider patterns (AWS, Stripe, Slack, etc.) |
+| **Security Reports** | Developer-friendly reports with intent/risk analysis |
+| **Batch Scanning** | Scan multiple repos from config file |
+
+### Running the GitHub Scanner
+
+```bash
+cd src
+
+# Scan a GitHub repository
+python -m pipeline.github_agent pallets/flask
+
+# Scan by URL
+python -m pipeline.github_agent https://github.com/psf/requests
+
+# Scan a local directory
+python -m pipeline.github_agent --local ./my-project
+
+# Batch scan from config file
+python -m pipeline.github_agent --config ../configs/targets.yaml
+
+# With LLM remediation
+python -m pipeline.github_agent owner/repo --use-llm --llm-provider ollama
+```
+
+### Output Files (Week 4)
+
+```
+reports/week4/<owner>__<repo>/
+├── findings.json        # Machine-readable findings
+├── report.md            # Standard markdown report
+└── security_report.md   # Developer-friendly security report (NEW)
+```
+
+### Security Report Contents
+
+The new `security_report.md` includes:
+- **Executive Summary** with risk level and category breakdown
+- **Detailed Findings** with:
+  - Intent: What the code is trying to do
+  - Attack Surface: Where user input flows
+  - Risk Assessment: Impact and likelihood
+  - Recommended Fix: Concrete remediation steps
+  - Verification: How to confirm the fix
+
+### Validation Results
+
+Scanned 5 real-world Python projects (109,000+ combined GitHub stars):
+- pallets/click, httpie/cli, encode/django-rest-framework, bottlepy/bottle, aio-libs/aiohttp
+
+See [docs/week4-results.md](docs/week4-results.md) for full results and analysis.
+
+### Documentation
+
+- [docs/week4-agent.md](docs/week4-agent.md) — Full GitHub agent documentation
+- [docs/week4-results.md](docs/week4-results.md) — Validation scan results
+- [configs/targets.yaml](configs/targets.yaml) — Target repository configuration
+
+---
+
 ## 🚀 Next Steps
 
-- Integrate pipeline into CI/CD (GitHub Actions)
-- Add custom ignore lists for false positives
-- Explore SARIF output for IDE integration
-- Week 3: Deeper vulnerability analysis
+- Add allowlists to reduce false positives
+- Implement SARIF output for IDE integration
+- Add more language-specific patterns
+- Continuous monitoring integration
 
 ---
 

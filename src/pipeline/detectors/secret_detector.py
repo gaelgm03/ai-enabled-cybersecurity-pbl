@@ -18,18 +18,73 @@ class SecretDetector:
     DETECTOR_NAME = "gitleaks"
     FALLBACK_DETECTOR_NAME = "regex-patterns"
     
-    # Fallback regex patterns for common secrets
+    # Fallback regex patterns for common secrets (expanded for Week 4)
     SECRET_PATTERNS = [
+        # Generic patterns
         (r'(?i)(api[_-]?key|apikey)\s*[=:]\s*["\']?([a-zA-Z0-9_\-]{20,})["\']?', "API Key", Severity.HIGH),
         (r'(?i)(secret|password|passwd|pwd)\s*[=:]\s*["\']?([^\s"\']{8,})["\']?', "Password/Secret", Severity.HIGH),
+        (r'(?i)(auth[_-]?token|access[_-]?token)\s*[=:]\s*["\']?([a-zA-Z0-9_\-]{20,})["\']?', "Auth Token", Severity.HIGH),
+        
+        # OpenAI
         (r'sk-[a-zA-Z0-9]{20,}', "OpenAI API Key", Severity.CRITICAL),
+        (r'sk-proj-[a-zA-Z0-9]{20,}', "OpenAI Project API Key", Severity.CRITICAL),
+        
+        # GitHub
         (r'ghp_[a-zA-Z0-9]{36,}', "GitHub PAT", Severity.CRITICAL),
         (r'github_pat_[a-zA-Z0-9_]{22,}', "GitHub Fine-grained PAT", Severity.CRITICAL),
+        (r'gho_[a-zA-Z0-9]{36,}', "GitHub OAuth Token", Severity.CRITICAL),
+        (r'ghu_[a-zA-Z0-9]{36,}', "GitHub User Token", Severity.CRITICAL),
+        (r'ghs_[a-zA-Z0-9]{36,}', "GitHub Server Token", Severity.CRITICAL),
+        
+        # Slack
         (r'xox[baprs]-[a-zA-Z0-9\-]{10,}', "Slack Token", Severity.HIGH),
-        (r'AKIA[A-Z0-9]{16}', "AWS Access Key", Severity.CRITICAL),
+        (r'https://hooks\.slack\.com/services/T[a-zA-Z0-9_]+/B[a-zA-Z0-9_]+/[a-zA-Z0-9_]+', "Slack Webhook URL", Severity.HIGH),
+        
+        # AWS
+        (r'AKIA[A-Z0-9]{16}', "AWS Access Key ID", Severity.CRITICAL),
+        (r'ABIA[A-Z0-9]{16}', "AWS STS Access Key", Severity.CRITICAL),
+        (r'ACCA[A-Z0-9]{16}', "AWS CloudFront Key", Severity.CRITICAL),
+        (r'ASIA[A-Z0-9]{16}', "AWS Temporary Access Key", Severity.HIGH),
         (r'(?i)aws[_-]?secret[_-]?access[_-]?key\s*[=:]\s*["\']?([a-zA-Z0-9/+=]{40})["\']?', "AWS Secret Key", Severity.CRITICAL),
-        (r'-----BEGIN (RSA |EC |OPENSSH )?PRIVATE KEY-----', "Private Key", Severity.CRITICAL),
+        
+        # Google Cloud
+        (r'AIza[a-zA-Z0-9_-]{35}', "Google API Key", Severity.HIGH),
+        (r'(?i)google[_-]?api[_-]?key\s*[=:]\s*["\']?([a-zA-Z0-9_-]{39})["\']?', "Google API Key", Severity.HIGH),
+        
+        # Stripe
+        (r'sk_live_[a-zA-Z0-9]{24,}', "Stripe Live Secret Key", Severity.CRITICAL),
+        (r'sk_test_[a-zA-Z0-9]{24,}', "Stripe Test Secret Key", Severity.MEDIUM),
+        (r'pk_live_[a-zA-Z0-9]{24,}', "Stripe Live Publishable Key", Severity.MEDIUM),
+        (r'rk_live_[a-zA-Z0-9]{24,}', "Stripe Restricted Key", Severity.HIGH),
+        
+        # Twilio
+        (r'SK[a-f0-9]{32}', "Twilio API Key", Severity.HIGH),
+        (r'AC[a-f0-9]{32}', "Twilio Account SID", Severity.MEDIUM),
+        
+        # SendGrid
+        (r'SG\.[a-zA-Z0-9_-]{22}\.[a-zA-Z0-9_-]{43}', "SendGrid API Key", Severity.HIGH),
+        
+        # Mailchimp
+        (r'[a-f0-9]{32}-us[0-9]{1,2}', "Mailchimp API Key", Severity.HIGH),
+        
+        # Discord
+        (r'[MN][a-zA-Z0-9_-]{23,}\.[a-zA-Z0-9_-]{6}\.[a-zA-Z0-9_-]{27}', "Discord Bot Token", Severity.HIGH),
+        
+        # Heroku
+        (r'(?i)heroku[_-]?api[_-]?key\s*[=:]\s*["\']?([a-f0-9-]{36})["\']?', "Heroku API Key", Severity.HIGH),
+        
+        # Database connection strings
+        (r'(?i)(mongodb|postgres|mysql|redis)://[^\s"\']+:[^\s"\']+@', "Database Connection String", Severity.CRITICAL),
+        
+        # Private keys
+        (r'-----BEGIN (RSA |EC |OPENSSH |DSA |PGP )?PRIVATE KEY-----', "Private Key", Severity.CRITICAL),
+        (r'-----BEGIN CERTIFICATE-----', "Certificate", Severity.MEDIUM),
+        
+        # JWT
         (r'eyJ[a-zA-Z0-9_-]+\.eyJ[a-zA-Z0-9_-]+\.[a-zA-Z0-9_-]+', "JWT Token", Severity.MEDIUM),
+        
+        # Generic high-entropy secrets in config files
+        (r'(?i)(token|secret|key|credential)\s*[=:]\s*["\']([a-zA-Z0-9_/+=]{32,})["\']', "Generic Secret", Severity.MEDIUM),
     ]
     
     # Directories to skip

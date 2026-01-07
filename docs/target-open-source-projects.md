@@ -1,7 +1,7 @@
 # Target Open-Source Projects for Security Analysis
 
 **MIT Blended AI+X Program - Track 3: AI-Enabled Cybersecurity**  
-**Living Document - Last Updated: Week 3**
+**Living Document - Last Updated: Week 4**
 
 ---
 
@@ -187,11 +187,95 @@ These are **production applications** where vulnerabilities were discovered and 
 
 ---
 
-## Category 4: Additional Candidates
+## Category 4: Week 4 Validation Targets (Non-Security-Focused)
+
+These are **real-world production projects** used to validate the Week 4 scanner against non-intentionally-vulnerable codebases.
+
+### 4.1 pallets/click
+
+| Field | Value |
+|-------|-------|
+| **URL** | https://github.com/pallets/click |
+| **Language** | Python |
+| **Stars** | 17,000+ |
+| **Purpose** | Command line interface toolkit |
+| **Analysis Status** | ✅ **Analyzed (Week 4)** |
+
+**Why Chosen**: Popular, well-maintained CLI library. Good for testing Python patterns without database code.
+
+**Findings**: 48 total (47 typos, 1 secret pattern). Mostly false positives from intentional naming and test fixtures.
+
+---
+
+### 4.2 httpie/cli
+
+| Field | Value |
+|-------|-------|
+| **URL** | https://github.com/httpie/cli |
+| **Language** | Python |
+| **Stars** | 37,000+ |
+| **Purpose** | Modern HTTP client |
+| **Analysis Status** | ✅ **Analyzed (Week 4)** |
+
+**Why Chosen**: Real-world utility application with authentication handling code.
+
+**Findings**: 17 total (6 typos, 11 secret patterns). Secret patterns are test authentication fixtures.
+
+---
+
+### 4.3 encode/django-rest-framework
+
+| Field | Value |
+|-------|-------|
+| **URL** | https://github.com/encode/django-rest-framework |
+| **Language** | Python |
+| **Stars** | 29,000+ |
+| **Purpose** | Django REST API framework |
+| **Analysis Status** | ✅ **Analyzed (Week 4)** |
+
+**Why Chosen**: Major framework with authentication and database patterns.
+
+**Findings**: 493 total (452 typos, 41 secret patterns). High count due to extensive documentation and test suite.
+
+---
+
+### 4.4 bottlepy/bottle
+
+| Field | Value |
+|-------|-------|
+| **URL** | https://github.com/bottlepy/bottle |
+| **Language** | Python |
+| **Stars** | 8,700+ |
+| **Purpose** | Micro web framework |
+| **Analysis Status** | ✅ **Analyzed (Week 4)** |
+
+**Why Chosen**: Single-file web framework with examples, good for testing pattern detection.
+
+**Findings**: 311 total (300 typos, 11 secret patterns). Most findings in documentation examples.
+
+---
+
+### 4.5 aio-libs/aiohttp
+
+| Field | Value |
+|-------|-------|
+| **URL** | https://github.com/aio-libs/aiohttp |
+| **Language** | Python |
+| **Stars** | 16,000+ |
+| **Purpose** | Async HTTP client/server |
+| **Analysis Status** | ✅ **Analyzed (Week 4)** |
+
+**Why Chosen**: Modern async library with server-side patterns.
+
+**Findings**: 39 total (23 typos, 16 secret patterns). Reasonable false positive rate.
+
+---
+
+## Category 5: Additional Candidates
 
 Projects identified for potential future analysis.
 
-### 4.1 VAmPI (Vulnerable API)
+### 5.1 VAmPI (Vulnerable API)
 
 | Field | Value |
 |-------|-------|
@@ -204,7 +288,7 @@ Projects identified for potential future analysis.
 
 ---
 
-### 4.2 NodeGoat
+### 5.2 NodeGoat
 
 | Field | Value |
 |-------|-------|
@@ -217,7 +301,7 @@ Projects identified for potential future analysis.
 
 ---
 
-### 4.3 RailsGoat
+### 5.3 RailsGoat
 
 | Field | Value |
 |-------|-------|

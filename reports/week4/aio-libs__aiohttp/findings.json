@@ -1,0 +1,683 @@
+{
+  "scan_id": "scan-20260107-070412-20780eea",
+  "timestamp": "2026-01-07T07:04:12.611525Z",
+  "target_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp",
+  "summary": {
+    "total_findings": 39,
+    "by_type": {
+      "typo": 23,
+      "secret": 16
+    },
+    "by_severity": {
+      "low": 23,
+      "high": 14,
+      "medium": 1,
+      "critical": 1
+    }
+  },
+  "findings": [
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Feld'",
+      "description": "Possible typo found: 'Feld' should be 'Field'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp\\CONTRIBUTORS.txt",
+      "line_number": 68,
+      "detector": "codespell",
+      "raw_match": "Feld",
+      "redacted_match": "Feld",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Feld",
+        "suggestion": "Field"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Mata'",
+      "description": "Possible typo found: 'Mata' should be 'Meta, Mater'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp\\CONTRIBUTORS.txt",
+      "line_number": 112,
+      "detector": "codespell",
+      "raw_match": "Mata",
+      "redacted_match": "Mata",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Mata",
+        "suggestion": "Meta, Mater"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'Collum'",
+      "description": "Possible typo found: 'Collum' should be 'Column'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp\\CONTRIBUTORS.txt",
+      "line_number": 280,
+      "detector": "codespell",
+      "raw_match": "Collum",
+      "redacted_match": "Collum",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "Collum",
+        "suggestion": "Column"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ALLS'",
+      "description": "Possible typo found: 'ALLS' should be 'ALL, FALLS'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp\\Makefile",
+      "line_number": 11,
+      "detector": "codespell",
+      "raw_match": "ALLS",
+      "redacted_match": "ALLS",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ALLS",
+        "suggestion": "ALL, FALLS"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ALLS'",
+      "description": "Possible typo found: 'ALLS' should be 'ALL, FALLS'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp\\Makefile",
+      "line_number": 25,
+      "detector": "codespell",
+      "raw_match": "ALLS",
+      "redacted_match": "ALLS",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ALLS",
+        "suggestion": "ALL, FALLS"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'ALLS'",
+      "description": "Possible typo found: 'ALLS' should be 'ALL, FALLS'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp\\Makefile",
+      "line_number": 47,
+      "detector": "codespell",
+      "raw_match": "ALLS",
+      "redacted_match": "ALLS",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "ALLS",
+        "suggestion": "ALL, FALLS"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'te'",
+      "description": "Possible typo found: 'te' should be 'the, be, we, to'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp\\aiohttp\\client_reqrep.py",
+      "line_number": 1120,
+      "detector": "codespell",
+      "raw_match": "te",
+      "redacted_match": "te",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "te",
+        "suggestion": "the, be, we, to"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'te'",
+      "description": "Possible typo found: 'te' should be 'the, be, we, to'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp\\aiohttp\\client_reqrep.py",
+      "line_number": 1122,
+      "detector": "codespell",
+      "raw_match": "te",
+      "redacted_match": "te",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "te",
+        "suggestion": "the, be, we, to"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'TE'",
+      "description": "Possible typo found: 'TE' should be 'THE, BE, WE, TO'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp\\aiohttp\\hdrs.py",
+      "line_number": 96,
+      "detector": "codespell",
+      "raw_match": "TE",
+      "redacted_match": "TE",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "TE",
+        "suggestion": "THE, BE, WE, TO"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'TE'",
+      "description": "Possible typo found: 'TE' should be 'THE, BE, WE, TO'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp\\aiohttp\\hdrs.py",
+      "line_number": 96,
+      "detector": "codespell",
+      "raw_match": "TE",
+      "redacted_match": "TE",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "TE",
+        "suggestion": "THE, BE, WE, TO"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'te'",
+      "description": "Possible typo found: 'te' should be 'the, be, we, to'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp\\aiohttp\\http_parser.py",
+      "line_number": 269,
+      "detector": "codespell",
+      "raw_match": "te",
+      "redacted_match": "te",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "te",
+        "suggestion": "the, be, we, to"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'te'",
+      "description": "Possible typo found: 'te' should be 'the, be, we, to'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp\\aiohttp\\http_parser.py",
+      "line_number": 534,
+      "detector": "codespell",
+      "raw_match": "te",
+      "redacted_match": "te",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "te",
+        "suggestion": "the, be, we, to"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'te'",
+      "description": "Possible typo found: 'te' should be 'the, be, we, to'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp\\aiohttp\\http_parser.py",
+      "line_number": 535,
+      "detector": "codespell",
+      "raw_match": "te",
+      "redacted_match": "te",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "te",
+        "suggestion": "the, be, we, to"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'te'",
+      "description": "Possible typo found: 'te' should be 'the, be, we, to'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp\\aiohttp\\http_parser.py",
+      "line_number": 536,
+      "detector": "codespell",
+      "raw_match": "te",
+      "redacted_match": "te",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "te",
+        "suggestion": "the, be, we, to"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'te'",
+      "description": "Possible typo found: 'te' should be 'the, be, we, to'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp\\aiohttp\\http_parser.py",
+      "line_number": 647,
+      "detector": "codespell",
+      "raw_match": "te",
+      "redacted_match": "te",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "te",
+        "suggestion": "the, be, we, to"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'te'",
+      "description": "Possible typo found: 'te' should be 'the, be, we, to'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp\\aiohttp\\http_parser.py",
+      "line_number": 648,
+      "detector": "codespell",
+      "raw_match": "te",
+      "redacted_match": "te",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "te",
+        "suggestion": "the, be, we, to"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'te'",
+      "description": "Possible typo found: 'te' should be 'the, be, we, to'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp\\aiohttp\\http_parser.py",
+      "line_number": 648,
+      "detector": "codespell",
+      "raw_match": "te",
+      "redacted_match": "te",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "te",
+        "suggestion": "the, be, we, to"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'te'",
+      "description": "Possible typo found: 'te' should be 'the, be, we, to'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp\\aiohttp\\http_parser.py",
+      "line_number": 650,
+      "detector": "codespell",
+      "raw_match": "te",
+      "redacted_match": "te",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "te",
+        "suggestion": "the, be, we, to"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'te'",
+      "description": "Possible typo found: 'te' should be 'the, be, we, to'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp\\aiohttp\\http_parser.py",
+      "line_number": 650,
+      "detector": "codespell",
+      "raw_match": "te",
+      "redacted_match": "te",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "te",
+        "suggestion": "the, be, we, to"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'te'",
+      "description": "Possible typo found: 'te' should be 'the, be, we, to'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp\\aiohttp\\http_parser.py",
+      "line_number": 740,
+      "detector": "codespell",
+      "raw_match": "te",
+      "redacted_match": "te",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "te",
+        "suggestion": "the, be, we, to"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'te'",
+      "description": "Possible typo found: 'te' should be 'the, be, we, to'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp\\aiohttp\\http_parser.py",
+      "line_number": 742,
+      "detector": "codespell",
+      "raw_match": "te",
+      "redacted_match": "te",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "te",
+        "suggestion": "the, be, we, to"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'te'",
+      "description": "Possible typo found: 'te' should be 'the, be, we, to'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp\\aiohttp\\multipart.py",
+      "line_number": 926,
+      "detector": "codespell",
+      "raw_match": "te",
+      "redacted_match": "te",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "te",
+        "suggestion": "the, be, we, to"
+      }
+    },
+    {
+      "finding_type": "typo",
+      "severity": "low",
+      "title": "Typo: 'te'",
+      "description": "Possible typo found: 'te' should be 'the, be, we, to'",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp\\tests\\test_http_parser.py",
+      "line_number": 1587,
+      "detector": "codespell",
+      "raw_match": "te",
+      "redacted_match": "te",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "typo": "te",
+        "suggestion": "the, be, we, to"
+      }
+    },
+    {
+      "finding_type": "secret",
+      "severity": "high",
+      "title": "Potential Password/Secret",
+      "description": "Detected potential secret matching Password/Secret pattern",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp\\aiohttp\\helpers.py",
+      "line_number": 161,
+      "detector": "regex-patterns",
+      "raw_match": "[REDACTED]",
+      "redacted_match": "deco******lit(",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "pattern": "(?i)(secret|password|passwd|pwd)\\s*[=:]\\s*[\"\\']?([...",
+        "secret_type": "Password/Secret"
+      }
+    },
+    {
+      "finding_type": "secret",
+      "severity": "high",
+      "title": "Potential Password/Secret",
+      "description": "Detected potential secret matching Password/Secret pattern",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp\\aiohttp\\helpers.py",
+      "line_number": 257,
+      "detector": "regex-patterns",
+      "raw_match": "[REDACTED]",
+      "redacted_match": "auth*******etrc",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "pattern": "(?i)(secret|password|passwd|pwd)\\s*[=:]\\s*[\"\\']?([...",
+        "secret_type": "Password/Secret"
+      }
+    },
+    {
+      "finding_type": "secret",
+      "severity": "high",
+      "title": "Potential Password/Secret",
+      "description": "Detected potential secret matching Password/Secret pattern",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp\\docs\\client_advanced.rst",
+      "line_number": 75,
+      "detector": "regex-patterns",
+      "raw_match": "[REDACTED]",
+      "redacted_match": "********",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "pattern": "(?i)(secret|password|passwd|pwd)\\s*[=:]\\s*[\"\\']?([...",
+        "secret_type": "Password/Secret"
+      }
+    },
+    {
+      "finding_type": "secret",
+      "severity": "high",
+      "title": "Potential Password/Secret",
+      "description": "Detected potential secret matching Password/Secret pattern",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp\\docs\\client_reference.rst",
+      "line_number": 2285,
+      "detector": "regex-patterns",
+      "raw_match": "[REDACTED]",
+      "redacted_match": "********",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "pattern": "(?i)(secret|password|passwd|pwd)\\s*[=:]\\s*[\"\\']?([...",
+        "secret_type": "Password/Secret"
+      }
+    },
+    {
+      "finding_type": "secret",
+      "severity": "high",
+      "title": "Potential Password/Secret",
+      "description": "Detected potential secret matching Password/Secret pattern",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp\\docs\\client_reference.rst",
+      "line_number": 2325,
+      "detector": "regex-patterns",
+      "raw_match": "[REDACTED]",
+      "redacted_match": "********",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "pattern": "(?i)(secret|password|passwd|pwd)\\s*[=:]\\s*[\"\\']?([...",
+        "secret_type": "Password/Secret"
+      }
+    },
+    {
+      "finding_type": "secret",
+      "severity": "high",
+      "title": "Potential Password/Secret",
+      "description": "Detected potential secret matching Password/Secret pattern",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp\\examples\\basic_auth_middleware.py",
+      "line_number": 36,
+      "detector": "regex-patterns",
+      "raw_match": "[REDACTED]",
+      "redacted_match": "********",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "pattern": "(?i)(secret|password|passwd|pwd)\\s*[=:]\\s*[\"\\']?([...",
+        "secret_type": "Password/Secret"
+      }
+    },
+    {
+      "finding_type": "secret",
+      "severity": "high",
+      "title": "Potential Password/Secret",
+      "description": "Detected potential secret matching Password/Secret pattern",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp\\examples\\basic_auth_middleware.py",
+      "line_number": 82,
+      "detector": "regex-patterns",
+      "raw_match": "[REDACTED]",
+      "redacted_match": "deco******lit(",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "pattern": "(?i)(secret|password|passwd|pwd)\\s*[=:]\\s*[\"\\']?([...",
+        "secret_type": "Password/Secret"
+      }
+    },
+    {
+      "finding_type": "secret",
+      "severity": "high",
+      "title": "Potential Password/Secret",
+      "description": "Detected potential secret matching Password/Secret pattern",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp\\examples\\combined_middleware.py",
+      "line_number": 71,
+      "detector": "regex-patterns",
+      "raw_match": "[REDACTED]",
+      "redacted_match": "********",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "pattern": "(?i)(secret|password|passwd|pwd)\\s*[=:]\\s*[\"\\']?([...",
+        "secret_type": "Password/Secret"
+      }
+    },
+    {
+      "finding_type": "secret",
+      "severity": "high",
+      "title": "Potential Password/Secret",
+      "description": "Detected potential secret matching Password/Secret pattern",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp\\examples\\combined_middleware.py",
+      "line_number": 181,
+      "detector": "regex-patterns",
+      "raw_match": "[REDACTED]",
+      "redacted_match": "deco******lit(",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "pattern": "(?i)(secret|password|passwd|pwd)\\s*[=:]\\s*[\"\\']?([...",
+        "secret_type": "Password/Secret"
+      }
+    },
+    {
+      "finding_type": "secret",
+      "severity": "high",
+      "title": "Potential Password/Secret",
+      "description": "Detected potential secret matching Password/Secret pattern",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp\\examples\\digest_auth_qop_auth.py",
+      "line_number": 36,
+      "detector": "regex-patterns",
+      "raw_match": "[REDACTED]",
+      "redacted_match": "PASS*ORD)",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "pattern": "(?i)(secret|password|passwd|pwd)\\s*[=:]\\s*[\"\\']?([...",
+        "secret_type": "Password/Secret"
+      }
+    },
+    {
+      "finding_type": "secret",
+      "severity": "medium",
+      "title": "Potential Certificate",
+      "description": "Detected potential secret matching Certificate pattern",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp\\examples\\server.crt",
+      "line_number": 1,
+      "detector": "regex-patterns",
+      "raw_match": "[REDACTED]",
+      "redacted_match": "----********----",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "pattern": "-----BEGIN CERTIFICATE-----...",
+        "secret_type": "Certificate"
+      }
+    },
+    {
+      "finding_type": "secret",
+      "severity": "critical",
+      "title": "Potential Private Key",
+      "description": "Detected potential secret matching Private Key pattern",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp\\examples\\server.key",
+      "line_number": 1,
+      "detector": "regex-patterns",
+      "raw_match": "[REDACTED]",
+      "redacted_match": "****",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "pattern": "-----BEGIN (RSA |EC |OPENSSH |DSA |PGP )?PRIVATE K...",
+        "secret_type": "Private Key"
+      }
+    },
+    {
+      "finding_type": "secret",
+      "severity": "high",
+      "title": "Potential Password/Secret",
+      "description": "Detected potential secret matching Password/Secret pattern",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp\\tests\\test_client_middleware_digest_auth.py",
+      "line_number": 359,
+      "detector": "regex-patterns",
+      "raw_match": "[REDACTED]",
+      "redacted_match": "pass*ord,",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "pattern": "(?i)(secret|password|passwd|pwd)\\s*[=:]\\s*[\"\\']?([...",
+        "secret_type": "Password/Secret"
+      }
+    },
+    {
+      "finding_type": "secret",
+      "severity": "high",
+      "title": "Potential Password/Secret",
+      "description": "Detected potential secret matching Password/Secret pattern",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp\\tests\\test_client_middleware_digest_auth.py",
+      "line_number": 655,
+      "detector": "regex-patterns",
+      "raw_match": "[REDACTED]",
+      "redacted_match": "pass*ord,",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "pattern": "(?i)(secret|password|passwd|pwd)\\s*[=:]\\s*[\"\\']?([...",
+        "secret_type": "Password/Secret"
+      }
+    },
+    {
+      "finding_type": "secret",
+      "severity": "high",
+      "title": "Potential Password/Secret",
+      "description": "Detected potential secret matching Password/Secret pattern",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp\\tests\\test_helpers.py",
+      "line_number": 209,
+      "detector": "regex-patterns",
+      "raw_match": "[REDACTED]",
+      "redacted_match": "********",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "pattern": "(?i)(secret|password|passwd|pwd)\\s*[=:]\\s*[\"\\']?([...",
+        "secret_type": "Password/Secret"
+      }
+    },
+    {
+      "finding_type": "secret",
+      "severity": "high",
+      "title": "Potential Password/Secret",
+      "description": "Detected potential secret matching Password/Secret pattern",
+      "file_path": "C:\\Users\\gguzm\\AppData\\Local\\Temp\\scan_aio-libs__aiohttp_w0m6g1kn\\aiohttp\\tests\\test_helpers.py",
+      "line_number": 213,
+      "detector": "regex-patterns",
+      "raw_match": "[REDACTED]",
+      "redacted_match": "********",
+      "remediation": "",
+      "prevention": "",
+      "metadata": {
+        "pattern": "(?i)(secret|password|passwd|pwd)\\s*[=:]\\s*[\"\\']?([...",
+        "secret_type": "Password/Secret"
+      }
+    }
+  ]
+}

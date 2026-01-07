@@ -1,0 +1,65 @@
+# Security Scan Workflow
+# MIT Blended AI+X PBL - AI-Enabled Cybersecurity
+#
+# Runs the security scanner on PRs and pushes to main
+# Does not require any secrets - uses built-in regex patterns
+
+name: Security Scan
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  security-scan:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Run security scan
+        working-directory: src
+        run: |
+          python -m pipeline.main .. --output-dir ../reports/ci-scan --no-llm
+      
+      - name: Upload scan results
+        uses: actions/upload-artifact@v4
+        with:
+          name: security-scan-results
+          path: reports/ci-scan/
+          retention-days: 30
+      
+      - name: Display scan summary
+        run: |
+          echo "## Security Scan Results" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ -f reports/ci-scan/report.md ]; then
+            # Extract summary section from report
+            head -50 reports/ci-scan/report.md >> $GITHUB_STEP_SUMMARY
+          else
+            echo "No report generated" >> $GITHUB_STEP_SUMMARY
+          fi
+      
+      - name: Check for critical findings
+        run: |
+          if [ -f reports/ci-scan/findings.json ]; then
+            # Check if there are any critical findings
+            CRITICAL=$(python -c "import json; data=json.load(open('reports/ci-scan/findings.json')); print(data.get('summary',{}).get('by_severity',{}).get('critical',0))")
+            if [ "$CRITICAL" -gt 0 ]; then
+              echo "::warning::Found $CRITICAL critical security issues!"
+            fi
+          fi

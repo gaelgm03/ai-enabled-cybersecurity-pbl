@@ -1,0 +1,42 @@
+# Target Repositories for Week 4 Security Scanning
+# MIT Blended AI+X PBL - AI-Enabled Cybersecurity
+#
+# This file contains non-security-focused public GitHub repositories
+# for validation of the security scanning pipeline.
+#
+# Selection criteria:
+# - Active, meaningful open-source projects
+# - NOT intentionally vulnerable training apps
+# - Python strongly preferred, with some JS/Node projects
+# - Public repositories with accessible code
+#
+# Usage:
+#   python -m pipeline.github_agent --config configs/targets.yaml
+
+targets:
+  # Python Projects
+  - repo: pallets/click
+    description: Python composable command line interface toolkit
+    language: python
+    reason: Well-maintained CLI library, good for testing Python patterns
+
+  - repo: psf/requests
+    description: A simple, yet elegant, HTTP library for Python
+    language: python
+    reason: One of the most popular Python packages, real-world codebase
+
+  - repo: tiangolo/fastapi
+    description: FastAPI framework, high performance web APIs
+    language: python
+    reason: Modern Python web framework with database patterns
+
+  - repo: pallets/flask
+    description: The Python micro framework for building web applications
+    language: python
+    reason: Classic web framework, may have SQL patterns in examples
+
+  # JavaScript/Node Projects
+  - repo: expressjs/express
+    description: Fast, unopinionated, minimalist web framework for Node.js
+    language: javascript
+    reason: Most popular Node.js framework, good for JS pattern testing
