@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """CLI runner for SQL Injection Detector.
 
-Provides command-line interface for scanning Python files for SQL injection
-vulnerabilities. Supports multiple detector types and output formats.
+Provides command-line interface for scanning source files for SQL injection
+vulnerabilities. Supports Python and PHP, with multiple detector types and
+output formats.
 """
 
 import argparse
@@ -90,22 +91,29 @@ def create_default_registry() -> DetectorRegistry:
     return registry
 
 
-def find_python_files(path: Path) -> List[Path]:
-    """Find all Python files in path.
+# Supported source file extensions
+SUPPORTED_EXTENSIONS = {".py", ".php"}
+
+
+def find_source_files(path: Path) -> List[Path]:
+    """Find all supported source files in path.
 
     Args:
         path: File or directory path.
 
     Returns:
-        List of Python file paths.
+        List of source file paths (Python and PHP).
     """
     if path.is_file():
-        if path.suffix == ".py":
+        if path.suffix.lower() in SUPPORTED_EXTENSIONS:
             return [path]
         return []
 
     if path.is_dir():
-        return list(path.rglob("*.py"))
+        files = []
+        for ext in SUPPORTED_EXTENSIONS:
+            files.extend(path.rglob(f"*{ext}"))
+        return files
 
     return []
 
@@ -132,11 +140,11 @@ def run_scan(
         print(f"Error: Path does not exist: {path}", file=sys.stderr)
         sys.exit(1)
 
-    # Find Python files
-    python_files = find_python_files(target_path)
+    # Find source files
+    source_files = find_source_files(target_path)
 
-    if not python_files:
-        print(f"Warning: No Python files found in: {path}", file=sys.stderr)
+    if not source_files:
+        print(f"Warning: No supported source files found in: {path}", file=sys.stderr)
 
     # Initialize detectors
     detectors = []
@@ -151,7 +159,7 @@ def run_scan(
             sys.exit(1)
 
     # Scan each file with all detectors
-    for file_path in python_files:
+    for file_path in source_files:
         all_findings = []
         for detector in detectors:
             findings = detector.detect(str(file_path))
@@ -168,13 +176,16 @@ def parse_args() -> argparse.Namespace:
         Parsed arguments namespace.
     """
     parser = argparse.ArgumentParser(
-        description="SQL Injection Detector - Scan Python code for SQL injection vulnerabilities",
+        description="SQL Injection Detector - Scan Python and PHP code for SQL injection vulnerabilities",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
   %(prog)s --path ./src
   %(prog)s --path app.py --format json --output report.json
   %(prog)s --path ./project --type classic --format text
+  %(prog)s --path index.php --format text
+
+Supported file types: .py, .php
         """,
     )
 

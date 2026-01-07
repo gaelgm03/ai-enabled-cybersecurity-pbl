@@ -1,8 +1,12 @@
 """Base classes for SQL injection detectors."""
 
+import re
 from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
-from typing import List
+from pathlib import Path
+from typing import Any, Dict, List
+
+import yaml
 
 
 @dataclass
@@ -55,12 +59,15 @@ class BaseDetector(ABC):
         pass
 
     @abstractmethod
-    def detect_content(self, content: str, file_path: str) -> List[Finding]:
+    def detect_content(
+        self, content: str, file_path: str, language: str = None
+    ) -> List[Finding]:
         """Scan content string for SQL injection vulnerabilities.
 
         Args:
             content: The source code content to scan.
             file_path: The file path (for reporting purposes).
+            language: Target language ('python', 'php', etc.) for pattern selection.
 
         Returns:
             List of Finding objects (empty if no vulnerabilities found).
@@ -113,3 +120,68 @@ class BaseDetector(ABC):
                 seen.add(key)
                 unique.append(finding)
         return unique
+
+    def _load_yaml_patterns(self, file_path: Path) -> List[Dict[str, Any]]:
+        """Load and compile patterns from a YAML file.
+
+        Args:
+            file_path: Path to the YAML pattern file.
+
+        Returns:
+            List of compiled pattern dictionaries.
+        """
+        with open(file_path, "r", encoding="utf-8") as f:
+            data = yaml.safe_load(f)
+
+        patterns = []
+        for pattern in data.get("patterns", []):
+            compiled = {
+                "name": pattern["name"],
+                "subtype": pattern["subtype"],
+                "regex": re.compile(pattern["regex"], re.IGNORECASE),
+                "severity": pattern["severity"],
+                "description": pattern["description"],
+            }
+            patterns.append(compiled)
+        return patterns
+
+    def _load_language_patterns(
+        self, language: str, subtypes: List[str] = None
+    ) -> List[Dict[str, Any]]:
+        """Load unsafe_query patterns for a specific language.
+
+        Args:
+            language: Target language ('python', 'php', etc.)
+            subtypes: Optional list of subtypes to filter patterns.
+
+        Returns:
+            List of compiled patterns for the language.
+        """
+        patterns_dir = Path(__file__).parent.parent / "patterns" / language
+        unsafe_file = patterns_dir / "unsafe_query.yaml"
+
+        if not unsafe_file.exists():
+            return []
+
+        patterns = self._load_yaml_patterns(unsafe_file)
+
+        if subtypes:
+            patterns = [p for p in patterns if p["subtype"] in subtypes]
+
+        return patterns
+
+    def _get_language_from_extension(self, file_path: str) -> str:
+        """Determine language from file extension.
+
+        Args:
+            file_path: Path to the source file.
+
+        Returns:
+            Language identifier ('python', 'php') or None.
+        """
+        ext = Path(file_path).suffix.lower()
+        if ext == ".py":
+            return "python"
+        elif ext == ".php":
+            return "php"
+        return None
