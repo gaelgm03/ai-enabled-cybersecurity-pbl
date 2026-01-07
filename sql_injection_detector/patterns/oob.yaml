@@ -1,0 +1,127 @@
+# Out-of-Band SQL Injection Detection Patterns
+# Phase 2: DNS exfiltration, HTTP exfiltration, and XXE patterns
+
+patterns:
+  # DNS exfiltration patterns
+  - name: mysql_load_file_unc
+    subtype: dns_exfiltration
+    regex: "\\bLOAD_FILE\\s*\\(\\s*['\"]\\\\\\\\\\\\\\\\|//"
+    severity: HIGH
+    description: "LOAD_FILE() with UNC path (MySQL) - DNS exfiltration"
+
+  - name: mysql_load_file
+    subtype: dns_exfiltration
+    regex: "\\bLOAD_FILE\\s*\\("
+    severity: MEDIUM
+    description: "LOAD_FILE() function (MySQL) - potential file/DNS exfiltration"
+
+  - name: oracle_utl_inaddr
+    subtype: dns_exfiltration
+    regex: "\\bUTL_INADDR\\.GET_HOST_ADDRESS\\s*\\("
+    severity: HIGH
+    description: "UTL_INADDR.GET_HOST_ADDRESS (Oracle) - DNS lookup for exfiltration"
+
+  - name: oracle_utl_inaddr_name
+    subtype: dns_exfiltration
+    regex: "\\bUTL_INADDR\\.GET_HOST_NAME\\s*\\("
+    severity: HIGH
+    description: "UTL_INADDR.GET_HOST_NAME (Oracle) - reverse DNS for exfiltration"
+
+  - name: mssql_xp_dirtree
+    subtype: dns_exfiltration
+    regex: "\\bxp_dirtree\\s*['\"]\\\\\\\\|//"
+    severity: HIGH
+    description: "xp_dirtree with UNC path (MSSQL) - DNS exfiltration"
+
+  - name: mssql_xp_fileexist
+    subtype: dns_exfiltration
+    regex: "\\bxp_fileexist\\s*['\"]\\\\\\\\|//"
+    severity: HIGH
+    description: "xp_fileexist with UNC path (MSSQL) - DNS exfiltration"
+
+  - name: mssql_xp_subdirs
+    subtype: dns_exfiltration
+    regex: "\\bxp_subdirs\\s*['\"]\\\\\\\\|//"
+    severity: HIGH
+    description: "xp_subdirs with UNC path (MSSQL) - DNS exfiltration"
+
+  # HTTP exfiltration patterns
+  - name: oracle_utl_http
+    subtype: http_exfiltration
+    regex: "\\bUTL_HTTP\\.REQUEST\\s*\\("
+    severity: HIGH
+    description: "UTL_HTTP.REQUEST (Oracle) - HTTP-based data exfiltration"
+
+  - name: oracle_httpuritype
+    subtype: http_exfiltration
+    regex: "\\bHTTPURITYPE\\s*\\("
+    severity: HIGH
+    description: "HTTPURITYPE (Oracle) - HTTP URI type for exfiltration"
+
+  - name: mssql_xp_cmdshell_curl
+    subtype: http_exfiltration
+    regex: "\\bxp_cmdshell\\s*['\"][^'\"]*\\b(?:curl|wget|Invoke-WebRequest)\\b"
+    severity: HIGH
+    description: "xp_cmdshell with curl/wget (MSSQL) - HTTP exfiltration via shell"
+
+  - name: mssql_xp_cmdshell
+    subtype: http_exfiltration
+    regex: "\\bxp_cmdshell\\s*\\("
+    severity: HIGH
+    description: "xp_cmdshell (MSSQL) - command execution, potential exfiltration"
+
+  - name: postgres_copy_program
+    subtype: http_exfiltration
+    regex: "\\bCOPY\\s+.+\\s+TO\\s+PROGRAM\\s+"
+    severity: HIGH
+    description: "COPY TO PROGRAM (PostgreSQL) - command execution for exfiltration"
+
+  # XML external entity patterns
+  - name: oracle_xmltype_external
+    subtype: xxe
+    regex: "\\bXMLTYPE\\s*\\([^)]*<!ENTITY"
+    severity: HIGH
+    description: "XMLTYPE with external entity (Oracle) - XXE-based exfiltration"
+
+  - name: xmltype_constructor
+    subtype: xxe
+    regex: "\\bXMLTYPE\\s*\\(\\s*['\"]"
+    severity: MEDIUM
+    description: "XMLTYPE constructor - potential XXE injection point"
+
+  - name: xml_external_dtd
+    subtype: xxe
+    regex: "<!DOCTYPE[^>]*SYSTEM\\s+['\"]http"
+    severity: HIGH
+    description: "XML external DTD with HTTP - XXE exfiltration"
+
+  - name: xml_parameter_entity
+    subtype: xxe
+    regex: "<!ENTITY\\s+%\\s+\\w+\\s+SYSTEM"
+    severity: HIGH
+    description: "XML parameter entity with SYSTEM - XXE attack pattern"
+
+  - name: xml_reader_external
+    subtype: xxe
+    regex: "XMLReader[^)]*external"
+    severity: HIGH
+    description: "XMLReader with external entity - XXE attack pattern"
+
+  - name: xml_parser_external_entity
+    subtype: xxe
+    regex: "(?:XMLParser|xml\\.sax)[^)]*external|setFeature[^)]*external-general-entities"
+    severity: HIGH
+    description: "XML parser with external entity enabled - XXE vulnerability"
+
+  # Python-specific OOB patterns
+  - name: execute_utl_http
+    subtype: http_exfiltration
+    regex: "\\.execute\\s*\\([^)]*UTL_HTTP"
+    severity: HIGH
+    description: "Execute with UTL_HTTP - OOB exfiltration via database"
+
+  - name: execute_xp_cmdshell
+    subtype: http_exfiltration
+    regex: "\\.execute\\s*\\([^)]*xp_cmdshell"
+    severity: HIGH
+    description: "Execute with xp_cmdshell - command injection via database"

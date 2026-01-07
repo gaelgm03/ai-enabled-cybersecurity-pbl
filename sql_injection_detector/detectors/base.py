@@ -66,3 +66,50 @@ class BaseDetector(ABC):
             List of Finding objects (empty if no vulnerabilities found).
         """
         pass
+
+    def _get_position(self, content: str, match_start: int) -> tuple:
+        """Get line number and column from character offset.
+
+        Args:
+            content: The full content string.
+            match_start: Character offset of the match.
+
+        Returns:
+            Tuple of (line_number, column) - both 1-indexed.
+        """
+        lines_before = content[:match_start].split("\n")
+        line_num = len(lines_before)
+        column = len(lines_before[-1]) + 1 if lines_before else 1
+        return line_num, column
+
+    def _get_snippet(self, lines: List[str], line_num: int) -> str:
+        """Extract code snippet for the given line.
+
+        Args:
+            lines: List of all lines in the file.
+            line_num: 1-indexed line number.
+
+        Returns:
+            The code snippet (single line, trimmed).
+        """
+        if 1 <= line_num <= len(lines):
+            return lines[line_num - 1].strip()
+        return ""
+
+    def _deduplicate_findings(self, findings: List[Finding]) -> List[Finding]:
+        """Remove duplicate findings on the same line with same pattern.
+
+        Args:
+            findings: List of findings to deduplicate.
+
+        Returns:
+            Deduplicated list of findings.
+        """
+        seen = set()
+        unique = []
+        for finding in findings:
+            key = (finding.line, finding.matched_pattern)
+            if key not in seen:
+                seen.add(key)
+                unique.append(finding)
+        return unique

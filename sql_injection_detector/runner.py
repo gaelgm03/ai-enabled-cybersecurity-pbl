@@ -11,7 +11,10 @@ from pathlib import Path
 from typing import Dict, List, Type
 
 from .detectors.base import BaseDetector
+from .detectors.blind import BlindDetector
 from .detectors.classic import ClassicDetector
+from .detectors.oob import OutOfBandDetector
+from .detectors.stacked import StackedQueriesDetector
 from .reporter import Reporter
 
 
@@ -79,10 +82,10 @@ def create_default_registry() -> DetectorRegistry:
     # Phase 1 detectors
     registry.register("classic", ClassicDetector)
 
-    # Phase 2 detectors will be added here:
-    # registry.register("blind", BlindDetector)
-    # registry.register("outofband", OutOfBandDetector)
-    # registry.register("stacked", StackedQueriesDetector)
+    # Phase 2 detectors
+    registry.register("blind", BlindDetector)
+    registry.register("oob", OutOfBandDetector)
+    registry.register("stacked", StackedQueriesDetector)
 
     return registry
 
@@ -185,7 +188,7 @@ Examples:
         "--type",
         nargs="+",
         default=["all"],
-        help="Detector types to run (default: all). Available: classic",
+        help="Detector types to run (default: all). Available: classic, blind, oob, stacked",
     )
 
     parser.add_argument(

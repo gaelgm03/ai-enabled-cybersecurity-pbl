@@ -1,4 +1,4 @@
-"""Classic SQL Injection Detector - Error-based and Union-based detection."""
+"""Out-of-Band SQL Injection Detector - DNS/HTTP exfiltration and XXE detection."""
 
 import re
 import sys
@@ -10,11 +10,11 @@ import yaml
 from .base import BaseDetector, Finding
 
 
-class ClassicDetector(BaseDetector):
-    """Detector for classic SQL injection patterns.
+class OutOfBandDetector(BaseDetector):
+    """Detector for out-of-band SQL injection patterns.
 
-    Detects error-based, union-based, string concatenation, and unsafe
-    format patterns in Python source code.
+    Detects DNS exfiltration, HTTP exfiltration, and XML external entity
+    patterns in Python source code.
     """
 
     def __init__(self, patterns_path: str = None):
@@ -22,18 +22,18 @@ class ClassicDetector(BaseDetector):
 
         Args:
             patterns_path: Optional path to patterns YAML file.
-                          Defaults to patterns/classic.yaml relative to this module.
+                          Defaults to patterns/oob.yaml relative to this module.
         """
         if patterns_path is None:
             module_dir = Path(__file__).parent.parent
-            patterns_path = module_dir / "patterns" / "classic.yaml"
+            patterns_path = module_dir / "patterns" / "oob.yaml"
 
         self._patterns = self._load_patterns(patterns_path)
 
     @property
     def name(self) -> str:
         """Return the detector name."""
-        return "classic"
+        return "oob"
 
     def _load_patterns(self, patterns_path: str) -> List[Dict[str, Any]]:
         """Load patterns from YAML file.
@@ -66,7 +66,7 @@ class ClassicDetector(BaseDetector):
         return patterns
 
     def detect(self, file_path: str) -> List[Finding]:
-        """Scan a file for SQL injection vulnerabilities.
+        """Scan a file for out-of-band SQL injection vulnerabilities.
 
         Args:
             file_path: Path to the Python file to scan.
@@ -84,7 +84,7 @@ class ClassicDetector(BaseDetector):
         return self.detect_content(content, file_path)
 
     def detect_content(self, content: str, file_path: str) -> List[Finding]:
-        """Scan content for SQL injection vulnerabilities.
+        """Scan content for out-of-band SQL injection vulnerabilities.
 
         Args:
             content: The source code content to scan.
