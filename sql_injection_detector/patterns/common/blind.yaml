@@ -48,9 +48,9 @@ patterns:
 
   - name: if_condition
     subtype: boolean_based
-    regex: "\\bIF\\s*\\([^)]*=[^)]*\\)"
+    regex: "\\bIF\\s*\\([^,)]+,[^,)]+,[^)]+\\)"
     severity: MEDIUM
-    description: "IF condition pattern - conditional SQL injection"
+    description: "SQL IF() function - conditional SQL injection"
 
   - name: case_when_condition
     subtype: boolean_based

@@ -30,7 +30,7 @@ patterns:
 
   - name: double_quote_sql_variable
     subtype: string_concat
-    regex: "\"[^\"]*(?:SELECT|INSERT|UPDATE|DELETE)[^\"]*\\$[a-zA-Z_][^\"]*\""
+    regex: "\"\\s*(?:SELECT|INSERT|UPDATE|DELETE|REPLACE|MERGE|WITH)\\b[^\"]*\\$[a-zA-Z_][^\"]*\""
     severity: HIGH
     description: "SQL query in double quotes with variable interpolation"
 
