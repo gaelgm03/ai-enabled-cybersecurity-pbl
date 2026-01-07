@@ -8,6 +8,7 @@ output formats.
 
 import argparse
 import sys
+from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Type
 
@@ -184,6 +185,7 @@ Examples:
   %(prog)s --path app.py --format json --output report.json
   %(prog)s --path ./project --type classic --format text
   %(prog)s --path index.php --format text
+  %(prog)s --path ./src --output-dir ./reports
 
 Supported file types: .py, .php
         """,
@@ -214,6 +216,11 @@ Supported file types: .py, .php
         help="Output file path (default: stdout)",
     )
 
+    parser.add_argument(
+        "--output-dir",
+        help="Directory to auto-save report with timestamped filename",
+    )
+
     return parser.parse_args()
 
 
@@ -236,11 +243,23 @@ def main() -> None:
     # Generate output
     if args.format == "json":
         output = reporter.to_json()
+        ext = "json"
     else:
         output = reporter.to_text()
+        ext = "txt"
 
     # Write output
-    if args.output:
+    if args.output_dir:
+        # Auto-generate filename with timestamp
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        filename = f"sqli_report_{timestamp}.{ext}"
+        output_path = Path(args.output_dir) / filename
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(output_path, "w", encoding="utf-8") as f:
+            f.write(output)
+        print(f"Report saved to: {output_path}")
+        print(output)  # Also print to stdout
+    elif args.output:
         output_path = Path(args.output)
         output_path.parent.mkdir(parents=True, exist_ok=True)
         with open(output_path, "w", encoding="utf-8") as f:

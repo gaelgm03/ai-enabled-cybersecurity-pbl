@@ -6,7 +6,7 @@ patterns:
   # DNS exfiltration patterns
   - name: mysql_load_file_unc
     subtype: dns_exfiltration
-    regex: "\\bLOAD_FILE\\s*\\(\\s*['\"]\\\\\\\\\\\\\\\\|//"
+    regex: "\\bLOAD_FILE\\s*\\(\\s*['\"](?:\\\\\\\\|//)"
     severity: HIGH
     description: "LOAD_FILE() with UNC path (MySQL) - DNS exfiltration"
 
@@ -30,19 +30,19 @@ patterns:
 
   - name: mssql_xp_dirtree
     subtype: dns_exfiltration
-    regex: "\\bxp_dirtree\\s*['\"]\\\\\\\\|//"
+    regex: "\\bxp_dirtree\\s*['\"](?:\\\\\\\\|//)"
     severity: HIGH
     description: "xp_dirtree with UNC path (MSSQL) - DNS exfiltration"
 
   - name: mssql_xp_fileexist
     subtype: dns_exfiltration
-    regex: "\\bxp_fileexist\\s*['\"]\\\\\\\\|//"
+    regex: "\\bxp_fileexist\\s*['\"](?:\\\\\\\\|//)"
     severity: HIGH
     description: "xp_fileexist with UNC path (MSSQL) - DNS exfiltration"
 
   - name: mssql_xp_subdirs
     subtype: dns_exfiltration
-    regex: "\\bxp_subdirs\\s*['\"]\\\\\\\\|//"
+    regex: "\\bxp_subdirs\\s*['\"](?:\\\\\\\\|//)"
     severity: HIGH
     description: "xp_subdirs with UNC path (MSSQL) - DNS exfiltration"
 
