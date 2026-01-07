@@ -1,0 +1,22 @@
+# Union-based SQL Injection Detection Patterns
+# Language: common
+# Category: union_based
+
+patterns:
+  - name: union_select
+    subtype: union_based
+    regex: "UNION\\s+(ALL\\s+)?SELECT"
+    severity: HIGH
+    description: "UNION SELECT pattern detected - classic union-based SQL injection technique"
+
+  - name: union_null_columns
+    subtype: union_based
+    regex: "UNION\\s+(ALL\\s+)?SELECT\\s+(NULL\\s*,?\\s*)+"
+    severity: HIGH
+    description: "UNION SELECT with NULL columns - common technique to determine column count"
+
+  - name: order_by_probe
+    subtype: union_based
+    regex: "ORDER\\s+BY\\s+\\d+\\s*(--|#|/\\*)"
+    severity: MEDIUM
+    description: "ORDER BY with numeric column index followed by comment - column count enumeration"

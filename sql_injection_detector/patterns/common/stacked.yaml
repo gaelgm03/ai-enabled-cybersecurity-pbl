@@ -1,5 +1,6 @@
 # Stacked Queries SQL Injection Detection Patterns
-# Phase 2: Multiple statement execution and batch patterns
+# Language: common
+# Category: stacked
 
 patterns:
   # Multiple statement execution - Data manipulation
@@ -101,28 +102,3 @@ patterns:
     regex: ";\\s*REVOKE\\b"
     severity: MEDIUM
     description: "Stacked REVOKE - privilege manipulation"
-
-  # Python-specific batch execution patterns
-  - name: executescript_usage
-    subtype: batch_execution
-    regex: "\\.executescript\\s*\\("
-    severity: HIGH
-    description: "executescript() usage (sqlite3) - multiple statement execution enabled"
-
-  - name: execute_multi_statement
-    subtype: batch_execution
-    regex: "\\.execute\\s*\\([^)]*;[^)]*(?:SELECT|INSERT|UPDATE|DELETE)\\b"
-    severity: HIGH
-    description: "execute() with multiple statements - stacked query injection"
-
-  - name: fstring_semicolon_sql
-    subtype: batch_execution
-    regex: "f['\"][^'\"]*;\\s*(?:SELECT|INSERT|UPDATE|DELETE|DROP)\\b"
-    severity: HIGH
-    description: "F-string with semicolon and SQL keyword - stacked query risk"
-
-  - name: concat_semicolon_sql
-    subtype: batch_execution
-    regex: "['\"][^'\"]*;\\s*['\"]\\s*\\+|\\+\\s*['\"]\\s*;\\s*(?:SELECT|INSERT|UPDATE|DELETE)"
-    severity: HIGH
-    description: "String concatenation with semicolon - stacked query injection"

@@ -1,59 +1,9 @@
-# Classic SQL Injection Detection Patterns
-# Phase 1: Error-based and Union-based SQL injection patterns
+# Python Unsafe Query Detection Patterns
+# Language: python
+# Category: unsafe_query
 
 patterns:
-  # Error-based SQL injection patterns
-  - name: extractvalue_injection
-    subtype: error_based
-    regex: "EXTRACTVALUE\\s*\\("
-    severity: HIGH
-    description: "EXTRACTVALUE function used for error-based SQL injection - extracts data through XML parsing errors"
-
-  - name: updatexml_injection
-    subtype: error_based
-    regex: "UPDATEXML\\s*\\("
-    severity: HIGH
-    description: "UPDATEXML function used for error-based SQL injection - extracts data through XML update errors"
-
-  - name: convert_error_injection
-    subtype: error_based
-    regex: "CONVERT\\s*\\([^,]+,\\s*(SELECT|CONCAT)"
-    severity: HIGH
-    description: "CONVERT function with subquery may trigger type conversion errors to leak data"
-
-  - name: cast_error_injection
-    subtype: error_based
-    regex: "CAST\\s*\\(\\s*(SELECT|CONCAT)[^)]*\\s+AS\\s+"
-    severity: HIGH
-    description: "CAST function with subquery may trigger type conversion errors to leak data"
-
-  - name: exp_overflow_injection
-    subtype: error_based
-    regex: "EXP\\s*\\(~\\s*\\(SELECT"
-    severity: HIGH
-    description: "EXP function overflow technique for error-based SQL injection"
-
-  # Union-based SQL injection patterns
-  - name: union_select
-    subtype: union_based
-    regex: "UNION\\s+(ALL\\s+)?SELECT"
-    severity: HIGH
-    description: "UNION SELECT pattern detected - classic union-based SQL injection technique"
-
-  - name: union_null_columns
-    subtype: union_based
-    regex: "UNION\\s+(ALL\\s+)?SELECT\\s+(NULL\\s*,?\\s*)+"
-    severity: HIGH
-    description: "UNION SELECT with NULL columns - common technique to determine column count"
-
-  - name: order_by_probe
-    subtype: union_based
-    regex: "ORDER\\s+BY\\s+\\d+\\s*(--|#|/\\*)"
-    severity: MEDIUM
-    description: "ORDER BY with numeric column index followed by comment - column count enumeration"
-
-  # String concatenation in queries (Python-specific)
-  # Note: Using \b word boundaries to avoid false positives (e.g., "ERROR" matching "OR")
+  # String concatenation in queries (from classic.yaml)
   - name: fstring_sql_concat
     subtype: string_concat
     regex: "f['\"][^'\"]*\\b(?:SELECT|INSERT|UPDATE|DELETE)\\b[^'\"]*\\{[^}]+\\}"
@@ -84,39 +34,90 @@ patterns:
     severity: HIGH
     description: "Percent formatting (%s) used in SQL query without parameterization"
 
-  # Unsafe format patterns
+  # Unsafe execute patterns (from classic.yaml)
   - name: execute_with_fstring
-    subtype: unsafe_format
+    subtype: unsafe_execute
     regex: "\\.execute\\s*\\(\\s*f['\"]"
     severity: HIGH
     description: "Database execute() called with f-string - direct SQL injection vulnerability"
 
   - name: execute_with_format
-    subtype: unsafe_format
+    subtype: unsafe_execute
     regex: "\\.execute\\s*\\([^)]*\\.format\\s*\\("
     severity: HIGH
     description: "Database execute() called with .format() - direct SQL injection vulnerability"
 
   - name: execute_with_percent
-    subtype: unsafe_format
+    subtype: unsafe_execute
     regex: "\\.execute\\s*\\([^)]*%\\s*(?:\\(|\\w)"
     severity: HIGH
     description: "Database execute() called with % formatting - direct SQL injection vulnerability"
 
   - name: execute_with_concat
-    subtype: unsafe_format
+    subtype: unsafe_execute
     regex: "\\.execute\\s*\\([^)]*\\+[^)]*\\)"
     severity: HIGH
     description: "Database execute() called with string concatenation - SQL injection vulnerability"
 
   - name: raw_sql_input
-    subtype: unsafe_format
+    subtype: unsafe_execute
     regex: "(?:input|request\\.(?:args|form|json)|sys\\.argv)[^)]*\\)[^;]*(?:SELECT|INSERT|UPDATE|DELETE)"
     severity: HIGH
     description: "User input directly used in SQL query construction"
 
   - name: executemany_unsafe
-    subtype: unsafe_format
+    subtype: unsafe_execute
     regex: "\\.executemany\\s*\\(\\s*f['\"]"
     severity: HIGH
     description: "Database executemany() called with f-string - SQL injection vulnerability"
+
+  # Boolean-based blind injection patterns (from blind.yaml)
+  - name: fstring_or_condition
+    subtype: boolean_based
+    regex: "f['\"][^'\"]*\\bOR\\b[^'\"]*\\{[^}]+\\}"
+    severity: HIGH
+    description: "F-string with OR condition and variable - blind injection risk"
+
+  - name: fstring_and_condition
+    subtype: boolean_based
+    regex: "f['\"][^'\"]*\\bAND\\b[^'\"]*\\{[^}]+\\}"
+    severity: HIGH
+    description: "F-string with AND condition and variable - blind injection risk"
+
+  # Batch execution patterns (from stacked.yaml)
+  - name: executescript_usage
+    subtype: batch_execution
+    regex: "\\.executescript\\s*\\("
+    severity: HIGH
+    description: "executescript() usage (sqlite3) - multiple statement execution enabled"
+
+  - name: execute_multi_statement
+    subtype: batch_execution
+    regex: "\\.execute\\s*\\([^)]*;[^)]*(?:SELECT|INSERT|UPDATE|DELETE)\\b"
+    severity: HIGH
+    description: "execute() with multiple statements - stacked query injection"
+
+  - name: fstring_semicolon_sql
+    subtype: batch_execution
+    regex: "f['\"][^'\"]*;\\s*(?:SELECT|INSERT|UPDATE|DELETE|DROP)\\b"
+    severity: HIGH
+    description: "F-string with semicolon and SQL keyword - stacked query risk"
+
+  - name: concat_semicolon_sql
+    subtype: batch_execution
+    regex: "['\"][^'\"]*;\\s*['\"]\\s*\\+|\\+\\s*['\"]\\s*;\\s*(?:SELECT|INSERT|UPDATE|DELETE)"
+    severity: HIGH
+    description: "String concatenation with semicolon - stacked query injection"
+
+  # OOB via execute (from oob.yaml)
+  - name: execute_utl_http
+    subtype: http_exfiltration
+    regex: "\\.execute\\s*\\([^)]*UTL_HTTP"
+    severity: HIGH
+    description: "Execute with UTL_HTTP - OOB exfiltration via database"
+
+  - name: execute_xp_cmdshell
+    subtype: http_exfiltration
+    regex: "\\.execute\\s*\\([^)]*xp_cmdshell"
+    severity: HIGH
+    description: "Execute with xp_cmdshell - command injection via database"

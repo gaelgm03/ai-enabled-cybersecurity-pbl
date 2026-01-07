@@ -1,5 +1,6 @@
 # Out-of-Band SQL Injection Detection Patterns
-# Phase 2: DNS exfiltration, HTTP exfiltration, and XXE patterns
+# Language: common
+# Category: oob
 
 patterns:
   # DNS exfiltration patterns
@@ -112,16 +113,3 @@ patterns:
     regex: "(?:XMLParser|xml\\.sax)[^)]*external|setFeature[^)]*external-general-entities"
     severity: HIGH
     description: "XML parser with external entity enabled - XXE vulnerability"
-
-  # Python-specific OOB patterns
-  - name: execute_utl_http
-    subtype: http_exfiltration
-    regex: "\\.execute\\s*\\([^)]*UTL_HTTP"
-    severity: HIGH
-    description: "Execute with UTL_HTTP - OOB exfiltration via database"
-
-  - name: execute_xp_cmdshell
-    subtype: http_exfiltration
-    regex: "\\.execute\\s*\\([^)]*xp_cmdshell"
-    severity: HIGH
-    description: "Execute with xp_cmdshell - command injection via database"

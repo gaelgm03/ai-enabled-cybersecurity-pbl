@@ -1,0 +1,34 @@
+# Error-based SQL Injection Detection Patterns
+# Language: common
+# Category: error_based
+
+patterns:
+  - name: extractvalue_injection
+    subtype: error_based
+    regex: "EXTRACTVALUE\\s*\\("
+    severity: HIGH
+    description: "EXTRACTVALUE function used for error-based SQL injection - extracts data through XML parsing errors"
+
+  - name: updatexml_injection
+    subtype: error_based
+    regex: "UPDATEXML\\s*\\("
+    severity: HIGH
+    description: "UPDATEXML function used for error-based SQL injection - extracts data through XML update errors"
+
+  - name: convert_error_injection
+    subtype: error_based
+    regex: "CONVERT\\s*\\([^,]+,\\s*(SELECT|CONCAT)"
+    severity: HIGH
+    description: "CONVERT function with subquery may trigger type conversion errors to leak data"
+
+  - name: cast_error_injection
+    subtype: error_based
+    regex: "CAST\\s*\\(\\s*(SELECT|CONCAT)[^)]*\\s+AS\\s+"
+    severity: HIGH
+    description: "CAST function with subquery may trigger type conversion errors to leak data"
+
+  - name: exp_overflow_injection
+    subtype: error_based
+    regex: "EXP\\s*\\(~\\s*\\(SELECT"
+    severity: HIGH
+    description: "EXP function overflow technique for error-based SQL injection"

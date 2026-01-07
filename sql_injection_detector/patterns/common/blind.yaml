@@ -1,5 +1,6 @@
 # Blind SQL Injection Detection Patterns
-# Phase 2: Boolean-based and Time-based blind SQL injection patterns
+# Language: common
+# Category: blind
 
 patterns:
   # Boolean-based blind SQL injection patterns
@@ -93,16 +94,3 @@ patterns:
     regex: "\\bDBMS_PIPE\\.RECEIVE_MESSAGE\\s*\\("
     severity: HIGH
     description: "DBMS_PIPE.RECEIVE_MESSAGE (Oracle) - time-based delay"
-
-  # Python-specific blind injection patterns
-  - name: fstring_or_condition
-    subtype: boolean_based
-    regex: "f['\"][^'\"]*\\bOR\\b[^'\"]*\\{[^}]+\\}"
-    severity: HIGH
-    description: "F-string with OR condition and variable - blind injection risk"
-
-  - name: fstring_and_condition
-    subtype: boolean_based
-    regex: "f['\"][^'\"]*\\bAND\\b[^'\"]*\\{[^}]+\\}"
-    severity: HIGH
-    description: "F-string with AND condition and variable - blind injection risk"
