@@ -12,18 +12,19 @@
 
 <?php
 //including the Mysql connect parameters.
-include("../sql-connections/sql-connect.php");
+include("../sql-connections/sqli-connect.php");
+error_reporting(0);
 
-function check_quotes($string)
+function check_quotes($con1, $string)
 {
-    $string= mysql_real_escape_string($string);    
+    $string=mysqli_real_escape_string($con1, $string);    
     return $string;
 }
 
 // take the variables 
 if(isset($_GET['id']))
 {
-$id=check_quotes($_GET['id']);
+$id=check_quotes($con1, $_GET['id']);
 //echo "The filtered request is :" .$id . "<br>";
 
 //logging the connection parameters to a file for analysis.
@@ -33,10 +34,10 @@ fclose($fp);
 
 // connectivity 
 
-mysql_query("SET NAMES gbk");
+mysqli_query($con1, "SET NAMES gbk");
 $sql="SELECT * FROM users WHERE id='$id' LIMIT 0,1";
-$result=mysql_query($sql);
-$row = mysql_fetch_array($result);
+$result=mysqli_query($con1, $sql);
+$row = mysqli_fetch_array($result, MYSQLI_BOTH);
 
 	if($row)
 	{
@@ -49,7 +50,7 @@ $row = mysql_fetch_array($result);
 	else 
 	{
 	echo '<font color= "#FFFF00">';
-	print_r(mysql_error());
+	print_r(mysqli_error($con1));
 	echo "</font>";  
 	}
 }

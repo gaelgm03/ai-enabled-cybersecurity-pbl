@@ -33,42 +33,42 @@
 
 <?php
 //including the Mysql connect parameters.
-include("../sql-connections/sql-connect.php");
+include("../sql-connections/sqli-connect.php");
 error_reporting(0);
+$a = 1;
 
-function check_input($value)
-	{
+function check_input($con1, $value)
+{
 	if(!empty($value))
-		{
+	{
 		// truncation (see comments)
 		$value = substr($value,0,15);
-		}
-
-		// Stripslashes if magic quotes enabled
-		if (get_magic_quotes_gpc())
-			{
-			$value = stripslashes($value);
-			}
-
-		// Quote if not a number
-		if (!ctype_digit($value))
-			{
-			$value = "'" . mysql_real_escape_string($value) . "'";
-			}
-		
-	else
-		{
-		$value = intval($value);
-		}
-	return $value;
 	}
+
+	// Stripslashes if magic quotes enabled
+	if (get_magic_quotes_gpc())
+	{
+		$value = stripslashes($value);
+	}
+
+	// Quote if not a number
+	if (!ctype_digit($value))
+	{
+		$value = "'" . mysqli_real_escape_string($con1, $value) . "'";
+	}
+	else
+	{
+		$value = intval($value);
+	}
+	return $value;
+}
 
 // take the variables
 if(isset($_POST['uname']) && isset($_POST['passwd']))
 
 {
 //making sure uname is not injectable
-$uname=check_input($_POST['uname']);  
+$uname=check_input($con1, $_POST['uname']);  
 
 $passwd=$_POST['passwd'];
 
@@ -83,8 +83,8 @@ fclose($fp);
 // connectivity 
 @$sql="SELECT username, password FROM users WHERE username= $uname LIMIT 0,1";
 
-$result=mysql_query($sql);
-$row = mysql_fetch_array($result);
+$result=mysqli_query($con1, $sql);
+$row = mysqli_fetch_array($result, MYSQLI_BOTH);
 //echo $row;
 	if($row)
 	{
@@ -92,15 +92,16 @@ $row = mysql_fetch_array($result);
 		$row1 = $row['username'];  	
 		//echo 'Your Login name:'. $row1;
 		$update="UPDATE users SET password = '$passwd' WHERE username='$row1'";
-		mysql_query($update);
+		mysqli_query($con1, $update);
+		//echo $update;
   		echo "<br>";
 	
 	
 	
-		if (mysql_error())
+		if (mysqli_error($con1))
 		{
 			echo '<font color= "#FFFF00" font size = 3 >';
-			print_r(mysql_error());
+			print_r(mysqli_error($con1));
 			echo "</br></br>";
 			echo "</font>";
 		}

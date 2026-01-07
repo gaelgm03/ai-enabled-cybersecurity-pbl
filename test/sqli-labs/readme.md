@@ -1,6 +1,9 @@
 README
 ================
-SQLI-LABS is a platform to learn SQLI 
+SQLI-LABS is a platform to learn SQLI(https://github.com/Audi-1/sqli-labs.git).
+
+SQLI-LABS-PHP7 is based on SQLI-LABS
+
 Following labs are covered for GET and POST scenarios:
 
 1. Error Based Injections (Union Select)
@@ -26,7 +29,7 @@ Following labs are covered for GET and POST scenarios:
 		Stripping UNION & SELECT
 	2. Impidence mismatch
 9. Bypass addslashes()
-10. Bypassing mysql_real_escape_string. (under special conditions)
+10. Bypassing mysqli_real_escape_string. (under special conditions)
 11. Stacked SQL injections.
 12. Secondary channel extraction
 
@@ -35,9 +38,9 @@ Install Instructions:
 
 1. Unzip the contents inside the apache folder, for example under /var/www
 2. This will create a folder sql-labs under it. else you can use git command from within /var/www folder.
-/var/www folder and then use following command> git clone https://github.com/Audi-1/sqli-labs.git sqli-labs
+/var/www folder and then use following command> git clone https://github.com/skyblueee/sqli-labs-php7.git sqli-labs
 3. Open the file "db-creds.inc" which is under sql-connections folder inside the sql-labs folder.
-4. Update your MYSQL database username and password.(default for Backtrack are used root:toor)
+4. Update your MYSQL database username and password.(default for kali are used root:)
 5. From your browser access the sql-labs folder to load index.html
 6. Click on the link setup/resetDB to create database, create tables and populate Data.
 7. Labs ready to be used, click on lesson number to open the lesson page.
@@ -46,18 +49,4 @@ Install Instructions:
 ==========================================================================================
 
 Corrosponding walkthrough video tutorials and explainations can be found at:
-
-1. http://dummy2dummies.blogspot.com 
-2. http://www.securitytube.net/user/Audi
-3. https://www.facebook.com/sqlilabs
-
-you can also find the read along book at https://leanpub.com/SQLI-LABS, work is under process.
-
-==========================================================================================
-
-Challenge Section added:
-Less-54 to Less - 61 special challenge lessons added to repository for testing skills learnt from the other Lab lessons.
-
-==========================================================================================
-
-
+(https://github.com/Audi-1/sqli-labs.git).

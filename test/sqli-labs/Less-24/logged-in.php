@@ -70,7 +70,7 @@ You can Change your password here.
 
 <tr>
 <td colspan="2" style="text-align:right">
-<input name="submit" id="submit" type="submit" value="Reset" />
+<input name="submit" id="submit" type="submit" value="update password" />
 
 </td>
 </tr>

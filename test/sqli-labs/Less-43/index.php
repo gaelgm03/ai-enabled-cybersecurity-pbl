@@ -6,7 +6,7 @@ if (isset($_SESSION['username']) && isset($_COOKIE['Auth'])) {
 ?>
 <?php
 //including the Mysql connect parameters.
-include("../sql-connections/sql-connect.php");
+include("../sql-connections/sqli-connect.php");
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <html>
