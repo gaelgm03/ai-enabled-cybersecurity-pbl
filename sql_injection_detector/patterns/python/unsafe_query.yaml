@@ -1,0 +1,123 @@
+# Python Unsafe Query Detection Patterns
+# Language: python
+# Category: unsafe_query
+
+patterns:
+  # String concatenation in queries (from classic.yaml)
+  - name: fstring_sql_concat
+    subtype: string_concat
+    regex: "f['\"][^'\"]*\\b(?:SELECT|INSERT|UPDATE|DELETE)\\b[^'\"]*\\{[^}]+\\}"
+    severity: HIGH
+    description: "F-string with SQL keywords and variable interpolation - high risk of SQL injection"
+
+  - name: fstring_where_clause
+    subtype: string_concat
+    regex: "f['\"][^'\"]*\\bWHERE\\b[^'\"]*=[^'\"]*\\{[^}]+\\}"
+    severity: HIGH
+    description: "F-string with WHERE clause and variable interpolation - SQL injection risk"
+
+  - name: plus_concat_sql
+    subtype: string_concat
+    regex: "['\"][^'\"]*\\b(?:SELECT|INSERT|UPDATE|DELETE)\\b[^'\"]*['\"]\\s*\\+\\s*\\w+"
+    severity: HIGH
+    description: "String concatenation with + operator in SQL query - vulnerable to SQL injection"
+
+  - name: format_sql_concat
+    subtype: string_concat
+    regex: "['\"][^'\"]*\\b(?:SELECT|INSERT|UPDATE|DELETE)\\b[^'\"]*(?:\\{\\}|\\{\\d+\\})[^'\"]*['\"]\\s*\\.format\\s*\\("
+    severity: HIGH
+    description: "String .format() method used in SQL query - vulnerable to SQL injection"
+
+  - name: percent_format_sql
+    subtype: string_concat
+    regex: "['\"][^'\"]*\\b(?:SELECT|INSERT|UPDATE|DELETE)\\b[^'\"]*%s[^'\"]*['\"]\\s*%\\s*(?:\\(|\\w)"
+    severity: HIGH
+    description: "Percent formatting (%s) used in SQL query without parameterization"
+
+  # Unsafe execute patterns (from classic.yaml)
+  - name: execute_with_fstring
+    subtype: unsafe_execute
+    regex: "\\.execute\\s*\\(\\s*f['\"]"
+    severity: HIGH
+    description: "Database execute() called with f-string - direct SQL injection vulnerability"
+
+  - name: execute_with_format
+    subtype: unsafe_execute
+    regex: "\\.execute\\s*\\([^)]*\\.format\\s*\\("
+    severity: HIGH
+    description: "Database execute() called with .format() - direct SQL injection vulnerability"
+
+  - name: execute_with_percent
+    subtype: unsafe_execute
+    regex: "\\.execute\\s*\\([^)]*%\\s*(?:\\(|\\w)"
+    severity: HIGH
+    description: "Database execute() called with % formatting - direct SQL injection vulnerability"
+
+  - name: execute_with_concat
+    subtype: unsafe_execute
+    regex: "\\.execute\\s*\\([^)]*\\+[^)]*\\)"
+    severity: HIGH
+    description: "Database execute() called with string concatenation - SQL injection vulnerability"
+
+  - name: raw_sql_input
+    subtype: unsafe_execute
+    regex: "(?:input|request\\.(?:args|form|json)|sys\\.argv)[^)]*\\)[^;]*(?:SELECT|INSERT|UPDATE|DELETE)"
+    severity: HIGH
+    description: "User input directly used in SQL query construction"
+
+  - name: executemany_unsafe
+    subtype: unsafe_execute
+    regex: "\\.executemany\\s*\\(\\s*f['\"]"
+    severity: HIGH
+    description: "Database executemany() called with f-string - SQL injection vulnerability"
+
+  # Boolean-based blind injection patterns (from blind.yaml)
+  - name: fstring_or_condition
+    subtype: boolean_based
+    regex: "f['\"][^'\"]*\\bOR\\b[^'\"]*\\{[^}]+\\}"
+    severity: HIGH
+    description: "F-string with OR condition and variable - blind injection risk"
+
+  - name: fstring_and_condition
+    subtype: boolean_based
+    regex: "f['\"][^'\"]*\\bAND\\b[^'\"]*\\{[^}]+\\}"
+    severity: HIGH
+    description: "F-string with AND condition and variable - blind injection risk"
+
+  # Batch execution patterns (from stacked.yaml)
+  - name: executescript_usage
+    subtype: batch_execution
+    regex: "\\.executescript\\s*\\("
+    severity: HIGH
+    description: "executescript() usage (sqlite3) - multiple statement execution enabled"
+
+  - name: execute_multi_statement
+    subtype: batch_execution
+    regex: "\\.execute\\s*\\([^)]*;[^)]*(?:SELECT|INSERT|UPDATE|DELETE)\\b"
+    severity: HIGH
+    description: "execute() with multiple statements - stacked query injection"
+
+  - name: fstring_semicolon_sql
+    subtype: batch_execution
+    regex: "f['\"][^'\"]*;\\s*(?:SELECT|INSERT|UPDATE|DELETE|DROP)\\b"
+    severity: HIGH
+    description: "F-string with semicolon and SQL keyword - stacked query risk"
+
+  - name: concat_semicolon_sql
+    subtype: batch_execution
+    regex: "['\"][^'\"]*;\\s*['\"]\\s*\\+|\\+\\s*['\"]\\s*;\\s*(?:SELECT|INSERT|UPDATE|DELETE)"
+    severity: HIGH
+    description: "String concatenation with semicolon - stacked query injection"
+
+  # OOB via execute (from oob.yaml)
+  - name: execute_utl_http
+    subtype: http_exfiltration
+    regex: "\\.execute\\s*\\([^)]*UTL_HTTP"
+    severity: HIGH
+    description: "Execute with UTL_HTTP - OOB exfiltration via database"
+
+  - name: execute_xp_cmdshell
+    subtype: http_exfiltration
+    regex: "\\.execute\\s*\\([^)]*xp_cmdshell"
+    severity: HIGH
+    description: "Execute with xp_cmdshell - command injection via database"

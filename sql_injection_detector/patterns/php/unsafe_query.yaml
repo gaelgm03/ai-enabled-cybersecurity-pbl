@@ -1,0 +1,137 @@
+# PHP Unsafe Query Detection Patterns
+# Language: php
+# Category: unsafe_query
+
+patterns:
+  # String concatenation in queries
+  - name: mysql_query_concat
+    subtype: string_concat
+    regex: "mysql_query\\s*\\([^)]*\\.[^)]*\\$"
+    severity: HIGH
+    description: "mysql_query() with string concatenation - SQL injection vulnerability"
+
+  - name: mysqli_query_concat
+    subtype: string_concat
+    regex: "mysqli_query\\s*\\([^,]+,[^)]*\\.[^)]*\\$"
+    severity: HIGH
+    description: "mysqli_query() with string concatenation - SQL injection vulnerability"
+
+  - name: mysql_query_variable
+    subtype: string_concat
+    regex: "mysql_query\\s*\\(['\"][^'\"]*\\$[a-zA-Z_]"
+    severity: HIGH
+    description: "mysql_query() with embedded variable - SQL injection vulnerability"
+
+  - name: mysqli_query_variable
+    subtype: string_concat
+    regex: "mysqli_query\\s*\\([^,]+,\\s*['\"][^'\"]*\\$[a-zA-Z_]"
+    severity: HIGH
+    description: "mysqli_query() with embedded variable - SQL injection vulnerability"
+
+  - name: double_quote_sql_variable
+    subtype: string_concat
+    regex: "\"\\s*(?:SELECT|INSERT|UPDATE|DELETE|REPLACE|MERGE|WITH)\\b[^\"]*\\$[a-zA-Z_][^\"]*\""
+    severity: HIGH
+    description: "SQL query in double quotes with variable interpolation"
+
+  - name: heredoc_sql_variable
+    subtype: string_concat
+    regex: "<<<\\s*['\"]?(?:SQL|QUERY|EOT|EOF)['\"]?[\\s\\S]*?\\$[a-zA-Z_]"
+    severity: HIGH
+    description: "SQL in heredoc with variable interpolation"
+
+  # Unsafe execute patterns - User input sources
+  - name: get_in_query
+    subtype: unsafe_execute
+    regex: "\\$_GET\\s*\\[[^\\]]+\\][^;]*(?:mysql|mysqli|query|SELECT|INSERT|UPDATE|DELETE)"
+    severity: HIGH
+    description: "$_GET directly used in SQL query - SQL injection vulnerability"
+
+  - name: post_in_query
+    subtype: unsafe_execute
+    regex: "\\$_POST\\s*\\[[^\\]]+\\][^;]*(?:mysql|mysqli|query|SELECT|INSERT|UPDATE|DELETE)"
+    severity: HIGH
+    description: "$_POST directly used in SQL query - SQL injection vulnerability"
+
+  - name: request_in_query
+    subtype: unsafe_execute
+    regex: "\\$_REQUEST\\s*\\[[^\\]]+\\][^;]*(?:mysql|mysqli|query|SELECT|INSERT|UPDATE|DELETE)"
+    severity: HIGH
+    description: "$_REQUEST directly used in SQL query - SQL injection vulnerability"
+
+  - name: cookie_in_query
+    subtype: unsafe_execute
+    regex: "\\$_COOKIE\\s*\\[[^\\]]+\\][^;]*(?:mysql|mysqli|query|SELECT|INSERT|UPDATE|DELETE)"
+    severity: HIGH
+    description: "$_COOKIE directly used in SQL query - SQL injection vulnerability"
+
+  # PDO without prepared statements
+  - name: pdo_query_concat
+    subtype: unsafe_execute
+    regex: "->query\\s*\\([^)]*\\.[^)]*\\$"
+    severity: HIGH
+    description: "PDO query() with concatenation - use prepared statements instead"
+
+  - name: pdo_exec_concat
+    subtype: unsafe_execute
+    regex: "->exec\\s*\\([^)]*\\.[^)]*\\$"
+    severity: HIGH
+    description: "PDO exec() with concatenation - SQL injection vulnerability"
+
+  # Deprecated/dangerous functions
+  - name: mysql_query_usage
+    subtype: unsafe_execute
+    regex: "\\bmysql_query\\s*\\("
+    severity: MEDIUM
+    description: "mysql_query() is deprecated - use mysqli or PDO with prepared statements"
+
+  - name: mysql_db_query_usage
+    subtype: unsafe_execute
+    regex: "\\bmysql_db_query\\s*\\("
+    severity: HIGH
+    description: "mysql_db_query() is deprecated and dangerous - use prepared statements"
+
+  - name: mysqli_query_var_param
+    subtype: unsafe_execute
+    regex: "mysqli_query\\s*\\([^,]+,\\s*\\$[a-zA-Z_][a-zA-Z0-9_]*\\s*\\)"
+    severity: MEDIUM
+    description: "mysqli_query() with variable - verify prepared statements are used"
+
+  # Insufficient escaping
+  - name: addslashes_for_sql
+    subtype: unsafe_execute
+    regex: "addslashes\\s*\\([^)]*\\)[^;]*(?:mysql|mysqli|query)"
+    severity: MEDIUM
+    description: "addslashes() is insufficient for SQL escaping - use prepared statements"
+
+  - name: manual_quote_escape
+    subtype: unsafe_execute
+    regex: "str_replace\\s*\\([^)]*['\"]['\"]['\"]\\s*,[^)]*\\)[^;]*(?:query|SELECT|INSERT)"
+    severity: MEDIUM
+    description: "Manual quote escaping is error-prone - use prepared statements"
+
+  # Batch execution patterns
+  - name: mysqli_multi_query
+    subtype: batch_execution
+    regex: "mysqli_multi_query\\s*\\("
+    severity: HIGH
+    description: "mysqli_multi_query() enables stacked queries - high injection risk"
+
+  - name: pdo_emulate_prepares
+    subtype: batch_execution
+    regex: "PDO::ATTR_EMULATE_PREPARES\\s*=>\\s*true"
+    severity: MEDIUM
+    description: "PDO emulated prepares may allow multi-statement execution"
+
+  # Boolean-based patterns (for blind detector)
+  - name: php_or_condition_variable
+    subtype: boolean_based
+    regex: "['\"][^'\"]*\\bOR\\b[^'\"]*\\$[a-zA-Z_]"
+    severity: HIGH
+    description: "OR condition with PHP variable - blind injection risk"
+
+  - name: php_and_condition_variable
+    subtype: boolean_based
+    regex: "['\"][^'\"]*\\bAND\\b[^'\"]*\\$[a-zA-Z_]"
+    severity: HIGH
+    description: "AND condition with PHP variable - blind injection risk"

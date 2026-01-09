@@ -1,0 +1,104 @@
+# Stacked Queries SQL Injection Detection Patterns
+# Language: common
+# Category: stacked
+
+patterns:
+  # Multiple statement execution - Data manipulation
+  - name: stacked_select
+    subtype: multi_statement
+    regex: ";\\s*SELECT\\b"
+    severity: HIGH
+    description: "Stacked SELECT query - multiple statement execution"
+
+  - name: stacked_insert
+    subtype: multi_statement
+    regex: ";\\s*INSERT\\b"
+    severity: HIGH
+    description: "Stacked INSERT query - unauthorized data insertion"
+
+  - name: stacked_update
+    subtype: multi_statement
+    regex: ";\\s*UPDATE\\b"
+    severity: HIGH
+    description: "Stacked UPDATE query - unauthorized data modification"
+
+  - name: stacked_delete
+    subtype: multi_statement
+    regex: ";\\s*DELETE\\b"
+    severity: HIGH
+    description: "Stacked DELETE query - unauthorized data deletion"
+
+  # Multiple statement execution - Schema manipulation
+  - name: stacked_drop
+    subtype: multi_statement
+    regex: ";\\s*DROP\\b"
+    severity: HIGH
+    description: "Stacked DROP statement - schema destruction attack"
+
+  - name: stacked_create
+    subtype: multi_statement
+    regex: ";\\s*CREATE\\b"
+    severity: HIGH
+    description: "Stacked CREATE statement - unauthorized object creation"
+
+  - name: stacked_alter
+    subtype: multi_statement
+    regex: ";\\s*ALTER\\b"
+    severity: HIGH
+    description: "Stacked ALTER statement - schema modification attack"
+
+  - name: stacked_truncate
+    subtype: multi_statement
+    regex: ";\\s*TRUNCATE\\b"
+    severity: HIGH
+    description: "Stacked TRUNCATE statement - data destruction attack"
+
+  # Stored procedure and variable execution
+  - name: stacked_exec
+    subtype: stored_procedure
+    regex: ";\\s*EXEC(?:UTE)?\\b"
+    severity: HIGH
+    description: "Stacked EXEC/EXECUTE - stored procedure execution"
+
+  - name: stacked_declare
+    subtype: stored_procedure
+    regex: ";\\s*DECLARE\\b"
+    severity: MEDIUM
+    description: "Stacked DECLARE - variable declaration for attack setup"
+
+  - name: stacked_set
+    subtype: stored_procedure
+    regex: ";\\s*SET\\s+@"
+    severity: MEDIUM
+    description: "Stacked SET variable - SQL variable manipulation"
+
+  # Dangerous system commands
+  - name: stacked_shutdown
+    subtype: dangerous_command
+    regex: ";\\s*SHUTDOWN\\b"
+    severity: HIGH
+    description: "Stacked SHUTDOWN - database denial of service"
+
+  - name: stacked_xp_cmdshell
+    subtype: dangerous_command
+    regex: ";\\s*(?:EXEC\\s+)?xp_cmdshell\\b"
+    severity: HIGH
+    description: "Stacked xp_cmdshell - remote command execution"
+
+  - name: stacked_sp_configure
+    subtype: dangerous_command
+    regex: ";\\s*(?:EXEC\\s+)?sp_configure\\b"
+    severity: HIGH
+    description: "Stacked sp_configure - server configuration change"
+
+  - name: stacked_grant
+    subtype: dangerous_command
+    regex: ";\\s*GRANT\\b"
+    severity: HIGH
+    description: "Stacked GRANT - privilege escalation"
+
+  - name: stacked_revoke
+    subtype: dangerous_command
+    regex: ";\\s*REVOKE\\b"
+    severity: MEDIUM
+    description: "Stacked REVOKE - privilege manipulation"

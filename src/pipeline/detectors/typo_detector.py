@@ -16,7 +16,7 @@ class TypoDetector:
     DETECTOR_NAME = "codespell"
     
     # File extensions to scan
-    EXTENSIONS = [".py", ".js", ".ts", ".md", ".txt", ".json", ".yaml", ".yml", ".html", ".css"]
+    EXTENSIONS = [".py", ".js", ".ts", ".md", ".txt", ".json", ".yaml", ".yml", ".html", ".css", ".php", ".inc"]
     
     # Directories to skip
     SKIP_DIRS = ["node_modules", ".git", "__pycache__", "venv", ".venv", "dist", "build", "reports", "pipeline"]

@@ -1,0 +1,96 @@
+# Blind SQL Injection Detection Patterns
+# Language: common
+# Category: blind
+
+patterns:
+  # Boolean-based blind SQL injection patterns
+  - name: or_true_condition
+    subtype: boolean_based
+    regex: "\\bOR\\s+['\"]?1['\"]?\\s*=\\s*['\"]?1['\"]?"
+    severity: HIGH
+    description: "OR 1=1 pattern - classic boolean-based blind SQL injection"
+
+  - name: or_string_true
+    subtype: boolean_based
+    regex: "\\bOR\\s+['\"][a-zA-Z]['\"]\\s*=\\s*['\"][a-zA-Z]['\"]"
+    severity: HIGH
+    description: "OR 'a'='a' pattern - string-based boolean blind injection"
+
+  - name: and_true_condition
+    subtype: boolean_based
+    regex: "\\bAND\\s+['\"]?1['\"]?\\s*=\\s*['\"]?1['\"]?"
+    severity: HIGH
+    description: "AND 1=1 pattern - boolean-based condition testing"
+
+  - name: and_false_condition
+    subtype: boolean_based
+    regex: "\\bAND\\s+['\"]?1['\"]?\\s*=\\s*['\"]?2['\"]?"
+    severity: HIGH
+    description: "AND 1=2 pattern - false condition for differential analysis"
+
+  - name: quote_bypass
+    subtype: boolean_based
+    regex: "['\"]\\s*OR\\s*['\"]['\"]\\s*=\\s*['\"]"
+    severity: HIGH
+    description: "Quote-based bypass pattern (' OR ''=') - authentication bypass"
+
+  - name: having_condition
+    subtype: boolean_based
+    regex: "\\bHAVING\\s+['\"]?1['\"]?\\s*=\\s*['\"]?1['\"]?"
+    severity: MEDIUM
+    description: "HAVING 1=1 pattern - group by condition manipulation"
+
+  - name: group_by_conditional
+    subtype: boolean_based
+    regex: "\\bGROUP\\s+BY\\s+.+\\s+HAVING\\s+"
+    severity: MEDIUM
+    description: "GROUP BY with HAVING clause - potential blind injection point"
+
+  - name: if_condition
+    subtype: boolean_based
+    regex: "\\bIF\\s*\\([^,)]+,[^,)]+,[^)]+\\)"
+    severity: MEDIUM
+    description: "SQL IF() function - conditional SQL injection"
+
+  - name: case_when_condition
+    subtype: boolean_based
+    regex: "\\bCASE\\s+WHEN\\s+.+\\s+THEN\\s+"
+    severity: MEDIUM
+    description: "CASE WHEN pattern - conditional logic injection"
+
+  # Time-based blind SQL injection patterns
+  - name: mysql_sleep
+    subtype: time_based
+    regex: "\\bSLEEP\\s*\\(\\s*\\d+"
+    severity: HIGH
+    description: "SLEEP() function (MySQL) - time-based blind injection"
+
+  - name: mssql_waitfor
+    subtype: time_based
+    regex: "\\bWAITFOR\\s+DELAY\\s+['\"]"
+    severity: HIGH
+    description: "WAITFOR DELAY (MSSQL) - time-based blind injection"
+
+  - name: postgres_sleep
+    subtype: time_based
+    regex: "\\bpg_sleep\\s*\\(\\s*\\d+"
+    severity: HIGH
+    description: "pg_sleep() function (PostgreSQL) - time-based blind injection"
+
+  - name: mysql_benchmark
+    subtype: time_based
+    regex: "\\bBENCHMARK\\s*\\(\\s*\\d+\\s*,"
+    severity: HIGH
+    description: "BENCHMARK() function (MySQL) - time-based via computation"
+
+  - name: oracle_dbms_sleep
+    subtype: time_based
+    regex: "\\bDBMS_LOCK\\.SLEEP\\s*\\("
+    severity: HIGH
+    description: "DBMS_LOCK.SLEEP (Oracle) - time-based blind injection"
+
+  - name: oracle_dbms_pipe
+    subtype: time_based
+    regex: "\\bDBMS_PIPE\\.RECEIVE_MESSAGE\\s*\\("
+    severity: HIGH
+    description: "DBMS_PIPE.RECEIVE_MESSAGE (Oracle) - time-based delay"
