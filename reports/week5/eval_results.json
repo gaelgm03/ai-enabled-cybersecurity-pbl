@@ -1,0 +1,659 @@
+{
+  "timestamp": "2026-01-14T14:11:36.272863Z",
+  "summary": {
+    "models": [
+      "baseline"
+    ],
+    "overall_comparison": [
+      {
+        "model": "baseline",
+        "f1": 0.7692,
+        "precision": 0.9091,
+        "recall": 0.6667,
+        "fpr": 0.0667,
+        "accuracy": 0.8,
+        "avg_latency_ms": 0.05
+      }
+    ],
+    "category_comparison": {
+      "secret": [
+        {
+          "model": "baseline",
+          "f1": 0.7059,
+          "precision": 0.8571,
+          "recall": 0.6,
+          "fpr": 0.1
+        }
+      ],
+      "sqli": [
+        {
+          "model": "baseline",
+          "f1": 0.75,
+          "precision": 1.0,
+          "recall": 0.6,
+          "fpr": 0.0
+        }
+      ],
+      "typo": [
+        {
+          "model": "baseline",
+          "f1": 0.8421,
+          "precision": 0.8889,
+          "recall": 0.8,
+          "fpr": 0.1
+        }
+      ]
+    },
+    "best_model": {
+      "by_f1": "baseline",
+      "by_precision": "baseline",
+      "by_recall": "baseline",
+      "by_fpr": "baseline"
+    }
+  },
+  "models": {
+    "baseline": {
+      "model_name": "baseline",
+      "overall": {
+        "category": "overall",
+        "true_positives": 20,
+        "false_positives": 2,
+        "true_negatives": 28,
+        "false_negatives": 10,
+        "total_cases": 60,
+        "precision": 0.9091,
+        "recall": 0.6667,
+        "f1": 0.7692,
+        "false_positive_rate": 0.0667,
+        "accuracy": 0.8,
+        "avg_latency_ms": 0.05
+      },
+      "by_category": {
+        "typo": {
+          "category": "typo",
+          "true_positives": 8,
+          "false_positives": 1,
+          "true_negatives": 9,
+          "false_negatives": 2,
+          "total_cases": 20,
+          "precision": 0.8889,
+          "recall": 0.8,
+          "f1": 0.8421,
+          "false_positive_rate": 0.1,
+          "accuracy": 0.85,
+          "avg_latency_ms": 0.05
+        },
+        "secret": {
+          "category": "secret",
+          "true_positives": 6,
+          "false_positives": 1,
+          "true_negatives": 9,
+          "false_negatives": 4,
+          "total_cases": 20,
+          "precision": 0.8571,
+          "recall": 0.6,
+          "f1": 0.7059,
+          "false_positive_rate": 0.1,
+          "accuracy": 0.75,
+          "avg_latency_ms": 0.07
+        },
+        "sqli": {
+          "category": "sqli",
+          "true_positives": 6,
+          "false_positives": 0,
+          "true_negatives": 10,
+          "false_negatives": 4,
+          "total_cases": 20,
+          "precision": 1.0,
+          "recall": 0.6,
+          "f1": 0.75,
+          "false_positive_rate": 0.0,
+          "accuracy": 0.8,
+          "avg_latency_ms": 0.02
+        }
+      },
+      "case_results": [
+        {
+          "case_id": "typo-001",
+          "category": "typo",
+          "ground_truth": true,
+          "prediction": true,
+          "correct": true,
+          "latency_ms": 0.17,
+          "rationale": "Pattern matched: teh -> the"
+        },
+        {
+          "case_id": "typo-002",
+          "category": "typo",
+          "ground_truth": true,
+          "prediction": false,
+          "correct": false,
+          "latency_ms": 0.57,
+          "rationale": "No vulnerability pattern matched"
+        },
+        {
+          "case_id": "typo-003",
+          "category": "typo",
+          "ground_truth": true,
+          "prediction": true,
+          "correct": true,
+          "latency_ms": 0.02,
+          "rationale": "Pattern matched: occured -> occurred"
+        },
+        {
+          "case_id": "typo-004",
+          "category": "typo",
+          "ground_truth": true,
+          "prediction": true,
+          "correct": true,
+          "latency_ms": 0.02,
+          "rationale": "Pattern matched: seperately -> separately"
+        },
+        {
+          "case_id": "typo-005",
+          "category": "typo",
+          "ground_truth": true,
+          "prediction": true,
+          "correct": true,
+          "latency_ms": 0.02,
+          "rationale": "Pattern matched: untill -> until"
+        },
+        {
+          "case_id": "typo-006",
+          "category": "typo",
+          "ground_truth": true,
+          "prediction": true,
+          "correct": true,
+          "latency_ms": 0.02,
+          "rationale": "Pattern matched: accidently -> accidentally"
+        },
+        {
+          "case_id": "typo-007",
+          "category": "typo",
+          "ground_truth": true,
+          "prediction": true,
+          "correct": true,
+          "latency_ms": 0.03,
+          "rationale": "Pattern matched: definately -> definitely"
+        },
+        {
+          "case_id": "typo-008",
+          "category": "typo",
+          "ground_truth": true,
+          "prediction": true,
+          "correct": true,
+          "latency_ms": 0.03,
+          "rationale": "Pattern matched: neccessary -> necessary"
+        },
+        {
+          "case_id": "typo-009",
+          "category": "typo",
+          "ground_truth": true,
+          "prediction": true,
+          "correct": true,
+          "latency_ms": 0.03,
+          "rationale": "Pattern matched: programing -> programming"
+        },
+        {
+          "case_id": "typo-010",
+          "category": "typo",
+          "ground_truth": true,
+          "prediction": false,
+          "correct": false,
+          "latency_ms": 0.03,
+          "rationale": "No vulnerability pattern matched"
+        },
+        {
+          "case_id": "typo-011",
+          "category": "typo",
+          "ground_truth": false,
+          "prediction": true,
+          "correct": false,
+          "latency_ms": 0.0,
+          "rationale": "Pattern matched: teh -> the"
+        },
+        {
+          "case_id": "typo-012",
+          "category": "typo",
+          "ground_truth": false,
+          "prediction": false,
+          "correct": true,
+          "latency_ms": 0.01,
+          "rationale": "No vulnerability pattern matched"
+        },
+        {
+          "case_id": "typo-013",
+          "category": "typo",
+          "ground_truth": false,
+          "prediction": false,
+          "correct": true,
+          "latency_ms": 0.01,
+          "rationale": "No vulnerability pattern matched"
+        },
+        {
+          "case_id": "typo-014",
+          "category": "typo",
+          "ground_truth": false,
+          "prediction": false,
+          "correct": true,
+          "latency_ms": 0.01,
+          "rationale": "No vulnerability pattern matched"
+        },
+        {
+          "case_id": "typo-015",
+          "category": "typo",
+          "ground_truth": false,
+          "prediction": false,
+          "correct": true,
+          "latency_ms": 0.01,
+          "rationale": "No vulnerability pattern matched"
+        },
+        {
+          "case_id": "typo-016",
+          "category": "typo",
+          "ground_truth": false,
+          "prediction": false,
+          "correct": true,
+          "latency_ms": 0.01,
+          "rationale": "No vulnerability pattern matched"
+        },
+        {
+          "case_id": "typo-017",
+          "category": "typo",
+          "ground_truth": false,
+          "prediction": false,
+          "correct": true,
+          "latency_ms": 0.01,
+          "rationale": "No vulnerability pattern matched"
+        },
+        {
+          "case_id": "typo-018",
+          "category": "typo",
+          "ground_truth": false,
+          "prediction": false,
+          "correct": true,
+          "latency_ms": 0.01,
+          "rationale": "No vulnerability pattern matched"
+        },
+        {
+          "case_id": "typo-019",
+          "category": "typo",
+          "ground_truth": false,
+          "prediction": false,
+          "correct": true,
+          "latency_ms": 0.01,
+          "rationale": "No vulnerability pattern matched"
+        },
+        {
+          "case_id": "typo-020",
+          "category": "typo",
+          "ground_truth": false,
+          "prediction": false,
+          "correct": true,
+          "latency_ms": 0.01,
+          "rationale": "No vulnerability pattern matched"
+        },
+        {
+          "case_id": "secret-001",
+          "category": "secret",
+          "ground_truth": true,
+          "prediction": true,
+          "correct": true,
+          "latency_ms": 0.27,
+          "rationale": "Pattern matched: OpenAI API key pattern"
+        },
+        {
+          "case_id": "secret-002",
+          "category": "secret",
+          "ground_truth": true,
+          "prediction": true,
+          "correct": true,
+          "latency_ms": 0.15,
+          "rationale": "Pattern matched: GitHub PAT pattern"
+        },
+        {
+          "case_id": "secret-003",
+          "category": "secret",
+          "ground_truth": true,
+          "prediction": true,
+          "correct": true,
+          "latency_ms": 0.14,
+          "rationale": "Pattern matched: AWS Access Key ID"
+        },
+        {
+          "case_id": "secret-004",
+          "category": "secret",
+          "ground_truth": true,
+          "prediction": true,
+          "correct": true,
+          "latency_ms": 0.3,
+          "rationale": "Pattern matched: Hardcoded password"
+        },
+        {
+          "case_id": "secret-005",
+          "category": "secret",
+          "ground_truth": true,
+          "prediction": false,
+          "correct": false,
+          "latency_ms": 0.37,
+          "rationale": "No vulnerability pattern matched"
+        },
+        {
+          "case_id": "secret-006",
+          "category": "secret",
+          "ground_truth": true,
+          "prediction": true,
+          "correct": true,
+          "latency_ms": 0.01,
+          "rationale": "Pattern matched: Hardcoded token"
+        },
+        {
+          "case_id": "secret-007",
+          "category": "secret",
+          "ground_truth": true,
+          "prediction": false,
+          "correct": false,
+          "latency_ms": 0.01,
+          "rationale": "No vulnerability pattern matched"
+        },
+        {
+          "case_id": "secret-008",
+          "category": "secret",
+          "ground_truth": true,
+          "prediction": false,
+          "correct": false,
+          "latency_ms": 0.01,
+          "rationale": "No vulnerability pattern matched"
+        },
+        {
+          "case_id": "secret-009",
+          "category": "secret",
+          "ground_truth": true,
+          "prediction": false,
+          "correct": false,
+          "latency_ms": 0.01,
+          "rationale": "No vulnerability pattern matched"
+        },
+        {
+          "case_id": "secret-010",
+          "category": "secret",
+          "ground_truth": true,
+          "prediction": true,
+          "correct": true,
+          "latency_ms": 0.01,
+          "rationale": "Pattern matched: Private key"
+        },
+        {
+          "case_id": "secret-011",
+          "category": "secret",
+          "ground_truth": false,
+          "prediction": false,
+          "correct": true,
+          "latency_ms": 0.01,
+          "rationale": "No vulnerability pattern matched"
+        },
+        {
+          "case_id": "secret-012",
+          "category": "secret",
+          "ground_truth": false,
+          "prediction": false,
+          "correct": true,
+          "latency_ms": 0.01,
+          "rationale": "No vulnerability pattern matched"
+        },
+        {
+          "case_id": "secret-013",
+          "category": "secret",
+          "ground_truth": false,
+          "prediction": false,
+          "correct": true,
+          "latency_ms": 0.01,
+          "rationale": "No vulnerability pattern matched"
+        },
+        {
+          "case_id": "secret-014",
+          "category": "secret",
+          "ground_truth": false,
+          "prediction": true,
+          "correct": false,
+          "latency_ms": 0.0,
+          "rationale": "Pattern matched: OpenAI API key pattern"
+        },
+        {
+          "case_id": "secret-015",
+          "category": "secret",
+          "ground_truth": false,
+          "prediction": false,
+          "correct": true,
+          "latency_ms": 0.02,
+          "rationale": "No vulnerability pattern matched"
+        },
+        {
+          "case_id": "secret-016",
+          "category": "secret",
+          "ground_truth": false,
+          "prediction": false,
+          "correct": true,
+          "latency_ms": 0.01,
+          "rationale": "No vulnerability pattern matched"
+        },
+        {
+          "case_id": "secret-017",
+          "category": "secret",
+          "ground_truth": false,
+          "prediction": false,
+          "correct": true,
+          "latency_ms": 0.01,
+          "rationale": "No vulnerability pattern matched"
+        },
+        {
+          "case_id": "secret-018",
+          "category": "secret",
+          "ground_truth": false,
+          "prediction": false,
+          "correct": true,
+          "latency_ms": 0.01,
+          "rationale": "No vulnerability pattern matched"
+        },
+        {
+          "case_id": "secret-019",
+          "category": "secret",
+          "ground_truth": false,
+          "prediction": false,
+          "correct": true,
+          "latency_ms": 0.01,
+          "rationale": "No vulnerability pattern matched"
+        },
+        {
+          "case_id": "secret-020",
+          "category": "secret",
+          "ground_truth": false,
+          "prediction": false,
+          "correct": true,
+          "latency_ms": 0.01,
+          "rationale": "No vulnerability pattern matched"
+        },
+        {
+          "case_id": "sqli-001",
+          "category": "sqli",
+          "ground_truth": true,
+          "prediction": true,
+          "correct": true,
+          "latency_ms": 0.06,
+          "rationale": "Pattern matched: f-string in execute()"
+        },
+        {
+          "case_id": "sqli-002",
+          "category": "sqli",
+          "ground_truth": true,
+          "prediction": true,
+          "correct": true,
+          "latency_ms": 0.05,
+          "rationale": "Pattern matched: String concatenation in execute()"
+        },
+        {
+          "case_id": "sqli-003",
+          "category": "sqli",
+          "ground_truth": true,
+          "prediction": false,
+          "correct": false,
+          "latency_ms": 0.23,
+          "rationale": "No vulnerability pattern matched"
+        },
+        {
+          "case_id": "sqli-004",
+          "category": "sqli",
+          "ground_truth": true,
+          "prediction": true,
+          "correct": true,
+          "latency_ms": 0.01,
+          "rationale": "Pattern matched: .format() in SQL"
+        },
+        {
+          "case_id": "sqli-005",
+          "category": "sqli",
+          "ground_truth": true,
+          "prediction": true,
+          "correct": true,
+          "latency_ms": 0.0,
+          "rationale": "Pattern matched: Template literal SQL (JS)"
+        },
+        {
+          "case_id": "sqli-006",
+          "category": "sqli",
+          "ground_truth": true,
+          "prediction": true,
+          "correct": true,
+          "latency_ms": 0.01,
+          "rationale": "Pattern matched: String concatenation in query()"
+        },
+        {
+          "case_id": "sqli-007",
+          "category": "sqli",
+          "ground_truth": true,
+          "prediction": true,
+          "correct": true,
+          "latency_ms": 0.01,
+          "rationale": "Pattern matched: Raw query with f-string"
+        },
+        {
+          "case_id": "sqli-008",
+          "category": "sqli",
+          "ground_truth": true,
+          "prediction": false,
+          "correct": false,
+          "latency_ms": 0.01,
+          "rationale": "No vulnerability pattern matched"
+        },
+        {
+          "case_id": "sqli-009",
+          "category": "sqli",
+          "ground_truth": true,
+          "prediction": false,
+          "correct": false,
+          "latency_ms": 0.01,
+          "rationale": "No vulnerability pattern matched"
+        },
+        {
+          "case_id": "sqli-010",
+          "category": "sqli",
+          "ground_truth": true,
+          "prediction": false,
+          "correct": false,
+          "latency_ms": 0.01,
+          "rationale": "No vulnerability pattern matched"
+        },
+        {
+          "case_id": "sqli-011",
+          "category": "sqli",
+          "ground_truth": false,
+          "prediction": false,
+          "correct": true,
+          "latency_ms": 0.01,
+          "rationale": "No vulnerability pattern matched"
+        },
+        {
+          "case_id": "sqli-012",
+          "category": "sqli",
+          "ground_truth": false,
+          "prediction": false,
+          "correct": true,
+          "latency_ms": 0.01,
+          "rationale": "No vulnerability pattern matched"
+        },
+        {
+          "case_id": "sqli-013",
+          "category": "sqli",
+          "ground_truth": false,
+          "prediction": false,
+          "correct": true,
+          "latency_ms": 0.01,
+          "rationale": "No vulnerability pattern matched"
+        },
+        {
+          "case_id": "sqli-014",
+          "category": "sqli",
+          "ground_truth": false,
+          "prediction": false,
+          "correct": true,
+          "latency_ms": 0.01,
+          "rationale": "No vulnerability pattern matched"
+        },
+        {
+          "case_id": "sqli-015",
+          "category": "sqli",
+          "ground_truth": false,
+          "prediction": false,
+          "correct": true,
+          "latency_ms": 0.01,
+          "rationale": "No vulnerability pattern matched"
+        },
+        {
+          "case_id": "sqli-016",
+          "category": "sqli",
+          "ground_truth": false,
+          "prediction": false,
+          "correct": true,
+          "latency_ms": 0.01,
+          "rationale": "No vulnerability pattern matched"
+        },
+        {
+          "case_id": "sqli-017",
+          "category": "sqli",
+          "ground_truth": false,
+          "prediction": false,
+          "correct": true,
+          "latency_ms": 0.01,
+          "rationale": "No vulnerability pattern matched"
+        },
+        {
+          "case_id": "sqli-018",
+          "category": "sqli",
+          "ground_truth": false,
+          "prediction": false,
+          "correct": true,
+          "latency_ms": 0.01,
+          "rationale": "No vulnerability pattern matched"
+        },
+        {
+          "case_id": "sqli-019",
+          "category": "sqli",
+          "ground_truth": false,
+          "prediction": false,
+          "correct": true,
+          "latency_ms": 0.01,
+          "rationale": "No vulnerability pattern matched"
+        },
+        {
+          "case_id": "sqli-020",
+          "category": "sqli",
+          "ground_truth": false,
+          "prediction": false,
+          "correct": true,
+          "latency_ms": 0.01,
+          "rationale": "No vulnerability pattern matched"
+        }
+      ]
+    }
+  }
+}
