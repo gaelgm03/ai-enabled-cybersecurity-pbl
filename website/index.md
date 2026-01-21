@@ -128,7 +128,9 @@ python -m evals.run_eval --models baseline
 ## Team
 
 - **Gael Guzmán**
-- *Additional team members*
+- **Diego Ulises**
+- **Yangingyi**
+- **Sekito Shinjo**
 
 ---
 
