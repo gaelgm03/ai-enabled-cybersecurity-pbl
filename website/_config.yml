@@ -1,0 +1,43 @@
+# Site settings
+title: AI-Enabled Cybersecurity
+description: >-
+  MIT Blended AI+X PBL Project - Track 3: AI-Enabled Cybersecurity.
+  Building responsible vulnerability detection tools with LLM integration.
+baseurl: "/ai-enabled-cybersecurity-pbl"
+url: ""
+
+# Theme
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+  - jekyll-remote-theme
+
+# Navigation
+header_pages:
+  - index.md
+  - background.md
+  - pipeline.md
+  - sqli-detector.md
+  - demos.md
+  - results.md
+  - evaluation.md
+  - ethics.md
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Exclude from build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
