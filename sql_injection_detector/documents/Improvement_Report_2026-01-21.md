@@ -54,21 +54,21 @@ Severity breakdown: {HIGH: 167, MEDIUM: 106, LOW: 0}
 
 **Examples of False Positives:**
 ```php
-// FP: PHP isset() check - not SQL
-if(!isset($_POST['answer_key']))  // 'answer_key' contains 'and'
-
-// FP: PHP comment
-//echo "cookie expired";  // 'expired' sounds like it shouldn't match, but 'and' in other contexts did
+// FP: Pattern matched across multiple lines
+// Line 34: if(!isset($_POST['answer_key']))
+// The pattern started at a quote, crossed newlines containing "and" in comments,
+// and ended at $_POST on a later line
 
 // FP: preg_replace sanitization code
-$id = preg_replace('/or/i', "", $id);  // Contains '/or/' pattern
-$id = preg_replace('/AND/i', "", $id);
+$id = preg_replace('/or/i', "", $id);  // Pattern matched from "" through "OR" in comment to $id
+$id = preg_replace('/AND/i', "", $id); // Same issue - sanitization code detected as vulnerability
 ```
 
 **Root Cause:**
 Original regex `['\"][^'\"]*\\bAND\\b[^'\"]*\\$[a-zA-Z_]` was too broad:
-- Matched any quoted string containing AND/OR followed by PHP variable
-- Did not require SQL context
+- `[^'\"]*` matched any character INCLUDING newlines
+- Pattern could span multiple lines, matching unrelated code
+- Did not require SQL context (SELECT/UPDATE/DELETE/INSERT)
 
 **Fix:**
 ```yaml
