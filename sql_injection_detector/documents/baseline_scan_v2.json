@@ -1,0 +1,3249 @@
+{
+  "scan_summary": {
+    "timestamp": "2026-01-21T22:01:04.150477",
+    "files_scanned": 121,
+    "total_findings": 254,
+    "severity_breakdown": {
+      "HIGH": 148,
+      "MEDIUM": 106,
+      "LOW": 0
+    },
+    "detectors_run": [
+      "classic",
+      "blind",
+      "oob",
+      "stacked"
+    ]
+  },
+  "results": [
+    {
+      "file": "test\\sqli-labs\\Less-10\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 30,
+          "column": 6,
+          "code_snippet": "$sql=\"SELECT * FROM users WHERE id=$id LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 31,
+          "column": 9,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-11\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 57,
+          "column": 8,
+          "code_snippet": "@$sql=\"SELECT username, password FROM users WHERE username='$uname' and password='$passwd' LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 58,
+          "column": 10,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "blind",
+          "subtype": "boolean_based",
+          "severity": "HIGH",
+          "line": 57,
+          "column": 8,
+          "code_snippet": "@$sql=\"SELECT username, password FROM users WHERE username='$uname' and password='$passwd' LIMIT 0,1\";",
+          "matched_pattern": "php_and_condition_variable",
+          "description": "AND condition with PHP variable in SQL query - blind injection risk"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-12\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 59,
+          "column": 8,
+          "code_snippet": "@$sql=\"SELECT username, password FROM users WHERE username=($uname) and password=($passwd) LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 60,
+          "column": 10,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "blind",
+          "subtype": "boolean_based",
+          "severity": "HIGH",
+          "line": 59,
+          "column": 8,
+          "code_snippet": "@$sql=\"SELECT username, password FROM users WHERE username=($uname) and password=($passwd) LIMIT 0,1\";",
+          "matched_pattern": "php_and_condition_variable",
+          "description": "AND condition with PHP variable in SQL query - blind injection risk"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-13\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 57,
+          "column": 8,
+          "code_snippet": "@$sql=\"SELECT username, password FROM users WHERE username=('$uname') and password=('$passwd') LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 58,
+          "column": 10,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "blind",
+          "subtype": "boolean_based",
+          "severity": "HIGH",
+          "line": 57,
+          "column": 8,
+          "code_snippet": "@$sql=\"SELECT username, password FROM users WHERE username=('$uname') and password=('$passwd') LIMIT 0,1\";",
+          "matched_pattern": "php_and_condition_variable",
+          "description": "AND condition with PHP variable in SQL query - blind injection risk"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-14\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 59,
+          "column": 8,
+          "code_snippet": "@$sql=\"SELECT username, password FROM users WHERE username=$uname and password=$passwd LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 60,
+          "column": 10,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "blind",
+          "subtype": "boolean_based",
+          "severity": "HIGH",
+          "line": 59,
+          "column": 8,
+          "code_snippet": "@$sql=\"SELECT username, password FROM users WHERE username=$uname and password=$passwd LIMIT 0,1\";",
+          "matched_pattern": "php_and_condition_variable",
+          "description": "AND condition with PHP variable in SQL query - blind injection risk"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-15\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 57,
+          "column": 8,
+          "code_snippet": "@$sql=\"SELECT username, password FROM users WHERE username='$uname' and password='$passwd' LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 58,
+          "column": 10,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "blind",
+          "subtype": "boolean_based",
+          "severity": "HIGH",
+          "line": 57,
+          "column": 8,
+          "code_snippet": "@$sql=\"SELECT username, password FROM users WHERE username='$uname' and password='$passwd' LIMIT 0,1\";",
+          "matched_pattern": "php_and_condition_variable",
+          "description": "AND condition with PHP variable in SQL query - blind injection risk"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-16\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 59,
+          "column": 8,
+          "code_snippet": "@$sql=\"SELECT username, password FROM users WHERE username=($uname) and password=($passwd) LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 60,
+          "column": 10,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "blind",
+          "subtype": "boolean_based",
+          "severity": "HIGH",
+          "line": 59,
+          "column": 8,
+          "code_snippet": "@$sql=\"SELECT username, password FROM users WHERE username=($uname) and password=($passwd) LIMIT 0,1\";",
+          "matched_pattern": "php_and_condition_variable",
+          "description": "AND condition with PHP variable in SQL query - blind injection risk"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-17\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 84,
+          "column": 7,
+          "code_snippet": "@$sql=\"SELECT username, password FROM users WHERE username= $uname LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 94,
+          "column": 11,
+          "code_snippet": "$update=\"UPDATE users SET password = '$passwd' WHERE username='$row1'\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 86,
+          "column": 9,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 95,
+          "column": 3,
+          "code_snippet": "mysqli_query($con1, $update);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-18\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 96,
+          "column": 7,
+          "code_snippet": "$sql=\"SELECT  users.username, users.password FROM users WHERE users.username=$uname and users.password=$passwd ORDER BY users.id DESC LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 102,
+          "column": 11,
+          "code_snippet": "$insert=\"INSERT INTO `security`.`uagents` (`uagent`, `ip_address`, `username`) VALUES ('$uagent', '$IP', $uname)\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 97,
+          "column": 13,
+          "code_snippet": "$result1 = mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 103,
+          "column": 3,
+          "code_snippet": "mysqli_query($con1, $insert);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "blind",
+          "subtype": "boolean_based",
+          "severity": "HIGH",
+          "line": 96,
+          "column": 7,
+          "code_snippet": "$sql=\"SELECT  users.username, users.password FROM users WHERE users.username=$uname and users.password=$passwd ORDER BY users.id DESC LIMIT 0,1\";",
+          "matched_pattern": "php_and_condition_variable",
+          "description": "AND condition with PHP variable in SQL query - blind injection risk"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-19\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 96,
+          "column": 7,
+          "code_snippet": "$sql=\"SELECT  users.username, users.password FROM users WHERE users.username=$uname and users.password=$passwd ORDER BY users.id DESC LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 102,
+          "column": 11,
+          "code_snippet": "$insert=\"INSERT INTO `security`.`referers` (`referer`, `ip_address`) VALUES ('$uagent', '$IP')\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 97,
+          "column": 13,
+          "code_snippet": "$result1 = mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 103,
+          "column": 3,
+          "code_snippet": "mysqli_query($con1, $insert);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "blind",
+          "subtype": "boolean_based",
+          "severity": "HIGH",
+          "line": 96,
+          "column": 7,
+          "code_snippet": "$sql=\"SELECT  users.username, users.password FROM users WHERE users.username=$uname and users.password=$passwd ORDER BY users.id DESC LIMIT 0,1\";",
+          "matched_pattern": "php_and_condition_variable",
+          "description": "AND condition with PHP variable in SQL query - blind injection risk"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-1\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "union_based",
+          "severity": "HIGH",
+          "line": 30,
+          "column": 43,
+          "code_snippet": "// $sql=\"SELECT * FROM users WHERE id='0' union select 1,2,3 -- ' LIMIT 0,1\";",
+          "matched_pattern": "union_select",
+          "description": "UNION SELECT pattern detected - classic union-based SQL injection technique"
+        },
+        {
+          "detector": "classic",
+          "subtype": "union_based",
+          "severity": "HIGH",
+          "line": 31,
+          "column": 43,
+          "code_snippet": "// $sql=\"SELECT * FROM users WHERE id='0' union select 1,2,3 # ' LIMIT 0,1\";",
+          "matched_pattern": "union_select",
+          "description": "UNION SELECT pattern detected - classic union-based SQL injection technique"
+        },
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 29,
+          "column": 6,
+          "code_snippet": "$sql=\"SELECT * FROM users WHERE id='$id' LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 32,
+          "column": 9,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-20\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 82,
+          "column": 8,
+          "code_snippet": "$sql=\"SELECT  users.username, users.password FROM users WHERE users.username=$uname and users.password=$passwd ORDER BY users.id DESC LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 147,
+          "column": 8,
+          "code_snippet": "$sql=\"SELECT * FROM users WHERE username='$cookee' LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 83,
+          "column": 14,
+          "code_snippet": "$result1 = mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 148,
+          "column": 11,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "blind",
+          "subtype": "boolean_based",
+          "severity": "HIGH",
+          "line": 82,
+          "column": 8,
+          "code_snippet": "$sql=\"SELECT  users.username, users.password FROM users WHERE users.username=$uname and users.password=$passwd ORDER BY users.id DESC LIMIT 0,1\";",
+          "matched_pattern": "php_and_condition_variable",
+          "description": "AND condition with PHP variable in SQL query - blind injection risk"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-21\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 82,
+          "column": 8,
+          "code_snippet": "$sql=\"SELECT  users.username, users.password FROM users WHERE users.username=$uname and users.password=$passwd ORDER BY users.id DESC LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 146,
+          "column": 8,
+          "code_snippet": "$sql=\"SELECT * FROM users WHERE username=('$cookee') LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 83,
+          "column": 14,
+          "code_snippet": "$result1 = mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 147,
+          "column": 11,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "blind",
+          "subtype": "boolean_based",
+          "severity": "HIGH",
+          "line": 82,
+          "column": 8,
+          "code_snippet": "$sql=\"SELECT  users.username, users.password FROM users WHERE users.username=$uname and users.password=$passwd ORDER BY users.id DESC LIMIT 0,1\";",
+          "matched_pattern": "php_and_condition_variable",
+          "description": "AND condition with PHP variable in SQL query - blind injection risk"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-22\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 83,
+          "column": 8,
+          "code_snippet": "$sql=\"SELECT  users.username, users.password FROM users WHERE users.username=$uname and users.password=$passwd ORDER BY users.id DESC LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 147,
+          "column": 8,
+          "code_snippet": "$sql=\"SELECT * FROM users WHERE username=$cookee1 LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 84,
+          "column": 14,
+          "code_snippet": "$result1 = mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 148,
+          "column": 11,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "blind",
+          "subtype": "boolean_based",
+          "severity": "HIGH",
+          "line": 83,
+          "column": 8,
+          "code_snippet": "$sql=\"SELECT  users.username, users.password FROM users WHERE users.username=$uname and users.password=$passwd ORDER BY users.id DESC LIMIT 0,1\";",
+          "matched_pattern": "php_and_condition_variable",
+          "description": "AND condition with PHP variable in SQL query - blind injection risk"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-23\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 36,
+          "column": 6,
+          "code_snippet": "$sql=\"SELECT * FROM users WHERE id='$id' LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 37,
+          "column": 9,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-24\\failed.php",
+      "status": "CLEAN",
+      "findings": []
+    },
+    {
+      "file": "test\\sqli-labs\\Less-24\\forgot_password.php",
+      "status": "CLEAN",
+      "findings": []
+    },
+    {
+      "file": "test\\sqli-labs\\Less-24\\index.php",
+      "status": "CLEAN",
+      "findings": []
+    },
+    {
+      "file": "test\\sqli-labs\\Less-24\\logged-in.php",
+      "status": "CLEAN",
+      "findings": []
+    },
+    {
+      "file": "test\\sqli-labs\\Less-24\\login.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 22,
+          "column": 11,
+          "code_snippet": "$sql = \"SELECT * FROM users WHERE username='$username' and password='$password'\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 23,
+          "column": 10,
+          "code_snippet": "//$sql = \"SELECT COUNT(*) FROM users WHERE username='$username' and password='$password'\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 24,
+          "column": 11,
+          "code_snippet": "$res = mysqli_query($con1, $sql) or die('You tried to be real smart, Try harder!!!! :( ');",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "blind",
+          "subtype": "boolean_based",
+          "severity": "HIGH",
+          "line": 22,
+          "column": 11,
+          "code_snippet": "$sql = \"SELECT * FROM users WHERE username='$username' and password='$password'\";",
+          "matched_pattern": "php_and_condition_variable",
+          "description": "AND condition with PHP variable in SQL query - blind injection risk"
+        },
+        {
+          "detector": "blind",
+          "subtype": "boolean_based",
+          "severity": "HIGH",
+          "line": 23,
+          "column": 10,
+          "code_snippet": "//$sql = \"SELECT COUNT(*) FROM users WHERE username='$username' and password='$password'\";",
+          "matched_pattern": "php_and_condition_variable",
+          "description": "AND condition with PHP variable in SQL query - blind injection risk"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-24\\login_create.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 30,
+          "column": 9,
+          "code_snippet": "$sql = \"select count(*) from users where username='$username'\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 31,
+          "column": 9,
+          "code_snippet": "$res = mysqli_query($con1, $sql) or die('You tried to be smart, Try harder!!!! :( ');",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 49,
+          "column": 4,
+          "code_snippet": "mysqli_query($con1, $sql) or die('Error Creating your user account,  : '.mysqli_error($con1));",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-24\\new_user.php",
+      "status": "CLEAN",
+      "findings": []
+    },
+    {
+      "file": "test\\sqli-labs\\Less-24\\pass_change.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 38,
+          "column": 10,
+          "code_snippet": "$sql = \"UPDATE users SET PASSWORD='$pass' where username='$username' and password='$curr_pass' \";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 39,
+          "column": 10,
+          "code_snippet": "$res = mysqli_query($con1, $sql) or die('You tried to be smart, Try harder!!!! :( ');",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "blind",
+          "subtype": "boolean_based",
+          "severity": "HIGH",
+          "line": 38,
+          "column": 10,
+          "code_snippet": "$sql = \"UPDATE users SET PASSWORD='$pass' where username='$username' and password='$curr_pass' \";",
+          "matched_pattern": "php_and_condition_variable",
+          "description": "AND condition with PHP variable in SQL query - blind injection risk"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-25\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 35,
+          "column": 7,
+          "code_snippet": "$sql=\"SELECT * FROM users WHERE id='$id' LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 36,
+          "column": 10,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-25a\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 35,
+          "column": 10,
+          "code_snippet": "$sql=\"SELECT * FROM users WHERE id=$id LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 36,
+          "column": 10,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-26\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 34,
+          "column": 7,
+          "code_snippet": "$sql=\"SELECT * FROM users WHERE id='$id' LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 35,
+          "column": 10,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-26a\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 34,
+          "column": 7,
+          "code_snippet": "$sql=\"SELECT * FROM users WHERE id=('$id') LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 35,
+          "column": 10,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-27\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 34,
+          "column": 7,
+          "code_snippet": "$sql=\"SELECT * FROM users WHERE id='$id' LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 35,
+          "column": 10,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-27a\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 35,
+          "column": 7,
+          "code_snippet": "$sql=\"SELECT * FROM users WHERE id=$id LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 36,
+          "column": 10,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-28\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 34,
+          "column": 7,
+          "code_snippet": "$sql=\"SELECT * FROM users WHERE id=('$id') LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 35,
+          "column": 10,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-28a\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 34,
+          "column": 7,
+          "code_snippet": "$sql=\"SELECT * FROM users WHERE id=('$id') LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 35,
+          "column": 10,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-29\\hacked.php",
+      "status": "CLEAN",
+      "findings": []
+    },
+    {
+      "file": "test\\sqli-labs\\Less-29\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 32,
+          "column": 7,
+          "code_snippet": "$sql=\"SELECT * FROM users WHERE id='$id' LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 33,
+          "column": 10,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-29\\login.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 38,
+          "column": 7,
+          "code_snippet": "$sql=\"SELECT * FROM users WHERE id='$id' LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 39,
+          "column": 10,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-2\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 32,
+          "column": 6,
+          "code_snippet": "$sql=\"SELECT * FROM users WHERE id=$id LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 33,
+          "column": 9,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-30\\hacked.php",
+      "status": "CLEAN",
+      "findings": []
+    },
+    {
+      "file": "test\\sqli-labs\\Less-30\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 34,
+          "column": 7,
+          "code_snippet": "$sql=\"SELECT * FROM users WHERE id=$id LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 35,
+          "column": 10,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-30\\login.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 39,
+          "column": 7,
+          "code_snippet": "$sql=\"SELECT * FROM users WHERE id=$id LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 40,
+          "column": 10,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-31\\hacked.php",
+      "status": "CLEAN",
+      "findings": []
+    },
+    {
+      "file": "test\\sqli-labs\\Less-31\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 31,
+          "column": 7,
+          "code_snippet": "$sql=\"SELECT * FROM users WHERE id= ($id) LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 32,
+          "column": 10,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-31\\login.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 39,
+          "column": 7,
+          "code_snippet": "$sql=\"SELECT * FROM users WHERE id=($id) LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 40,
+          "column": 10,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-32\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 41,
+          "column": 6,
+          "code_snippet": "$sql=\"SELECT * FROM users WHERE id='$id' LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 42,
+          "column": 9,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-33\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 37,
+          "column": 6,
+          "code_snippet": "$sql=\"SELECT * FROM users WHERE id='$id' LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 38,
+          "column": 9,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-34\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 68,
+          "column": 8,
+          "code_snippet": "@$sql=\"SELECT username, password FROM users WHERE username='$uname' and password='$passwd' LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 69,
+          "column": 10,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "blind",
+          "subtype": "boolean_based",
+          "severity": "HIGH",
+          "line": 68,
+          "column": 8,
+          "code_snippet": "@$sql=\"SELECT username, password FROM users WHERE username='$uname' and password='$passwd' LIMIT 0,1\";",
+          "matched_pattern": "php_and_condition_variable",
+          "description": "AND condition with PHP variable in SQL query - blind injection risk"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-35\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 37,
+          "column": 6,
+          "code_snippet": "$sql=\"SELECT * FROM users WHERE id=$id LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 38,
+          "column": 9,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-36\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 38,
+          "column": 6,
+          "code_snippet": "$sql=\"SELECT * FROM users WHERE id='$id' LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 39,
+          "column": 9,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-37\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 68,
+          "column": 8,
+          "code_snippet": "@$sql=\"SELECT username, password FROM users WHERE username='$uname' and password='$passwd' LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 69,
+          "column": 10,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "blind",
+          "subtype": "boolean_based",
+          "severity": "HIGH",
+          "line": 68,
+          "column": 8,
+          "code_snippet": "@$sql=\"SELECT username, password FROM users WHERE username='$uname' and password='$passwd' LIMIT 0,1\";",
+          "matched_pattern": "php_and_condition_variable",
+          "description": "AND condition with PHP variable in SQL query - blind injection risk"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-38\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 46,
+          "column": 6,
+          "code_snippet": "$sql=\"SELECT * FROM users WHERE id='$id' LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "stacked",
+          "subtype": "batch_execution",
+          "severity": "HIGH",
+          "line": 48,
+          "column": 5,
+          "code_snippet": "if (mysqli_multi_query($con1, $sql))",
+          "matched_pattern": "mysqli_multi_query",
+          "description": "mysqli_multi_query() enables stacked queries - high injection risk"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-38\\phpinfo.php",
+      "status": "CLEAN",
+      "findings": []
+    },
+    {
+      "file": "test\\sqli-labs\\Less-39\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 46,
+          "column": 6,
+          "code_snippet": "$sql=\"SELECT * FROM users WHERE id=$id LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "stacked",
+          "subtype": "batch_execution",
+          "severity": "HIGH",
+          "line": 48,
+          "column": 5,
+          "code_snippet": "if (mysqli_multi_query($con1, $sql))",
+          "matched_pattern": "mysqli_multi_query",
+          "description": "mysqli_multi_query() enables stacked queries - high injection risk"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-3\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 31,
+          "column": 6,
+          "code_snippet": "$sql=\"SELECT * FROM users WHERE id=('$id') LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 32,
+          "column": 9,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-40\\failed.php",
+      "status": "CLEAN",
+      "findings": []
+    },
+    {
+      "file": "test\\sqli-labs\\Less-40\\forgot_password.php",
+      "status": "CLEAN",
+      "findings": []
+    },
+    {
+      "file": "test\\sqli-labs\\Less-40\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 46,
+          "column": 6,
+          "code_snippet": "$sql=\"SELECT * FROM users WHERE id=('$id') LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "stacked",
+          "subtype": "batch_execution",
+          "severity": "HIGH",
+          "line": 48,
+          "column": 5,
+          "code_snippet": "if (mysqli_multi_query($con1, $sql))",
+          "matched_pattern": "mysqli_multi_query",
+          "description": "mysqli_multi_query() enables stacked queries - high injection risk"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-40\\logged-in.php",
+      "status": "CLEAN",
+      "findings": []
+    },
+    {
+      "file": "test\\sqli-labs\\Less-40\\login.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 22,
+          "column": 11,
+          "code_snippet": "$sql = \"SELECT * FROM users WHERE username='$username' and password='$password'\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 23,
+          "column": 10,
+          "code_snippet": "//$sql = \"SELECT COUNT(*) FROM users WHERE username='$username' and password='$password'\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 24,
+          "column": 11,
+          "code_snippet": "$res = mysqli_query($con1, $sql) or die('You tried to be real smart, Try harder!!!! :( ');",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "blind",
+          "subtype": "boolean_based",
+          "severity": "HIGH",
+          "line": 22,
+          "column": 11,
+          "code_snippet": "$sql = \"SELECT * FROM users WHERE username='$username' and password='$password'\";",
+          "matched_pattern": "php_and_condition_variable",
+          "description": "AND condition with PHP variable in SQL query - blind injection risk"
+        },
+        {
+          "detector": "blind",
+          "subtype": "boolean_based",
+          "severity": "HIGH",
+          "line": 23,
+          "column": 10,
+          "code_snippet": "//$sql = \"SELECT COUNT(*) FROM users WHERE username='$username' and password='$password'\";",
+          "matched_pattern": "php_and_condition_variable",
+          "description": "AND condition with PHP variable in SQL query - blind injection risk"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-40\\login_create.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 30,
+          "column": 9,
+          "code_snippet": "$sql = \"select count(*) from users where username='$username'\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 31,
+          "column": 9,
+          "code_snippet": "$res = mysqli_query($con1, $sql) or die('You tried to be smart, Try harder!!!! :( ');",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 49,
+          "column": 8,
+          "code_snippet": "mysqli_query($con1, $sql) or die('Error Creating your user account,  : '.mysqli_error($con1));",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-40\\new_user.php",
+      "status": "CLEAN",
+      "findings": []
+    },
+    {
+      "file": "test\\sqli-labs\\Less-40\\pass_change.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 38,
+          "column": 10,
+          "code_snippet": "$sql = \"UPDATE users SET PASSWORD='$pass' where username='$username' and password='$curr_pass' \";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 39,
+          "column": 10,
+          "code_snippet": "$res = mysqli_query($con1, $sql) or die('You tried to be smart, Try harder!!!! :( ');",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "blind",
+          "subtype": "boolean_based",
+          "severity": "HIGH",
+          "line": 38,
+          "column": 10,
+          "code_snippet": "$sql = \"UPDATE users SET PASSWORD='$pass' where username='$username' and password='$curr_pass' \";",
+          "matched_pattern": "php_and_condition_variable",
+          "description": "AND condition with PHP variable in SQL query - blind injection risk"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-41\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 46,
+          "column": 6,
+          "code_snippet": "$sql=\"SELECT * FROM users WHERE id=$id LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "stacked",
+          "subtype": "batch_execution",
+          "severity": "HIGH",
+          "line": 48,
+          "column": 5,
+          "code_snippet": "if (mysqli_multi_query($con1, $sql))",
+          "matched_pattern": "mysqli_multi_query",
+          "description": "mysqli_multi_query() enables stacked queries - high injection risk"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-42\\acc-create.php",
+      "status": "CLEAN",
+      "findings": []
+    },
+    {
+      "file": "test\\sqli-labs\\Less-42\\failed.php",
+      "status": "CLEAN",
+      "findings": []
+    },
+    {
+      "file": "test\\sqli-labs\\Less-42\\forgot_password.php",
+      "status": "CLEAN",
+      "findings": []
+    },
+    {
+      "file": "test\\sqli-labs\\Less-42\\index.php",
+      "status": "CLEAN",
+      "findings": []
+    },
+    {
+      "file": "test\\sqli-labs\\Less-42\\logged-in.php",
+      "status": "CLEAN",
+      "findings": []
+    },
+    {
+      "file": "test\\sqli-labs\\Less-42\\login.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 42,
+          "column": 11,
+          "code_snippet": "$sql = \"SELECT * FROM users WHERE username='$username' and password='$password'\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "blind",
+          "subtype": "boolean_based",
+          "severity": "HIGH",
+          "line": 42,
+          "column": 11,
+          "code_snippet": "$sql = \"SELECT * FROM users WHERE username='$username' and password='$password'\";",
+          "matched_pattern": "php_and_condition_variable",
+          "description": "AND condition with PHP variable in SQL query - blind injection risk"
+        },
+        {
+          "detector": "stacked",
+          "subtype": "batch_execution",
+          "severity": "HIGH",
+          "line": 43,
+          "column": 9,
+          "code_snippet": "if (@mysqli_multi_query($con1, $sql))",
+          "matched_pattern": "mysqli_multi_query",
+          "description": "mysqli_multi_query() enables stacked queries - high injection risk"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-42\\pass_change.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 38,
+          "column": 10,
+          "code_snippet": "$sql = \"UPDATE users SET PASSWORD='$pass' where username='$username' and password='$curr_pass' \";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 39,
+          "column": 10,
+          "code_snippet": "$res = mysqli_query($con1, $sql) or die('You tried to be smart, Try harder!!!! :( ');",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "blind",
+          "subtype": "boolean_based",
+          "severity": "HIGH",
+          "line": 38,
+          "column": 10,
+          "code_snippet": "$sql = \"UPDATE users SET PASSWORD='$pass' where username='$username' and password='$curr_pass' \";",
+          "matched_pattern": "php_and_condition_variable",
+          "description": "AND condition with PHP variable in SQL query - blind injection risk"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-43\\acc-create.php",
+      "status": "CLEAN",
+      "findings": []
+    },
+    {
+      "file": "test\\sqli-labs\\Less-43\\failed.php",
+      "status": "CLEAN",
+      "findings": []
+    },
+    {
+      "file": "test\\sqli-labs\\Less-43\\forgot_password.php",
+      "status": "CLEAN",
+      "findings": []
+    },
+    {
+      "file": "test\\sqli-labs\\Less-43\\index.php",
+      "status": "CLEAN",
+      "findings": []
+    },
+    {
+      "file": "test\\sqli-labs\\Less-43\\logged-in.php",
+      "status": "CLEAN",
+      "findings": []
+    },
+    {
+      "file": "test\\sqli-labs\\Less-43\\login.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 42,
+          "column": 11,
+          "code_snippet": "$sql = \"SELECT * FROM users WHERE username=('$username') and password=('$password')\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "blind",
+          "subtype": "boolean_based",
+          "severity": "HIGH",
+          "line": 42,
+          "column": 11,
+          "code_snippet": "$sql = \"SELECT * FROM users WHERE username=('$username') and password=('$password')\";",
+          "matched_pattern": "php_and_condition_variable",
+          "description": "AND condition with PHP variable in SQL query - blind injection risk"
+        },
+        {
+          "detector": "stacked",
+          "subtype": "batch_execution",
+          "severity": "HIGH",
+          "line": 43,
+          "column": 9,
+          "code_snippet": "if (@mysqli_multi_query($con1, $sql))",
+          "matched_pattern": "mysqli_multi_query",
+          "description": "mysqli_multi_query() enables stacked queries - high injection risk"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-43\\pass_change.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 38,
+          "column": 10,
+          "code_snippet": "$sql = \"UPDATE users SET PASSWORD='$pass' where username='$username' and password='$curr_pass' \";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 39,
+          "column": 10,
+          "code_snippet": "$res = mysqli_query($con1, $sql) or die('You tried to be smart, Try harder!!!! :( ');",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "blind",
+          "subtype": "boolean_based",
+          "severity": "HIGH",
+          "line": 38,
+          "column": 10,
+          "code_snippet": "$sql = \"UPDATE users SET PASSWORD='$pass' where username='$username' and password='$curr_pass' \";",
+          "matched_pattern": "php_and_condition_variable",
+          "description": "AND condition with PHP variable in SQL query - blind injection risk"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-44\\acc-create.php",
+      "status": "CLEAN",
+      "findings": []
+    },
+    {
+      "file": "test\\sqli-labs\\Less-44\\failed.php",
+      "status": "CLEAN",
+      "findings": []
+    },
+    {
+      "file": "test\\sqli-labs\\Less-44\\forgot_password.php",
+      "status": "CLEAN",
+      "findings": []
+    },
+    {
+      "file": "test\\sqli-labs\\Less-44\\index.php",
+      "status": "CLEAN",
+      "findings": []
+    },
+    {
+      "file": "test\\sqli-labs\\Less-44\\logged-in.php",
+      "status": "CLEAN",
+      "findings": []
+    },
+    {
+      "file": "test\\sqli-labs\\Less-44\\login.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 42,
+          "column": 11,
+          "code_snippet": "$sql = \"SELECT * FROM users WHERE username='$username' and password='$password'\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "blind",
+          "subtype": "boolean_based",
+          "severity": "HIGH",
+          "line": 42,
+          "column": 11,
+          "code_snippet": "$sql = \"SELECT * FROM users WHERE username='$username' and password='$password'\";",
+          "matched_pattern": "php_and_condition_variable",
+          "description": "AND condition with PHP variable in SQL query - blind injection risk"
+        },
+        {
+          "detector": "stacked",
+          "subtype": "batch_execution",
+          "severity": "HIGH",
+          "line": 43,
+          "column": 9,
+          "code_snippet": "if (@mysqli_multi_query($con1, $sql))",
+          "matched_pattern": "mysqli_multi_query",
+          "description": "mysqli_multi_query() enables stacked queries - high injection risk"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-44\\pass_change.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 38,
+          "column": 10,
+          "code_snippet": "$sql = \"UPDATE users SET PASSWORD='$pass' where username='$username' and password='$curr_pass' \";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 39,
+          "column": 10,
+          "code_snippet": "$res = mysqli_query($con1, $sql) or die('You tried to be smart, Try harder!!!! :( ');",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "blind",
+          "subtype": "boolean_based",
+          "severity": "HIGH",
+          "line": 38,
+          "column": 10,
+          "code_snippet": "$sql = \"UPDATE users SET PASSWORD='$pass' where username='$username' and password='$curr_pass' \";",
+          "matched_pattern": "php_and_condition_variable",
+          "description": "AND condition with PHP variable in SQL query - blind injection risk"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-45\\acc-create.php",
+      "status": "CLEAN",
+      "findings": []
+    },
+    {
+      "file": "test\\sqli-labs\\Less-45\\failed.php",
+      "status": "CLEAN",
+      "findings": []
+    },
+    {
+      "file": "test\\sqli-labs\\Less-45\\forgot_password.php",
+      "status": "CLEAN",
+      "findings": []
+    },
+    {
+      "file": "test\\sqli-labs\\Less-45\\index.php",
+      "status": "CLEAN",
+      "findings": []
+    },
+    {
+      "file": "test\\sqli-labs\\Less-45\\logged-in.php",
+      "status": "CLEAN",
+      "findings": []
+    },
+    {
+      "file": "test\\sqli-labs\\Less-45\\login.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 42,
+          "column": 11,
+          "code_snippet": "$sql = \"SELECT * FROM users WHERE username=('$username') and password=('$password')\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "blind",
+          "subtype": "boolean_based",
+          "severity": "HIGH",
+          "line": 42,
+          "column": 11,
+          "code_snippet": "$sql = \"SELECT * FROM users WHERE username=('$username') and password=('$password')\";",
+          "matched_pattern": "php_and_condition_variable",
+          "description": "AND condition with PHP variable in SQL query - blind injection risk"
+        },
+        {
+          "detector": "stacked",
+          "subtype": "batch_execution",
+          "severity": "HIGH",
+          "line": 43,
+          "column": 9,
+          "code_snippet": "if (@mysqli_multi_query($con1, $sql))",
+          "matched_pattern": "mysqli_multi_query",
+          "description": "mysqli_multi_query() enables stacked queries - high injection risk"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-45\\pass_change.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 38,
+          "column": 10,
+          "code_snippet": "$sql = \"UPDATE users SET PASSWORD='$pass' where username='$username' and password='$curr_pass' \";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 39,
+          "column": 10,
+          "code_snippet": "$res = mysqli_query($con1, $sql) or die('You tried to be smart, Try harder!!!! :( ');",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "blind",
+          "subtype": "boolean_based",
+          "severity": "HIGH",
+          "line": 38,
+          "column": 10,
+          "code_snippet": "$sql = \"UPDATE users SET PASSWORD='$pass' where username='$username' and password='$curr_pass' \";",
+          "matched_pattern": "php_and_condition_variable",
+          "description": "AND condition with PHP variable in SQL query - blind injection risk"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-46\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 22,
+          "column": 9,
+          "code_snippet": "$sql = \"SELECT * FROM users ORDER BY $id\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 23,
+          "column": 12,
+          "code_snippet": "$result = mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-47\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 22,
+          "column": 9,
+          "code_snippet": "$sql = \"SELECT * FROM users ORDER BY '$id'\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 23,
+          "column": 12,
+          "code_snippet": "$result = mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-48\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 22,
+          "column": 9,
+          "code_snippet": "$sql = \"SELECT * FROM users ORDER BY $id\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 23,
+          "column": 12,
+          "code_snippet": "$result = mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-49\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 22,
+          "column": 9,
+          "code_snippet": "$sql = \"SELECT * FROM users ORDER BY '$id'\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 23,
+          "column": 12,
+          "code_snippet": "$result = mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-4\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 29,
+          "column": 6,
+          "code_snippet": "$sql=\"SELECT * FROM users WHERE id=($id) LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 30,
+          "column": 9,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-50\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 23,
+          "column": 7,
+          "code_snippet": "$sql=\"SELECT * FROM users ORDER BY $id\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "stacked",
+          "subtype": "batch_execution",
+          "severity": "HIGH",
+          "line": 25,
+          "column": 6,
+          "code_snippet": "if (mysqli_multi_query($con1, $sql))",
+          "matched_pattern": "mysqli_multi_query",
+          "description": "mysqli_multi_query() enables stacked queries - high injection risk"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-51\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 23,
+          "column": 7,
+          "code_snippet": "$sql=\"SELECT * FROM users ORDER BY '$id'\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "stacked",
+          "subtype": "batch_execution",
+          "severity": "HIGH",
+          "line": 25,
+          "column": 6,
+          "code_snippet": "if (mysqli_multi_query($con1, $sql))",
+          "matched_pattern": "mysqli_multi_query",
+          "description": "mysqli_multi_query() enables stacked queries - high injection risk"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-52\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 23,
+          "column": 7,
+          "code_snippet": "$sql=\"SELECT * FROM users ORDER BY $id\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "stacked",
+          "subtype": "batch_execution",
+          "severity": "HIGH",
+          "line": 25,
+          "column": 6,
+          "code_snippet": "if (mysqli_multi_query($con1, $sql))",
+          "matched_pattern": "mysqli_multi_query",
+          "description": "mysqli_multi_query() enables stacked queries - high injection risk"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-53\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 23,
+          "column": 7,
+          "code_snippet": "$sql=\"SELECT * FROM users ORDER BY '$id'\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "stacked",
+          "subtype": "batch_execution",
+          "severity": "HIGH",
+          "line": 25,
+          "column": 6,
+          "code_snippet": "if (mysqli_multi_query($con1, $sql))",
+          "matched_pattern": "mysqli_multi_query",
+          "description": "mysqli_multi_query() enables stacked queries - high injection risk"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-54\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 97,
+          "column": 9,
+          "code_snippet": "$sql=\"SELECT * FROM security.users WHERE id='$id' LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 150,
+          "column": 7,
+          "code_snippet": "$sql=\"SELECT 1 FROM $table WHERE $col1= '$key'\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 98,
+          "column": 12,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 152,
+          "column": 10,
+          "code_snippet": "$result=mysqli_query($con1, $sql)or die(\"error in submittion of Key Solution\".mysqli_error($con1));",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-55\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 99,
+          "column": 9,
+          "code_snippet": "$sql=\"SELECT * FROM security.users WHERE id=($id) LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 153,
+          "column": 7,
+          "code_snippet": "$sql=\"SELECT 1 FROM $table WHERE $col1= '$key'\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 100,
+          "column": 12,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 155,
+          "column": 10,
+          "code_snippet": "$result=mysqli_query($con1, $sql)or die(\"error in submittion of Key Solution\".mysqli_error($con1));",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-56\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 99,
+          "column": 9,
+          "code_snippet": "$sql=\"SELECT * FROM security.users WHERE id=('$id') LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 152,
+          "column": 7,
+          "code_snippet": "$sql=\"SELECT 1 FROM $table WHERE $col1= '$key'\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 100,
+          "column": 12,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 154,
+          "column": 10,
+          "code_snippet": "$result=mysqli_query($con1, $sql)or die(\"error in submittion of Key Solution\".mysqli_error($con1));",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-57\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 99,
+          "column": 9,
+          "code_snippet": "$sql=\"SELECT * FROM security.users WHERE id=$id LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 152,
+          "column": 7,
+          "code_snippet": "$sql=\"SELECT 1 FROM $table WHERE $col1= '$key'\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 100,
+          "column": 12,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 154,
+          "column": 10,
+          "code_snippet": "$result=mysqli_query($con1, $sql)or die(\"error in submittion of Key Solution\".mysqli_error($con1));",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-58\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 97,
+          "column": 9,
+          "code_snippet": "$sql=\"SELECT * FROM security.users WHERE id='$id' LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 152,
+          "column": 7,
+          "code_snippet": "$sql=\"SELECT 1 FROM $table WHERE $col1= '$key'\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 98,
+          "column": 12,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 154,
+          "column": 10,
+          "code_snippet": "$result=mysqli_query($con1, $sql)or die(\"error in submittion of Key Solution\".mysqli_error($con1));",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-59\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 97,
+          "column": 9,
+          "code_snippet": "$sql=\"SELECT * FROM security.users WHERE id=$id LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 152,
+          "column": 7,
+          "code_snippet": "$sql=\"SELECT 1 FROM $table WHERE $col1= '$key'\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 98,
+          "column": 12,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 154,
+          "column": 10,
+          "code_snippet": "$result=mysqli_query($con1, $sql)or die(\"error in submittion of Key Solution\".mysqli_error($con1));",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-5\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 29,
+          "column": 6,
+          "code_snippet": "$sql=\"SELECT * FROM users WHERE id='$id' LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 30,
+          "column": 9,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-60\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 97,
+          "column": 9,
+          "code_snippet": "$sql=\"SELECT * FROM security.users WHERE id=$id LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 152,
+          "column": 7,
+          "code_snippet": "$sql=\"SELECT 1 FROM $table WHERE $col1= '$key'\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 98,
+          "column": 12,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 154,
+          "column": 10,
+          "code_snippet": "$result=mysqli_query($con1, $sql)or die(\"error in submittion of Key Solution\".mysqli_error($con1));",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-61\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 97,
+          "column": 9,
+          "code_snippet": "$sql=\"SELECT * FROM security.users WHERE id=(('$id')) LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 152,
+          "column": 7,
+          "code_snippet": "$sql=\"SELECT 1 FROM $table WHERE $col1= '$key'\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 98,
+          "column": 12,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 154,
+          "column": 10,
+          "code_snippet": "$result=mysqli_query($con1, $sql)or die(\"error in submittion of Key Solution\".mysqli_error($con1));",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-62\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 97,
+          "column": 9,
+          "code_snippet": "$sql=\"SELECT * FROM security.users WHERE id=('$id') LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 152,
+          "column": 7,
+          "code_snippet": "$sql=\"SELECT 1 FROM $table WHERE $col1= '$key'\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 98,
+          "column": 12,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 154,
+          "column": 10,
+          "code_snippet": "$result=mysqli_query($con1, $sql)or die(\"error in submittion of Key Solution\".mysqli_error($con1));",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-63\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 97,
+          "column": 9,
+          "code_snippet": "$sql=\"SELECT * FROM security.users WHERE id='$id' LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 152,
+          "column": 7,
+          "code_snippet": "$sql=\"SELECT 1 FROM $table WHERE $col1= '$key'\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 98,
+          "column": 12,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 154,
+          "column": 10,
+          "code_snippet": "$result=mysqli_query($con1, $sql)or die(\"error in submittion of Key Solution\".mysqli_error($con1));",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-64\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 97,
+          "column": 9,
+          "code_snippet": "$sql=\"SELECT * FROM security.users WHERE id=(($id)) LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 152,
+          "column": 7,
+          "code_snippet": "$sql=\"SELECT 1 FROM $table WHERE $col1= '$key'\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 98,
+          "column": 12,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 154,
+          "column": 10,
+          "code_snippet": "$result=mysqli_query($con1, $sql)or die(\"error in submittion of Key Solution\".mysqli_error($con1));",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-65\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 97,
+          "column": 9,
+          "code_snippet": "$sql=\"SELECT * FROM security.users WHERE id=($id) LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 152,
+          "column": 7,
+          "code_snippet": "$sql=\"SELECT 1 FROM $table WHERE $col1= '$key'\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 98,
+          "column": 12,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 154,
+          "column": 10,
+          "code_snippet": "$result=mysqli_query($con1, $sql)or die(\"error in submittion of Key Solution\".mysqli_error($con1));",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-6\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 29,
+          "column": 6,
+          "code_snippet": "$sql=\"SELECT * FROM users WHERE id=$id LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 30,
+          "column": 9,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-7\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 31,
+          "column": 6,
+          "code_snippet": "$sql=\"SELECT * FROM users WHERE id=(('$id')) LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 32,
+          "column": 9,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-8\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 29,
+          "column": 6,
+          "code_snippet": "$sql=\"SELECT * FROM users WHERE id='$id' LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 30,
+          "column": 9,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\Less-9\\index.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 30,
+          "column": 6,
+          "code_snippet": "$sql=\"SELECT * FROM users WHERE id='$id' LIMIT 0,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 31,
+          "column": 9,
+          "code_snippet": "$result=mysqli_query($con1, $sql);",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\sql-connections\\functions.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 33,
+          "column": 7,
+          "code_snippet": "$sql=\"SELECT table_name FROM information_schema.tables WHERE table_schema='$dbname1'\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 48,
+          "column": 7,
+          "code_snippet": "$sql=\"SELECT column_name FROM information_schema.columns WHERE table_name='$table' LIMIT $idee,1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 63,
+          "column": 7,
+          "code_snippet": "$sql=\"SELECT $col FROM $tab WHERE id=1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 79,
+          "column": 9,
+          "code_snippet": "$sql = \"UPDATE $table SET tryy=tryy+1 WHERE id=1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 87,
+          "column": 7,
+          "code_snippet": "$sql=\"SELECT tryy FROM $table WHERE id=1\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 34,
+          "column": 10,
+          "code_snippet": "$result=mysqli_query($con1, $sql) or die(\"error in function table_name()\".mysqli_error($con1));",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 49,
+          "column": 10,
+          "code_snippet": "$result=mysqli_query($con1, $sql) or die(\"error in function column_name()\".mysqli_error($con1));",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 64,
+          "column": 10,
+          "code_snippet": "$result=mysqli_query($con1, $sql) or die(\"error in function column_name()\".mysqli_error($con1));",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 80,
+          "column": 2,
+          "code_snippet": "mysqli_query($con1, $sql) or die(\"error in function next_tryy()\". mysqli_error($con1));",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 88,
+          "column": 10,
+          "code_snippet": "$result=mysqli_query($con1, $sql) ;",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\sql-connections\\setup-db-challenge.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "string_concat",
+          "severity": "HIGH",
+          "line": 63,
+          "column": 6,
+          "code_snippet": "$sql=\"INSERT INTO $dbname1.$table VALUES (1, '$hash', '$sec_key', 0)\";",
+          "matched_pattern": "double_quote_sql_variable",
+          "description": "SQL query in double quotes with variable interpolation"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 24,
+          "column": 6,
+          "code_snippet": "if (mysqli_query($con, $sql))",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 34,
+          "column": 6,
+          "code_snippet": "if (mysqli_query($con, $sql))",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 51,
+          "column": 6,
+          "code_snippet": "if (mysqli_query($con, $sql))",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 64,
+          "column": 13,
+          "code_snippet": "if (mysqli_query($con, $sql))",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\sql-connections\\setup-db.php",
+      "status": "VULNERABLE",
+      "findings": [
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 44,
+          "column": 6,
+          "code_snippet": "if (mysqli_query($con, $sql))",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 52,
+          "column": 6,
+          "code_snippet": "if (mysqli_query($con, $sql))",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 59,
+          "column": 6,
+          "code_snippet": "if (mysqli_query($con, $sql))",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 72,
+          "column": 6,
+          "code_snippet": "if (mysqli_query($con, $sql))",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 88,
+          "column": 6,
+          "code_snippet": "if (mysqli_query($con, $sql))",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 102,
+          "column": 6,
+          "code_snippet": "if (mysqli_query($con, $sql))",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 115,
+          "column": 6,
+          "code_snippet": "if (mysqli_query($con, $sql))",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        },
+        {
+          "detector": "classic",
+          "subtype": "unsafe_execute",
+          "severity": "MEDIUM",
+          "line": 124,
+          "column": 6,
+          "code_snippet": "if (mysqli_query($con, $sql))",
+          "matched_pattern": "mysqli_query_var_param",
+          "description": "mysqli_query() with variable - verify prepared statements are used"
+        }
+      ]
+    },
+    {
+      "file": "test\\sqli-labs\\sql-connections\\sql-connect-1.php",
+      "status": "CLEAN",
+      "findings": []
+    },
+    {
+      "file": "test\\sqli-labs\\sql-connections\\sql-connect.php",
+      "status": "CLEAN",
+      "findings": []
+    },
+    {
+      "file": "test\\sqli-labs\\sql-connections\\sqli-connect.php",
+      "status": "CLEAN",
+      "findings": []
+    },
+    {
+      "file": "test\\sqli-labs\\sql-connections\\test.php",
+      "status": "CLEAN",
+      "findings": []
+    }
+  ]
+}

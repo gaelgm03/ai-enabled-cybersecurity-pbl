@@ -41,27 +41,28 @@ patterns:
     description: "SQL in heredoc with variable interpolation"
 
   # Unsafe execute patterns - User input sources
+  # Patterns use [^;\\n]* to match only within the same line (no newline crossing)
   - name: get_in_query
     subtype: unsafe_execute
-    regex: "\\$_GET\\s*\\[[^\\]]+\\][^;]*(?:mysql|mysqli|query|SELECT|INSERT|UPDATE|DELETE)"
+    regex: "\\$_GET\\s*\\[[^\\]]+\\][^;\\n]*(?:mysql|mysqli|query|SELECT|INSERT|UPDATE|DELETE)"
     severity: HIGH
     description: "$_GET directly used in SQL query - SQL injection vulnerability"
 
   - name: post_in_query
     subtype: unsafe_execute
-    regex: "\\$_POST\\s*\\[[^\\]]+\\][^;]*(?:mysql|mysqli|query|SELECT|INSERT|UPDATE|DELETE)"
+    regex: "\\$_POST\\s*\\[[^\\]]+\\][^;\\n]*(?:mysql|mysqli|query|SELECT|INSERT|UPDATE|DELETE)"
     severity: HIGH
     description: "$_POST directly used in SQL query - SQL injection vulnerability"
 
   - name: request_in_query
     subtype: unsafe_execute
-    regex: "\\$_REQUEST\\s*\\[[^\\]]+\\][^;]*(?:mysql|mysqli|query|SELECT|INSERT|UPDATE|DELETE)"
+    regex: "\\$_REQUEST\\s*\\[[^\\]]+\\][^;\\n]*(?:mysql|mysqli|query|SELECT|INSERT|UPDATE|DELETE)"
     severity: HIGH
     description: "$_REQUEST directly used in SQL query - SQL injection vulnerability"
 
   - name: cookie_in_query
     subtype: unsafe_execute
-    regex: "\\$_COOKIE\\s*\\[[^\\]]+\\][^;]*(?:mysql|mysqli|query|SELECT|INSERT|UPDATE|DELETE)"
+    regex: "\\$_COOKIE\\s*\\[[^\\]]+\\][^;\\n]*(?:mysql|mysqli|query|SELECT|INSERT|UPDATE|DELETE)"
     severity: HIGH
     description: "$_COOKIE directly used in SQL query - SQL injection vulnerability"
 
@@ -124,14 +125,15 @@ patterns:
     description: "PDO emulated prepares may allow multi-statement execution"
 
   # Boolean-based patterns (for blind detector)
+  # Pattern requires SQL context: SELECT/FROM/WHERE before AND/OR condition
   - name: php_or_condition_variable
     subtype: boolean_based
-    regex: "['\"][^'\"]*\\bOR\\b[^'\"]*\\$[a-zA-Z_]"
+    regex: "\"\\s*(?:SELECT|UPDATE|DELETE|INSERT)[^\"]*\\bOR\\b[^\"]*\\$[a-zA-Z_][^\"]*\""
     severity: HIGH
-    description: "OR condition with PHP variable - blind injection risk"
+    description: "OR condition with PHP variable in SQL query - blind injection risk"
 
   - name: php_and_condition_variable
     subtype: boolean_based
-    regex: "['\"][^'\"]*\\bAND\\b[^'\"]*\\$[a-zA-Z_]"
+    regex: "\"\\s*(?:SELECT|UPDATE|DELETE|INSERT)[^\"]*\\bAND\\b[^\"]*\\$[a-zA-Z_][^\"]*\""
     severity: HIGH
-    description: "AND condition with PHP variable - blind injection risk"
+    description: "AND condition with PHP variable in SQL query - blind injection risk"
