@@ -21,7 +21,7 @@
 ## 1. Initial Baseline Scan
 
 ### Configuration
-- **Target:** `test/sqli-labs/` (全69 Less-*directory)
+- **Target:** `test/sqli-labs/` (All 69 Less-* directories)
 - **Detectors:** classic, blind, oob, stacked
 - **Files Scanned:** 121 PHP files
 
