@@ -221,6 +221,16 @@ See [docs/week4-results.md](docs/week4-results.md) for full results and analysis
 
 ---
 
+## 📝 Week 6 Focus
+
+**Week 6 Topic:** Responsible Innovation
+
+**Week 6 Deliverable:** Essay on developing and sharing vulnerability detection tools responsibly.
+
+- [docs/week6-responsible-innovation-essay.md](docs/week6-responsible-innovation-essay.md) — Responsible innovation essay covering dual-use concerns, ethical scanning, redaction practices, and a practical responsibility checklist
+
+---
+
 ## 🚀 Next Steps
 
 - Add allowlists to reduce false positives
