@@ -231,6 +231,40 @@ See [docs/week4-results.md](docs/week4-results.md) for full results and analysis
 
 ---
 
+## 📄 Week 7 – Final Deliverable
+
+**Week 7 Topic:** Preparing deliverable and defining research directions
+
+**Week 7 Deliverables:**
+
+### Chosen Deliverable Type
+
+**Short Academic-Style Paper** — A structured paper following problem → method → evaluation → discussion format, showcasing the hybrid architecture, formal evaluation results, and responsible innovation considerations.
+
+### Documentation
+
+| Document | Description |
+|----------|-------------|
+| [docs/week7-deliverable-decision.md](docs/week7-deliverable-decision.md) | Deliverable type selection and justification |
+| [docs/week7-draft.md](docs/week7-draft.md) | Paper outline with Introduction and Background sections |
+| [docs/week7-research-directions.md](docs/week7-research-directions.md) | Research questions and future work roadmap |
+
+### Week 7 Enhancement
+
+- **Confidence score field** added to findings schema (`src/pipeline/schema.py`)
+- Enables future confidence-based triage without breaking existing functionality
+- Default value: 0.5 (medium confidence)
+
+### Research Questions Defined
+
+1. **RQ1:** Can confidence scoring reduce false positive burden? (Short-term)
+2. **RQ2:** Which vulnerability categories benefit most from AI? (Short-term)
+3. **RQ3:** How can AI reduce FPs without becoming the detector? (Medium-term)
+4. **RQ4:** Can we quantify LLM classification reliability? (Medium-term)
+5. **RQ5:** What patterns distinguish findings from noise? (Short-term)
+
+---
+
 ## 🚀 Next Steps
 
 - Add allowlists to reduce false positives

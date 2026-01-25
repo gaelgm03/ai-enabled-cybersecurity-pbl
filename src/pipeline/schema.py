@@ -38,6 +38,7 @@ class Finding:
     redacted_match: str = ""  # Safe to store/display
     remediation: str = ""  # LLM-generated fix instructions
     prevention: str = ""  # LLM-generated prevention guidance
+    confidence: float = 0.5  # Confidence score 0.0-1.0 (Week 7 enhancement)
     metadata: dict = field(default_factory=dict)
     
     def to_dict(self) -> dict:
