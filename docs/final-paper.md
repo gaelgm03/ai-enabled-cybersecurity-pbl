@@ -110,7 +110,7 @@ The detection layer implements four specialized detectors, each targeting a spec
 
 **SecretDetector.** Identifies accidentally committed credentials using a two-tier approach: (1) integration with gitleaks for comprehensive pattern coverage when available, and (2) fallback to custom regex patterns covering 30+ provider formats (AWS, GitHub, Stripe, Slack, database URLs, etc.). High-entropy string detection supplements explicit patterns.
 
-**DependencyDetector.** Checks package manifests against vulnerability databases using pip-audit for Python projects. Findings include CVE identifiers, severity scores, and affected version ranges.
+**DependencyDetector.** Checks package manifests against vulnerability databases using pip-audit for Python projects. Findings include CVE identifiers, severity scores, and affected version ranges (this detector is part of the system but is not included in the 60-case labeled dataset).
 
 **SQLiDetector.** Pattern-based detection for SQL injection vulnerabilities across Python, JavaScript, and PHP. Identifies string concatenation and format string patterns in database query construction while attempting to exclude safe patterns (parameterized queries, ORM usage).
 
@@ -194,13 +194,13 @@ We evaluate using standard classification metrics:
 | **Recall** | TP / (TP + FN) | Proportion of real vulnerabilities that are flagged |
 | **F1 Score** | 2 × (P × R) / (P + R) | Harmonic mean balancing precision and recall |
 | **False Positive Rate** | FP / (FP + TN) | Proportion of safe items incorrectly flagged |
-| **Latency** | Time per case | Practical deployment consideration |
+| **Latency** | Mean end-to-end time per case | Practical deployment consideration |
 
 ### 4.3 Baseline vs. LLM Comparison
 
 We compare three configurations:
 
-1. **Baseline:** Deterministic detectors only (regex patterns, codespell, pip-audit)
+1. **Baseline:** Deterministic detectors only (regex patterns, codespell, pip-audit; dependency vulnerabilities were not included in the 60-case labeled dataset)
 2. **Ollama llama3.1:8b:** Local LLM classification using 8-billion parameter model
 3. **Ollama mistral:7b:** Local LLM classification using 7-billion parameter model
 
@@ -224,6 +224,8 @@ Beyond synthetic benchmarks, we validated on five production open-source reposit
 
 ## 5. Results
 
+LLM remediation quality is discussed qualitatively and was not quantitatively evaluated in this study.
+
 ### 5.1 Summary Results
 
 | Model | Precision | Recall | F1 | FPR | Latency |
@@ -242,6 +244,8 @@ Beyond synthetic benchmarks, we validated on five production open-source reposit
 | SQL Injection | 1.00 | 0.60 | 0.75 | 0.86 |
 | Typos | 0.89 | 0.80 | 0.84 | 0.17 |
 
+For brevity, we report only per-category F1 for the LLM (llama3.1), since F1 is the primary summary metric used for cross-model comparison.
+
 **Notable observations:**
 
 - **Typos:** Baseline excels (F1=0.84); LLMs perform poorly (F1=0.17) because they do not recognize typos as security-relevant
@@ -257,21 +261,13 @@ SQL injection detection is the **only category where LLMs demonstrated an advant
 | Baseline | <1ms | Suitable for CI/CD, IDE integration, large codebases |
 | LLM (local) | 54-58s | Impractical for primary detection; viable for selective enhancement |
 
+Latency is reported as the mean per-case end-to-end classification time measured around the model `classify(...)` call.
+
 The 50,000x latency differential makes LLM-based primary detection impractical for real-world deployment. However, LLMs remain viable for post-detection enhancement (e.g., remediation generation, false positive filtering on flagged items).
 
 ### 5.4 Real-World Validation Results
 
 Scanning five production repositories produced:
-
-| Category | Count | Percentage |
-|----------|-------|------------|
-| Typos | 828 | 91.2% |
-| Secrets | 80 | 8.8% |
-| SQL Injection | 0 | 0% |
-| Dependencies | 0 | 0% |
-| **Total** | **908** | 100% |
-
-**Findings by repository:**
 
 | Repository | Total Findings | Critical | High | Low |
 |------------|----------------|----------|------|-----|
@@ -285,7 +281,7 @@ Scanning five production repositories produced:
 - **Zero critical vulnerabilities:** Expected for well-maintained projects
 - **High false positive rate:** 70-95% of findings are benign (intentional names, test fixtures, documentation)
 - **No SQL injection findings:** These libraries use ORMs or parameterized queries
-- **Scanner validated on real code:** Performance consistent with synthetic evaluation
+- **Scanner validated on real code:** Qualitatively consistent with observed trends from the synthetic evaluation
 
 ---
 
