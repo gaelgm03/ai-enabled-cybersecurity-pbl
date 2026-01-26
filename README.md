@@ -14,26 +14,31 @@ The project explores how **Large Language Models (LLMs)** can be used to **assis
 
 ---
 
+## 📄 Key Deliverables
+
+| Document | Description |
+|----------|-------------|
+| **[Final Paper](docs/final-paper.md)** | Academic-style paper presenting our hybrid detection approach |
+| **[Evaluation Results](reports/week5/eval_results.md)** | Quantitative comparison of baseline vs. LLM detection |
+| **[Responsible Innovation Essay](docs/week6-responsible-innovation-essay.md)** | Ethical considerations for security tooling |
+
+---
+
+## 🔬 Key Findings
+
+- **Deterministic detection outperforms LLMs:** Baseline detectors achieved F1=0.77 (91% precision, 67% recall) vs. F1=0.54 for the best LLM configuration
+- **LLMs add value in specific contexts:** SQL injection detection showed LLM advantage (F1=0.86 vs 0.75); remediation generation benefits from AI assistance
+- **Hybrid architectures are the pragmatic path forward:** Separate detection (deterministic) from explanation (LLM-assisted) to capture benefits of both approaches
+
+---
+
 ## 🎯 Project Goals
 
 - Understand how LLMs introduce **new security risks and attack surfaces**
 - Explore how AI can support **defensive cybersecurity workflows**
 - Identify common **software vulnerabilities** and how AI may assist in detecting or explaining them
 - Design and prototype a **lightweight AI-assisted cybersecurity tool**
-- Apply **responsible AI principles**, including human-in-the-loop validation
-
----
-
-## 🧭 Track Information
-
-**Track:** Track 3 – AI-Enabled Cybersecurity  
-
-**Track Focus Areas:**
-- Foundations of penetration testing and vulnerability research  
-- AI-assisted security audits and system testing  
-- Identifying code vulnerabilities with LLMs  
-- Prompt engineering and scaffolding for security use cases  
-- Proofs-of-concept for AI-enabled cybersecurity workflows  
+- Apply **responsible AI principles**, including human-in-the-loop validation  
 
 ---
 
@@ -231,53 +236,64 @@ See [docs/week4-results.md](docs/week4-results.md) for full results and analysis
 
 ---
 
-## 📄 Week 7 – Final Deliverable
+## 🚀 Quick Start
 
-**Week 7 Topic:** Preparing deliverable and defining research directions
+```bash
+# Clone and install
+git clone https://github.com/YOUR_USERNAME/ai-enabled-cybersecurity-pbl.git
+cd ai-enabled-cybersecurity-pbl
+pip install -r requirements.txt
 
-**Week 7 Deliverables:**
+# Run the scanner on a local directory
+cd src
+python -m pipeline.main ../path/to/scan
 
-### Chosen Deliverable Type
+# Run the evaluation harness
+cd ../evals
+python run_eval.py --model baseline
+```
 
-**Short Academic-Style Paper** — A structured paper following problem → method → evaluation → discussion format, showcasing the hybrid architecture, formal evaluation results, and responsible innovation considerations.
-
-### Documentation
-
-| Document | Description |
-|----------|-------------|
-| [docs/week7-deliverable-decision.md](docs/week7-deliverable-decision.md) | Deliverable type selection and justification |
-| [docs/week7-draft.md](docs/week7-draft.md) | Paper outline with Introduction and Background sections |
-| [docs/week7-research-directions.md](docs/week7-research-directions.md) | Research questions and future work roadmap |
-
-### Week 7 Enhancement
-
-- **Confidence score field** added to findings schema (`src/pipeline/schema.py`)
-- Enables future confidence-based triage without breaking existing functionality
-- Default value: 0.5 (medium confidence)
-
-### Research Questions Defined
-
-1. **RQ1:** Can confidence scoring reduce false positive burden? (Short-term)
-2. **RQ2:** Which vulnerability categories benefit most from AI? (Short-term)
-3. **RQ3:** How can AI reduce FPs without becoming the detector? (Medium-term)
-4. **RQ4:** Can we quantify LLM classification reliability? (Medium-term)
-5. **RQ5:** What patterns distinguish findings from noise? (Short-term)
+See [docs/week2-pipeline.md](docs/week2-pipeline.md) for full usage documentation.
 
 ---
 
-## 🚀 Next Steps
+## 📄 Final Deliverable
 
-- Add allowlists to reduce false positives
-- Implement SARIF output for IDE integration
-- Add more language-specific patterns
-- Continuous monitoring integration
+**[Final Paper: Hybrid Vulnerability Detection](docs/final-paper.md)**
+
+A structured academic-style paper presenting:
+- Problem motivation and background
+- Hybrid architecture design (deterministic detection + LLM remediation)
+- Evaluation methodology and results
+- Responsible innovation considerations
+- Limitations and future work
+
+### Supporting Documentation
+
+| Document | Description |
+|----------|-------------|
+| [docs/week7-research-directions.md](docs/week7-research-directions.md) | Research questions and future work roadmap |
+| [reports/week5/eval_results.md](reports/week5/eval_results.md) | Detailed evaluation metrics |
+| [docs/week4-results.md](docs/week4-results.md) | Real-world validation on 5 OSS repositories |
+
+---
+
+## ⚠️ Responsible Use
+
+This project is conducted strictly for **educational and defensive purposes**. The tools and techniques documented here:
+
+- Are designed for **defensive security analysis only**
+- Include **mandatory secret redaction** before any storage or LLM transmission
+- Provide **no exploitation capabilities**
+- Follow **responsible disclosure principles**
+
+See [docs/week6-responsible-innovation-essay.md](docs/week6-responsible-innovation-essay.md) for detailed ethical considerations.
 
 ---
 
 ## 👥 Team
 
 - **Gael Guzmán**  
-- *Additional team members to be added*
 
 ---
 
