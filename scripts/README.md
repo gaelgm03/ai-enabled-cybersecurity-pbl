@@ -92,5 +92,5 @@ After running the scripts, the following files are generated:
 
 ## Related Documentation
 
-- [Pipeline Documentation](../docs/week2-pipeline.md)
+- [Pipeline Documentation](../docs/archive/week2-pipeline.md)
 - [Project README](../README.md)

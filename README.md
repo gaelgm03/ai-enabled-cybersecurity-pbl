@@ -6,7 +6,7 @@
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 This repository contains the work for the **AI in Cybersecurity Project-Based Learning (PBL)** as part of the **MIT Blended AI+X Program**.
 
@@ -14,17 +14,18 @@ The project explores how **Large Language Models (LLMs)** can be used to **assis
 
 ---
 
-## 📄 Key Deliverables
+## Key Deliverables
 
 | Document | Description |
 |----------|-------------|
 | **[Final Paper](docs/final-paper.md)** | Academic-style paper presenting our hybrid detection approach |
 | **[Evaluation Results](reports/week5/eval_results.md)** | Quantitative comparison of baseline vs. LLM detection |
-| **[Responsible Innovation Essay](docs/week6-responsible-innovation-essay.md)** | Ethical considerations for security tooling |
+| **[Responsible Innovation](docs/responsible-innovation.md)** | Ethical considerations for security tooling |
+| **[Validation Results](docs/validation-results.md)** | Real-world validation summary on 5 open-source repositories |
 
 ---
 
-## 🔬 Key Findings
+## Key Findings
 
 - **Deterministic detection outperforms LLMs:** Baseline detectors achieved F1=0.77 (91% precision, 67% recall) vs. F1=0.54 for the best LLM configuration
 - **LLMs add value in specific contexts:** SQL injection detection showed LLM advantage (F1=0.86 vs 0.75); remediation generation benefits from AI assistance
@@ -32,7 +33,7 @@ The project explores how **Large Language Models (LLMs)** can be used to **assis
 
 ---
 
-## 🎯 Project Goals
+## Project Goals
 
 - Understand how LLMs introduce **new security risks and attack surfaces**
 - Explore how AI can support **defensive cybersecurity workflows**
@@ -42,7 +43,7 @@ The project explores how **Large Language Models (LLMs)** can be used to **assis
 
 ---
 
-## 🗂️ Repository Structure
+## Repository Structure
 
 ```
 ai-enabled-cybersecurity-pbl/
@@ -51,10 +52,13 @@ ai-enabled-cybersecurity-pbl/
 │   └── security-scan.yml    # Week 4: Self-scan on PRs
 ├── configs/                 # Configuration files
 │   └── targets.yaml         # Week 4: Target repos for batch scanning
-├── docs/                    # References, diagrams, and documentation
-│   ├── week4-agent.md       # Week 4: GitHub agent documentation
-│   └── week4-results.md     # Week 4: Validation scan results
-├── notes/                   # Weekly reflections, findings, and discussions
+├── docs/                    # Final-facing documentation
+│   ├── final-paper.md
+│   ├── publication-readiness.md
+│   ├── responsible-innovation.md
+│   ├── validation-results.md
+│   └── archive/
+│       └── reports/         # Historical scan outputs (non-primary)
 ├── experiments/             # Vulnerability examples and prompt experiments
 ├── src/
 │   └── pipeline/            # Security scanning pipeline
@@ -65,9 +69,8 @@ ai-enabled-cybersecurity-pbl/
 │       ├── schema.py        # Unified finding schema
 │       ├── redaction.py     # Secret redaction layer
 │       └── llm_remediation.py  # LLM-based fix instructions
-├── reports/                 # Generated scan reports
-│   ├── week2/               # Week 2 scan outputs
-│   └── week4/               # Week 4 GitHub repo scans
+├── reports/                 # Final evaluation outputs
+│   └── week5/
 ├── requirements.txt         # Python dependencies
 ├── README.md                # Project overview and documentation
 └── .gitignore
@@ -75,22 +78,7 @@ ai-enabled-cybersecurity-pbl/
 
 ---
 
-## 📅 Week 1 Focus
-
-**Week 1 Objectives (Track 3):**
-- Gain familiarity with **Git** and collaborative workflows
-- Build foundational understanding of **software vulnerabilities**
-- Frame vulnerabilities in the context of **AI-assisted security analysis**
-
-**Week 1 Progress:**
-- Repository setup and team collaboration established  
-- Core Git workflows practiced (branching, commits, pull requests)  
-- Review of common vulnerability types (e.g., injection, access control, misconfiguration)  
-- Initial discussion on how LLMs can assist or introduce risks in cybersecurity  
-
----
-
-## ⚠️ Ethical & Security Considerations
+## Ethical & Security Considerations
 
 This project is conducted strictly for **educational and defensive purposes**.  
 All experiments and tools developed will:
@@ -101,29 +89,7 @@ All experiments and tools developed will:
 
 ---
 
-## � Week 2 Focus
-
-**Week 2 Topic:** Basic issues—typos, accidentally committed API keys, outdated dependencies.
-
-**Week 2 Deliverable:** A security scanning pipeline that detects common issues and generates remediation guidance.
-
-### Pipeline Features
-
-| Detector | Tool | Purpose |
-|----------|------|---------|
-| **Typos** | codespell | Spelling errors in code and docs |
-| **Secrets** | gitleaks/regex | Accidentally committed credentials |
-| **Dependencies** | pip-audit/npm audit | Known vulnerable packages |
-
-### Key Design Decisions
-
-- **Deterministic detection**: All scanning uses established tools, not LLM inference
-- **Redaction layer**: Secrets are **never** stored or displayed in full
-- **LLM for remediation only**: LLM generates fix instructions from redacted context
-- **Unified schema**: All findings use a common format for easy processing
-- **Multiple LLM backends**: Anthropic Claude, Ollama (free/local), or templates
-
-### Running the Pipeline
+## Reproducing Results
 
 ```bash
 # Install dependencies
@@ -141,102 +107,9 @@ python -m pipeline.main .. --no-llm
 
 # Check available tools and LLM providers
 python -m pipeline.main --check-tools
-
-# Output will be in reports/week2/
 ```
 
-### Output Files
-
-- `reports/week2/findings.json` — Machine-readable scan results
-- `reports/week2/report.md` — Human-readable report with remediation guidance
-
-See [docs/week2-pipeline.md](docs/week2-pipeline.md) for full documentation.
-
----
-
-## � Week 4 Focus
-
-**Week 4 Topic:** Building an agent to find software vulnerabilities in open-source software.
-
-**Week 4 Deliverable:** Automated GitHub repository security scanner with developer-friendly reports.
-
-### New Features (Week 4)
-
-| Feature | Description |
-|---------|-------------|
-| **GitHub Agent** | Scan any GitHub repo by URL or owner/name |
-| **SQL Injection Detection** | Pattern-based detection for Python, JS, PHP |
-| **Expanded Secrets** | 30+ provider patterns (AWS, Stripe, Slack, etc.) |
-| **Security Reports** | Developer-friendly reports with intent/risk analysis |
-| **Batch Scanning** | Scan multiple repos from config file |
-
-### Running the GitHub Scanner
-
-```bash
-cd src
-
-# Scan a GitHub repository
-python -m pipeline.github_agent pallets/flask
-
-# Scan by URL
-python -m pipeline.github_agent https://github.com/psf/requests
-
-# Scan a local directory
-python -m pipeline.github_agent --local ./my-project
-
-# Batch scan from config file
-python -m pipeline.github_agent --config ../configs/targets.yaml
-
-# With LLM remediation
-python -m pipeline.github_agent owner/repo --use-llm --llm-provider ollama
-```
-
-### Output Files (Week 4)
-
-```
-reports/week4/<owner>__<repo>/
-├── findings.json        # Machine-readable findings
-├── report.md            # Standard markdown report
-└── security_report.md   # Developer-friendly security report (NEW)
-```
-
-### Security Report Contents
-
-The new `security_report.md` includes:
-- **Executive Summary** with risk level and category breakdown
-- **Detailed Findings** with:
-  - Intent: What the code is trying to do
-  - Attack Surface: Where user input flows
-  - Risk Assessment: Impact and likelihood
-  - Recommended Fix: Concrete remediation steps
-  - Verification: How to confirm the fix
-
-### Validation Results
-
-Scanned 5 real-world Python projects (109,000+ combined GitHub stars):
-- pallets/click, httpie/cli, encode/django-rest-framework, bottlepy/bottle, aio-libs/aiohttp
-
-See [docs/week4-results.md](docs/week4-results.md) for full results and analysis.
-
-### Documentation
-
-- [docs/week4-agent.md](docs/week4-agent.md) — Full GitHub agent documentation
-- [docs/week4-results.md](docs/week4-results.md) — Validation scan results
-- [configs/targets.yaml](configs/targets.yaml) — Target repository configuration
-
----
-
-## 📝 Week 6 Focus
-
-**Week 6 Topic:** Responsible Innovation
-
-**Week 6 Deliverable:** Essay on developing and sharing vulnerability detection tools responsibly.
-
-- [docs/week6-responsible-innovation-essay.md](docs/week6-responsible-innovation-essay.md) — Responsible innovation essay covering dual-use concerns, ethical scanning, redaction practices, and a practical responsibility checklist
-
----
-
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 # Clone and install
@@ -253,32 +126,9 @@ cd ../evals
 python run_eval.py --model baseline
 ```
 
-See [docs/week2-pipeline.md](docs/week2-pipeline.md) for full usage documentation.
-
 ---
 
-## 📄 Final Deliverable
-
-**[Final Paper: Hybrid Vulnerability Detection](docs/final-paper.md)**
-
-A structured academic-style paper presenting:
-- Problem motivation and background
-- Hybrid architecture design (deterministic detection + LLM remediation)
-- Evaluation methodology and results
-- Responsible innovation considerations
-- Limitations and future work
-
-### Supporting Documentation
-
-| Document | Description |
-|----------|-------------|
-| [docs/week7-research-directions.md](docs/week7-research-directions.md) | Research questions and future work roadmap |
-| [reports/week5/eval_results.md](reports/week5/eval_results.md) | Detailed evaluation metrics |
-| [docs/week4-results.md](docs/week4-results.md) | Real-world validation on 5 OSS repositories |
-
----
-
-## ⚠️ Responsible Use
+## Responsible Use
 
 This project is conducted strictly for **educational and defensive purposes**. The tools and techniques documented here:
 
@@ -287,17 +137,17 @@ This project is conducted strictly for **educational and defensive purposes**. T
 - Provide **no exploitation capabilities**
 - Follow **responsible disclosure principles**
 
-See [docs/week6-responsible-innovation-essay.md](docs/week6-responsible-innovation-essay.md) for detailed ethical considerations.
+See [docs/responsible-innovation.md](docs/responsible-innovation.md) for detailed ethical considerations.
 
 ---
 
-## 👥 Team
+## Contributors / Team
 
 - **Gael Guzmán**  
 
 ---
 
-## 📎 License & Usage
+## License & Usage
 
 This repository is intended for **academic use** within the MIT Blended AI+X Program.  
 No content should be used for malicious or unauthorized security activities.

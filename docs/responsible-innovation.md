@@ -1,7 +1,7 @@
 # Responsible Innovation in Vulnerability Detection Tools
 
-**MIT Blended AI+X PBL – AI-Enabled Cybersecurity (Anthropic Project)**  
-**Week 6: Responsible Innovation**  
+**MIT Blended AI+X PBL – AI-Enabled Cybersecurity (Anthropic Project)**
+**Responsible Innovation**
 **Date:** January 2026
 
 ---
@@ -70,7 +70,7 @@ For third-party repository scanning, we avoid storing cloned code beyond the sca
 
 ## 5. False positives, uncertainty, and communicating limitations
 
-No detection system is perfect. Our Week 5 evaluation measured baseline detector performance at 91% precision and 67% recall—meaning some real issues are missed (false negatives) and some flagged items are not actually vulnerable (false positives).
+No detection system is perfect. Our evaluation measured baseline detector performance at 91% precision and 67% recall—meaning some real issues are missed (false negatives) and some flagged items are not actually vulnerable (false positives).
 
 **Evaluation results highlight the tradeoffs:**
 
@@ -124,7 +124,7 @@ We cannot prevent determined attackers from misusing public code, but we can avo
 
 ## 8. Evaluation, transparency, and reproducibility
 
-Responsible tools are testable and their claims are verifiable. Our Week 5 evaluation framework demonstrates this principle:
+Responsible tools are testable and their claims are verifiable. Our evaluation framework demonstrates this principle:
 
 - **Documented methodology.** We published our evaluation dataset (60 labeled cases), metrics definitions, and testing procedures.
 - **Reproducible results.** Anyone can re-run our harness and verify our precision/recall claims.
@@ -190,4 +190,4 @@ Responsible innovation is not a destination but a practice—a set of questions 
 
 ---
 
-*Essay prepared as part of Week 6 deliverables – MIT Blended AI+X PBL, Track 3: AI-Enabled Cybersecurity*
+*MIT Blended AI+X PBL, Track 3: AI-Enabled Cybersecurity*

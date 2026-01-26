@@ -1,4 +1,4 @@
-# Week 4 Validation Results
+# Validation Results
 
 **MIT Blended AI+X Program - Track 3: AI-Enabled Cybersecurity**  
 **Scan Date:** January 2026
@@ -7,7 +7,7 @@
 
 ## Overview
 
-This document summarizes the results of running the Week 4 security scanner against 5 non-security-focused, real-world open-source repositories. The goal was to validate the scanner's effectiveness on production codebases rather than intentionally vulnerable training applications.
+This document summarizes the results of running the security scanner against 5 non-security-focused, real-world open-source repositories. The goal was to validate the scanner's effectiveness on production codebases rather than intentionally vulnerable training applications.
 
 ## Repositories Scanned
 
@@ -141,7 +141,7 @@ This document summarizes the results of running the Week 4 security scanner agai
 Generated reports are available at:
 
 ```
-reports/week4/
+docs/archive/reports/validation/
 ├── pallets__click/
 │   ├── findings.json
 │   ├── report.md
@@ -190,4 +190,4 @@ reports/week4/
 
 ---
 
-*Week 4 Results - MIT Blended AI+X PBL - AI-Enabled Cybersecurity*
+*MIT Blended AI+X PBL - AI-Enabled Cybersecurity*

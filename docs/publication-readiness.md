@@ -67,10 +67,10 @@ All checklist items have been verified. The project is **ready for publication**
 
 | Deliverable | Location | Status |
 |-------------|----------|--------|
-| Final Paper | `docs/final-paper.md` | ✅ Complete |
-| Evaluation Results | `reports/week5/eval_results.md` | ✅ Complete |
-| Responsible Innovation Essay | `docs/week6-responsible-innovation-essay.md` | ✅ Complete |
-| README | `README.md` | ✅ Polished |
+| Final Paper | `docs/final-paper.md` | Complete |
+| Evaluation Results | `reports/week5/eval_results.md` | Complete |
+| Responsible Innovation Essay | `docs/responsible-innovation.md` | Complete |
+| README | `README.md` | Polished |
 
 ---
 
